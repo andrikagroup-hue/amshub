@@ -215,6 +215,19 @@ nav.main-nav a:hover::after { width: 100%; }
 .vehicle-slider img:nth-child(10) { animation-delay: 27s; }
 .vehicle-slider img:nth-child(11) { animation-delay: 30s; }
 .vehicle-slider img:nth-child(12) { animation-delay: 33s; }
+.kitchen-slider { position: absolute; inset: 0; }
+.kitchen-slider img { position: absolute; inset: 0; opacity: 0; animation: kitchenFade 12s infinite; }
+.kitchen-slider img:nth-child(1) { animation-delay: 0s; }
+.kitchen-slider img:nth-child(2) { animation-delay: 3s; }
+.kitchen-slider img:nth-child(3) { animation-delay: 6s; }
+.kitchen-slider img:nth-child(4) { animation-delay: 9s; }
+@keyframes kitchenFade {
+  0% { opacity: 0; }
+  4.5% { opacity: 1; }
+  21% { opacity: 1; }
+  24.5% { opacity: 0; }
+  100% { opacity: 0; }
+}
 @keyframes vehicleFade {
   0% { opacity: 0; }
   1.5% { opacity: 1; }
@@ -664,7 +677,12 @@ footer { background: #07111f; color: rgba(255,255,255,.6); }
         </div>
       </div>
       <div class="tailor-card">
-        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Kitchen Protection" loading="lazy">
+        <div class="kitchen-slider">
+          <img src="images/produk/kitchen/1.jpg" alt="Kitchen Protection" loading="lazy">
+          <img src="images/produk/kitchen/2.jpg" alt="Kitchen Protection" loading="lazy">
+          <img src="images/produk/kitchen/3.jpg" alt="Kitchen Protection" loading="lazy">
+          <img src="images/produk/kitchen/4.jpg" alt="Kitchen Protection" loading="lazy">
+        </div>
         <div class="tailor-overlay">
           <h4>Kitchen Protection Systems</h4>
           <p>Suppression dapur komersial dengan respons cepat dan aman.</p>
