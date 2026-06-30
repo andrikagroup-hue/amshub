@@ -232,6 +232,20 @@ nav.main-nav a:hover::after { width: 100%; }
 .clean-slider img:nth-child(7) { animation-delay: 18s; }
 .clean-slider img:nth-child(8) { animation-delay: 21s; }
 .clean-slider img:nth-child(9) { animation-delay: 24s; }
+.mist-slider { position: absolute; inset: 0; }
+.mist-slider img { position: absolute; inset: 0; opacity: 0; animation: mistFade 15s infinite; }
+.mist-slider img:nth-child(1) { animation-delay: 0s; }
+.mist-slider img:nth-child(2) { animation-delay: 3s; }
+.mist-slider img:nth-child(3) { animation-delay: 6s; }
+.mist-slider img:nth-child(4) { animation-delay: 9s; }
+.mist-slider img:nth-child(5) { animation-delay: 12s; }
+@keyframes mistFade {
+  0% { opacity: 0; }
+  3.5% { opacity: 1; }
+  17% { opacity: 1; }
+  19.5% { opacity: 0; }
+  100% { opacity: 0; }
+}
 @keyframes cleanFade {
   0% { opacity: 0; }
   2% { opacity: 1; }
@@ -724,7 +738,13 @@ footer { background: #07111f; color: rgba(255,255,255,.6); }
         </div>
       </div>
       <div class="tailor-card">
-        <img src="https://images.unsplash.com/photo-1548407260-da850faa41e3?w=600&q=80" alt="Water Mist Systems" loading="lazy">
+        <div class="mist-slider">
+          <img src="images/produk/water%20mist/1.jpg" alt="Water Mist Systems" loading="lazy">
+          <img src="images/produk/water%20mist/2.jpg" alt="Water Mist Systems" loading="lazy">
+          <img src="images/produk/water%20mist/3.jpg" alt="Water Mist Systems" loading="lazy">
+          <img src="images/produk/water%20mist/4.jpg" alt="Water Mist Systems" loading="lazy">
+          <img src="images/produk/water%20mist/5.webp" alt="Water Mist Systems" loading="lazy">
+        </div>
         <div class="tailor-overlay">
           <h4>Water Mist Systems</h4>
           <p>Teknologi kabut air mengurangi panas dan meminimalkan kerusakan.</p>
