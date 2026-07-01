@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsubscribe — PT Andrika Mitra Solusi</title>
+<link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f4f7f9 0%, #e8eef2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .box {
+    background: #ffffff;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    padding: 36px 30px;
+    text-align: center;
+  }
+  .box img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 16px;
+  }
+  .box h1 {
+    font-size: 20px;
+    color: #003b5c;
+    margin-bottom: 12px;
+  }
+  .box p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+  }
+  .icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+  .icon.success { color: #5ce1e6; }
+  .icon.error { color: #e67e22; }
+  .spinner {
+    width: 34px;
+    height: 34px;
+    border: 4px solid #eee;
+    border-top: 4px solid #5ce1e6;
+    border-radius: 50%;
+    margin: 0 auto 16px;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  a.back {
+    display: inline-block;
+    margin-top: 20px;
+    color: #5ce1e6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  a.back:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div class="box" id="box">
+  <div class="spinner"></div>
+  <img src="images/logo-partner/AMS.png" alt="AMS Logo">
+  <h1>Memproses permintaan kamu...</h1>
+  <p>Mohon tunggu sebentar.</p>
+</div>
+
+<script>
+  var SUPABASE_URL = 'https://xcmpsmydlgtvegqtokez.supabase.co';
+  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjbXBzbXlkbGd0dmVncXRva2V6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4NTI1NjAsImV4cCI6MjA5NzQyODU2MH0.opac4K11jP9O85PqsZV5BWD08oaaZ2OehQrvp2R_wsY';
+  var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  var box = document.getElementById('box');
+
+  function render(iconClass, iconSymbol, title, message, showBack) {
+    box.innerHTML =
+      '<div class="icon ' + iconClass + '">' + iconSymbol + '</div>' +
+      '<img src="images/logo-partner/AMS.png" alt="AMS Logo">' +
+      '<h1>' + title + '</h1>' +
+      '<p>' + message + '</p>' +
+      (showBack ? '<a class="back" href="index.html">&larr; Kembali ke Website AMS</a>' : '');
+  }
+
+  async function doUnsubscribe() {
+    var params = new URLSearchParams(window.location.search);
+    var email = params.get('email');
+
+    if (!email) {
+      render('error', '&#9888;', 'Link Tidak Valid', 'Alamat email tidak ditemukan pada link ini. Silakan cek kembali link yang kamu terima.', true);
+      return;
+    }
+
+    email = decodeURIComponent(email).trim().toLowerCase();
+
+    try {
+      var result = await sb
+        .from('subscribers')
+        .update({ is_active: false })
+        .eq('email', email)
+        .select();
+
+      if (result.error) {
+        render('error', '&#9888;', 'Terjadi Kesalahan', 'Maaf, proses unsubscribe gagal. Silakan coba lagi nanti atau hubungi kami langsung.', true);
+        return;
+      }
+
+      if (!result.data || result.data.length === 0) {
+        render('error', '&#9888;', 'Email Tidak Ditemukan', 'Email <strong>' + email + '</strong> tidak terdaftar di sistem kami.', true);
+        return;
+      }
+
+      render('success', '&#10003;', 'Berhasil Berhenti Berlangganan', 'Email <strong>' + email + '</strong> sudah tidak akan menerima penawaran dari AMS lagi. Terima kasih pernah menjadi bagian dari kami.', true);
+
+    } catch (err) {
+      render('error', '&#9888;', 'Terjadi Kesalahan', 'Maaf, ada masalah koneksi. Silakan coba lagi nanti.', true);
+    }
+  }
+
+  doUnsubscribe();
+</script>
+
+</body>
+</html>
