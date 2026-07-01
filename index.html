@@ -3,1109 +3,235 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PT Andrika Mitra Solusi | Industrial & Tailor-Made Fire Solutions</title>
-<meta name="description" content="PT Andrika Mitra Solusi (AMS) — spesialis proteksi kebakaran industri di Indonesia. Desain, supply, instalasi, komisioning, dan maintenance sistem proteksi kebakaran.">
-<link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<title>Reliable Fire & Security</title>
+
 <style>
-:root {
-  --teal: #5ce1e6;
-  --teal-dark: #3bbfc4;
-  --teal-darker: #1d9da2;
-  --teal-light: #9eeef1;
-  --teal-pale: #e8fafb;
-  --orange: #FF6B35;
-  --orange-light: #FF8C5A;
-  --navy: #0d2340;
-  --navy-soft: #153258;
-  --ink: #1a2332;
-  --steel: #4a5568;
-  --muted: #718096;
-  --line: #e2e8f0;
-  --white: #ffffff;
-  --paper: #f7fffe;
-  --font: 'Montserrat', sans-serif;
-  --font-b: 'Inter', sans-serif;
-  --shadow: 0 10px 40px rgba(92,225,230,0.15);
-  --shadow-dark: 0 20px 60px rgba(13,35,64,0.2);
-}
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; font-family: var(--font-b); color: var(--ink); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-h1,h2,h3,h4,h5 { font-family: var(--font); margin: 0; line-height: 1.1; }
-p { margin: 0; }
-ul { margin: 0; padding: 0; list-style: none; }
-button { font-family: inherit; cursor: pointer; border: none; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-@media (max-width: 640px) { .container { padding: 0 18px; } }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+  }
 
-/* ── BUTTONS ── */
-.btn { display: inline-flex; align-items: center; gap: 9px; padding: 14px 28px; font-family: var(--font); font-weight: 700; font-size: 14px; letter-spacing: .04em; text-transform: uppercase; border-radius: 4px; transition: all .25s ease; white-space: nowrap; cursor: pointer; border: 2px solid transparent; }
-.btn-primary { background: var(--teal); color: var(--navy); }
-.btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(92,225,230,.4); }
-.btn-outline-white { background: transparent; border-color: rgba(255,255,255,.7); color: #fff; }
-.btn-outline-white:hover { background: rgba(255,255,255,.12); border-color: #fff; transform: translateY(-2px); }
-.btn-orange { background: var(--orange); color: #fff; }
-.btn-orange:hover { background: var(--orange-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,53,.4); }
-.btn-sm { padding: 10px 20px; font-size: 12.5px; }
+  /* ── KONTEN HALAMAN (di belakang popup) ── */
+  .page {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+  .page h1 { font-size: 28px; }
 
-/* ── HEADER ── */
-#header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 16px 0; transition: all .3s ease; background: transparent; }
-#header.scrolled { background: rgba(13,35,64,.97); backdrop-filter: blur(12px); box-shadow: 0 4px 24px rgba(0,0,0,.3); padding: 10px 0; }
-.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brand img { height: 64px; width: 64px; object-fit: contain; transition: .3s; flex-shrink: 0; }
-#header.scrolled .brand img { height: 52px; width: 52px; }
-.brand-text { font-family: var(--font); color: #fff; }
-.brand-text strong { display: block; font-size: 14px; font-weight: 800; letter-spacing: .02em; }
-.brand-text span { display: block; font-size: 10px; font-weight: 500; color: var(--teal); letter-spacing: .1em; text-transform: uppercase; margin-top: 1px; }
-.brand-tagline { display: block; font-size: 9px; font-weight: 400; color: rgba(255,255,255,.6); letter-spacing: .08em; text-transform: uppercase; margin-top: 1px; }
-nav.main-nav { display: flex; align-items: center; gap: 28px; }
-nav.main-nav a { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: rgba(255,255,255,.85); position: relative; padding: 4px 0; transition: color .2s; }
-nav.main-nav a::after { content: ""; position: absolute; left: 0; bottom: -2px; width: 0; height: 2px; background: var(--teal); transition: width .2s; }
-nav.main-nav a:hover { color: var(--teal); }
-nav.main-nav a:hover::after { width: 100%; }
-.header-ctas { display: flex; align-items: center; gap: 10px; }
-.hamburger { display: none; background: none; border: none; font-size: 24px; color: #fff; padding: 4px; }
-.mobile-panel { display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 78%; max-width: 300px; background: var(--navy); z-index: 1100; padding: 28px; transform: translateX(110%); transition: transform .3s ease; }
-.mobile-panel.open { transform: translateX(0); display: block; }
-.mobile-panel a { display: block; padding: 14px 0; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid rgba(255,255,255,.1); color: #fff; }
-.mobile-panel a:hover { color: var(--teal); }
-.close-x { float: right; background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; margin-bottom: 20px; }
-.scrim { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 1050; }
-.scrim.show { display: block; }
-@media (max-width: 960px) { nav.main-nav { display: none; } .hamburger { display: inline-block; } .header-ctas .btn-outline-white { display: none; } }
-@media (max-width: 480px) { .header-ctas .btn-sm span { display: none; } .header-ctas .btn-sm { padding: 10px 14px; } }
+  /* ── OVERLAY / LATAR GELAP ── */
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 16px;
+  }
+  .overlay.hidden { display: none; }
 
-/* ── HERO ── */
-.hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; background: var(--navy); }
-.hero-bg { position: absolute; inset: 0; background-image: url('images/produk/ams2.png'); background-size: cover; background-position: center; opacity: .35; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,35,64,.95) 0%, rgba(13,35,64,.7) 50%, rgba(92,225,230,.1) 100%); }
-.hero-glow { position: absolute; top: -100px; right: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(92,225,230,.15) 0%, transparent 70%); pointer-events: none; }
-.hero-content { position: relative; z-index: 2; padding: 120px 0 80px; }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(92,225,230,.15); border: 1px solid rgba(92,225,230,.3); padding: 8px 16px; border-radius: 100px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 28px; }
-.hero-badge i { font-size: 14px; }
-.hero h1 { font-size: clamp(30px, 5vw, 58px); font-weight: 900; color: #fff; line-height: 1.05; margin-bottom: 20px; max-width: 800px; }
-.hero h1 em { font-style: normal; color: var(--teal); }
-.hero p.sub { font-size: clamp(14px,1.6vw,17px); color: rgba(255,255,255,.75); max-width: 620px; margin-bottom: 32px; line-height: 1.65; }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 48px; }
-.hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 500px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,.1); }
-.hero-stat-num { font-family: var(--font); font-size: 32px; font-weight: 900; color: var(--teal); line-height: 1; margin-bottom: 4px; }
-.hero-stat-label { font-size: 12px; font-weight: 600; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .08em; }
-.hero-scroll { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,.4); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; animation: bounce 2s infinite; }
-.hero-scroll i { font-size: 20px; color: var(--teal); }
-@keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+  /* ── KOTAK POPUP ── */
+  .popup {
+    position: relative;
+    background: #fbdcd8;
+    max-width: 420px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 32px 28px 28px;
+    box-shadow: 0 10px 40px rgba(0,0,0,.3);
+  }
+  .popup-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+  }
+  .popup h2 {
+    font-size: 24px;
+    margin: 0 0 16px;
+  }
+  .popup p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+  }
+  .popup label {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  .popup label .required { color: #e33; margin-right: 3px; }
+  .popup input[type="text"],
+  .popup input[type="email"] {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    font-family: inherit;
+  }
+  .popup .consent {
+    font-size: 11.5px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 18px;
+  }
+  .popup .consent a { color: #444; }
+  .popup button.submit-btn {
+    width: 100%;
+    background: #8bc34a;
+    color: #1a1a1a;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .popup button.submit-btn:hover { background: #7cb342; }
+  .popup button.submit-btn:disabled { opacity: .6; cursor: not-allowed; }
 
-/* ── SECTION BASE ── */
-.section { padding: 72px 0; }
-@media (max-width: 768px) { .section { padding: 48px 0; } }
-.section-header { text-align: center; margin-bottom: 40px; }
-.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font); font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 12px; }
-.eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--teal); display: inline-block; border-radius: 2px; }
-.section-title { font-size: clamp(22px,3vw,36px); font-weight: 800; color: var(--navy); margin-bottom: 12px; }
-.section-title em { font-style: normal; color: var(--teal-darker); }
-.section-lead { font-size: 15px; color: var(--steel); max-width: 620px; margin: 0 auto; line-height: 1.7; }
-
-/* ── ABOUT ── */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-@media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
-.about-img-stack { position: relative; padding-bottom: 50px; }
-.about-img-main { border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-dark); }
-.about-img-main img { width: 100%; height: 340px; object-fit: cover; }
-.about-img-badge { position: absolute; bottom: -12px; right: -12px; background: #5ce1e6; padding: 4px; border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
-.about-img-badge img { width: 75px; height: 75px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35)); }
-.about-content .eyebrow { margin-bottom: 14px; }
-.about-content h2 { font-size: clamp(20px,2.8vw,32px); font-weight: 800; color: var(--navy); margin-bottom: 14px; }
-.about-content p { font-size: 15px; color: var(--steel); line-height: 1.75; margin-bottom: 16px; }
-.about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
-.about-tag { background: var(--teal-pale); color: var(--teal-darker); padding: 6px 14px; border-radius: 100px; font-size: 12.5px; font-weight: 700; letter-spacing: .03em; }
-
-/* ── VISION MISSION ── */
-.bg-navy { background: var(--navy); color: #fff; }
-.vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-@media (max-width: 768px) { .vm-grid { grid-template-columns: 1fr; gap: 28px; } }
-.vm-card { background: rgba(255,255,255,.06); border: 1px solid rgba(92,225,230,.2); border-radius: 16px; padding: 32px; position: relative; overflow: hidden; transition: transform .3s; }
-.vm-card:hover { transform: translateY(-6px); }
-.vm-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--teal), var(--orange)); }
-.vm-card.visi-card { background: #ffffff; border: 1px solid var(--teal-light); box-shadow: 0 8px 32px rgba(92,225,230,0.18); }
-.vm-card.visi-card h3 { color: var(--navy); }
-.vm-card.visi-card p { color: var(--steel); }
-.vm-card.visi-card .vm-icon { background: var(--teal-pale); }
-.vm-card.visi-card .vm-icon i { color: var(--teal-darker); }
-.vm-card.visi-card::before { background: linear-gradient(90deg, var(--teal-darker), var(--teal)); }
-.vm-icon { width: 52px; height: 52px; background: rgba(92,225,230,.15); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
-.vm-icon i { font-size: 22px; color: var(--teal); }
-.vm-card h3 { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 14px; }
-.vm-card p { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.75; }
-.vm-mission-list { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
-.vm-mission-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: rgba(255,255,255,.75); }
-.vm-mission-item i { color: var(--teal); font-size: 16px; margin-top: 3px; flex-shrink: 0; }
-/* ── COMMITMENT BADGE ── */
-.about-commitment-badge { position: absolute; bottom: -16px; left: 20px; right: 20px; background: #fff; border-radius: 10px; padding: 10px 14px; box-shadow: 0 8px 32px rgba(13,35,64,0.18); border-left: 4px solid var(--teal); }
-.about-commitment-title { font-family: var(--font); font-size: 13px; font-weight: 800; color: var(--navy); margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
-.about-commitment-title i { color: var(--teal-darker); }
-.about-commitment-text { font-size: 13px; color: var(--steel); line-height: 1.6; margin: 0; }
-
-/* ── VALUES ── */
-.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-@media (max-width: 900px) { .values-grid { grid-template-columns: 1fr; gap: 20px; } }
-.value-card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 30px; text-align: center; transition: all .3s; box-shadow: 0 4px 16px rgba(0,0,0,.04); }
-.value-card:hover { transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--teal-light); }
-.value-icon { width: 64px; height: 64px; margin: 0 auto 16px; background: linear-gradient(135deg, var(--teal-pale), #c8f7f8); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-.value-icon i { font-size: 24px; color: var(--teal-darker); }
-.value-card h3 { font-size: 18px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
-.value-card p { font-size: 14px; color: var(--steel); line-height: 1.7; }
-
-/* ── SUSTAINABILITY ── */
-.sust-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-@media (max-width: 768px) { .sust-grid { grid-template-columns: 1fr; } }
-.sust-card { background: rgba(255,255,255,.07); border: 1px solid rgba(92,225,230,.2); border-radius: 14px; padding: 28px; }
-.sust-card h3 { font-size: 18px; font-weight: 800; color: var(--teal); margin-bottom: 8px; margin-top: 12px; }
-.sust-card p { font-size: 14px; color: rgba(255,255,255,.7); line-height: 1.7; }
-.sust-num { font-family: var(--font); font-size: 34px; font-weight: 900; color: rgba(92,225,230,.3); line-height: 1; }
-
-/* ── SECTORS ── */
-.sectors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
-.sector-card { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: flex; align-items: center; gap: 12px; transition: all .25s; box-shadow: 0 2px 8px rgba(0,0,0,.04); }
-.sector-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--teal); }
-.sector-icon { width: 40px; height: 40px; background: var(--teal-pale); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.sector-icon i { font-size: 18px; color: var(--teal-darker); }
-.sector-name { font-size: 13px; font-weight: 700; color: var(--navy); line-height: 1.3; }
-
-/* ── PRODUCTS ── */
-.products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
-@media (max-width: 768px) { .products-grid { grid-template-columns: 1fr; } }
-.product-card { border-radius: 16px; overflow: hidden; position: relative; box-shadow: var(--shadow-dark); transition: transform .3s; }
-.product-card:hover { transform: translateY(-6px); }
-.product-img { height: 420px; overflow: hidden; position: relative; }
-#da-slider { display: flex; width: 100%; height: 100%; }
-.product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
-.product-card:hover .product-img img { transform: scale(1.06); }
-.product-body { padding: 14px 22px; background: var(--white); border: 1px solid var(--line); border-top: none; border-radius: 0 0 16px 16px; }
-.product-num { font-family: var(--font); font-size: 11px; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 8px; }
-.product-body h3 { font-size: 15px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
-.product-body p { font-size: 12px; color: var(--steel); line-height: 1.65; }
-
-/* ── TAILOR MADE ── */
-.tailor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-@media (max-width: 768px) { .tailor-grid { grid-template-columns: 1fr 1fr; gap: 16px; } }
-@media (max-width: 480px) { .tailor-grid { grid-template-columns: 1fr; } }
-.tailor-card { border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 4/3; cursor: default; }
-.tailor-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
-.tailor-card:hover img { transform: scale(1.08); }
-.tailor-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,35,64,.9) 0%, transparent 55%); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; pointer-events: none; }
-.tailor-overlay h4 { font-size: 14px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
-.tailor-overlay p { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.5; }
-.vehicle-slider, .kitchen-slider, .clean-slider, .mist-slider, .foam-slider, .heavy-slider { position: absolute; inset: 0; overflow: hidden; }
-.vehicle-slider .khusus-track, .kitchen-slider .khusus-track, .clean-slider .khusus-track, .mist-slider .khusus-track, .foam-slider .khusus-track, .heavy-slider .khusus-track { display: flex; width: 100%; height: 100%; transition: transform .5s ease; }
-.vehicle-slider img, .kitchen-slider img, .clean-slider img, .mist-slider img, .foam-slider img, .heavy-slider img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; }
-.khusus-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(13,35,64,.65); border: none; color: #fff; width: 30px; height: 30px; border-radius: 50%; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5; transition: background .2s; }
-.khusus-arrow:hover { background: rgba(92,225,230,.85); }
-.khusus-prev { left: 8px; }
-.khusus-next { right: 8px; }
-.khusus-dots { display: flex; gap: 6px; justify-content: center; position: relative; z-index: 5; margin-bottom: 10px; pointer-events: auto; }
-.khusus-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); border: none; padding: 0; cursor: pointer; transition: all .2s; }
-.khusus-dot.active { background: var(--teal); width: 18px; border-radius: 4px; }
-
-/* ── BUSINESS DEVELOPMENT ── */
-.process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; margin-bottom: 48px; }
-@media (max-width: 860px) { .process-steps { grid-template-columns: 1fr 1fr; gap: 20px; } }
-@media (max-width: 480px) { .process-steps { grid-template-columns: 1fr; } }
-.process-step { text-align: center; position: relative; padding: 0 16px; }
-.process-step:not(:last-child)::after { content: ""; position: absolute; top: 35px; left: calc(50% + 35px); right: calc(-50% + 35px); height: 2px; background: linear-gradient(90deg, var(--teal), rgba(92,225,230,.2)); }
-@media (max-width: 860px) { .process-step::after { display: none; } }
-.step-circle { width: 60px; height: 60px; margin: 0 auto 14px; background: var(--teal-pale); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 3px solid var(--teal); }
-.step-circle i { font-size: 22px; color: var(--teal-darker); }
-.process-step h4 { font-size: 13px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 8px; }
-.process-step p { font-size: 12.5px; color: var(--steel); line-height: 1.6; }
-.certs-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-@media (max-width: 768px) { .certs-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; } }
-.cert-card { background: var(--teal-pale); border: 2px solid var(--teal-light); border-radius: 12px; padding: 20px; text-align: center; }
-.cert-card .cert-icon { font-size: 28px; color: var(--teal-darker); margin-bottom: 8px; font-family: var(--font); font-weight: 900; }
-.cert-card h4 { font-size: 14px; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
-.cert-card p { font-size: 11.5px; color: var(--steel); line-height: 1.5; }
-
-/* ── PARTNERS ── */
-.partners-logo-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
-@media (max-width: 900px) { .partners-logo-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 480px) { .partners-logo-grid { grid-template-columns: repeat(2, 1fr); } }
-.partner-logo { background: var(--white); border: 1px solid var(--line); border-radius: 10px; padding: 18px 16px; display: flex; align-items: center; justify-content: center; font-family: var(--font); font-weight: 900; font-size: 13px; color: var(--navy); text-align: center; min-height: 64px; transition: all .2s; }
-.partner-logo:hover { border-color: var(--teal); box-shadow: 0 4px 16px rgba(92,225,230,.2); color: var(--teal-darker); }
-.partner-logo img { max-width: 100%; max-height: 56px; width: auto; height: auto; object-fit: contain; filter: grayscale(40%); transition: filter .2s; }
-.partner-logo:hover img { filter: grayscale(0%); }
-.partner-logo.scale-up img { transform: scale(2.2); }
-.partner-logo.scale-up-extra img { transform: scale(3); }
-
-/* ── CONTACT ── */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
-.contact-info h2 { font-size: clamp(22px,2.8vw,32px); font-weight: 800; color: #fff; margin-bottom: 16px; }
-.contact-info p { font-size: 15px; color: rgba(255,255,255,.7); line-height: 1.75; margin-bottom: 28px; }
-.contact-items { display: flex; flex-direction: column; gap: 16px; }
-.contact-item { display: flex; align-items: flex-start; gap: 16px; }
-.contact-item-icon { width: 44px; height: 44px; background: rgba(92,225,230,.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.contact-item-icon i { font-size: 18px; color: var(--teal); }
-.contact-item-text strong { display: block; font-size: 12px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 2px; }
-.contact-item-text span { font-size: 15px; color: rgba(255,255,255,.85); line-height: 1.6; }
-.contact-map { border-radius: 16px; overflow: hidden; height: 280px; border: 2px solid rgba(92,225,230,.2); }
-.contact-map iframe { width: 100%; height: 100%; border: none; }
-.social-links { display: flex; gap: 12px; margin-top: 24px; }
-.social-link { width: 44px; height: 44px; background: rgba(92,225,230,.12); border: 1px solid rgba(92,225,230,.3); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 18px; transition: all .2s; }
-.social-link:hover { background: var(--teal); color: var(--navy); }
-
-/* ── FOOTER ── */
-footer { background: #07111f; color: rgba(255,255,255,.6); }
-.footer-main { padding: 48px 0 32px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
-@media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
-@media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
-.footer-brand img { height: 56px; margin-bottom: 16px; }
-.footer-brand p { font-size: 14px; line-height: 1.8; max-width: 260px; }
-.footer-col h5 { font-family: var(--font); font-size: 12px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 16px; }
-.footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,.55); padding: 5px 0; transition: color .2s; }
-.footer-col a:hover { color: var(--teal); }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-.footer-bottom span { font-size: 13px; }
-.footer-bottom-links { display: flex; gap: 20px; }
-.footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,.4); }
-.footer-bottom-links a:hover { color: var(--teal); }
-.footer-cert-badges { display: flex; gap: 10px; flex-wrap: wrap; }
-.cert-badge { background: rgba(92,225,230,.1); border: 1px solid rgba(92,225,230,.2); color: var(--teal); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: .05em; }
-
-/* ── WA FLOAT ── */
-.wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,.5); transition: transform .2s; }
-.wa-float:hover { transform: scale(1.12); }
-.wa-float i { font-size: 30px; color: #fff; }
-.wa-pulse { position: absolute; top: -4px; right: -4px; width: 16px; height: 16px; background: var(--orange); border-radius: 50%; border: 2px solid #fff; animation: pulse 2s infinite; }
-@keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.25); } }
-
-/* ── REVEAL ── */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.in { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: .1s; }
-.reveal-delay-2 { transition-delay: .2s; }
-.reveal-delay-3 { transition-delay: .3s; }
-.reveal-delay-4 { transition-delay: .4s; }
-
-/* ── DIVIDER ── */
-.teal-stripe { height: 4px; background: linear-gradient(90deg, var(--teal), var(--orange), var(--teal)); }
-.bg-paper { background: var(--paper); }
+  .form-message {
+    font-size: 13px;
+    margin-bottom: 14px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    display: none;
+  }
+  .form-message.show { display: block; }
+  .form-message.success { background: #d7f3d0; color: #1e5c1e; }
+  .form-message.error { background: #fbd7d7; color: #8a1c1c; }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header id="header">
-  <div class="container">
-    <div class="header-inner">
-      <div class="brand">
-        <img src="images/logo-partner/AMS.png" alt="AMS Logo">
-        <div class="brand-text">
-          <strong>ANDRIKA MITRA SOLUSI</strong>
-          <span>Integrity &amp; Competency</span>
-          <span class="brand-tagline">Industrial &amp; Tailor-Made Fire Solutions</span>
-        </div>
-      </div>
-      <nav class="main-nav">
-        <a href="#about">Tentang</a>
-        <a href="#vision">Visi & Misi</a>
-        <a href="#sectors">Sektor</a>
-        <a href="#products">Produk</a>
-        <a href="#partners">Partner</a>
-        <a href="#contact">Kontak</a>
-      </nav>
-      <div class="header-ctas">
-        <a class="btn btn-primary btn-sm" href="Company%20Profile%20AMS.pdf" download><i class="fas fa-download"></i> <span>Download Compro</span></a>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
-      </div>
-    </div>
-  </div>
-</header>
+<!-- ISI HALAMAN DI BELAKANG POPUP (boleh diisi konten website kamu) -->
+<div class="page">
+  <h1>Selamat datang di Reliable Fire & Security</h1>
+  <p>Ini adalah halaman utama website kamu. Popup subscribe akan muncul otomatis saat halaman dibuka.</p>
+</div>
 
-<!-- MOBILE PANEL -->
-<div class="mobile-panel" id="mobilePanel">
-  <button class="close-x" id="closeMobile"><i class="fas fa-times"></i></button>
-  <div style="clear:both;margin-top:12px;">
-    <a href="#about">Tentang Kami</a>
-    <a href="#vision">Visi & Misi</a>
-    <a href="#values">Nilai Perusahaan</a>
-    <a href="#sectors">Sektor</a>
-    <a href="#products">Produk & Layanan</a>
-    <a href="#partners">Partner Global</a>
-    <a href="#contact">Kontak</a>
-    <a href="Company%20Profile%20AMS.pdf" download style="color:var(--teal);margin-top:16px;"><i class="fas fa-download"></i> Download Company Profile</a>
+<!-- POPUP SUBSCRIBE -->
+<div class="overlay" id="overlay">
+  <div class="popup">
+    <button class="popup-close" id="closePopup" aria-label="Tutup">&times;</button>
+
+    <h2>🧯 Stop, Drop, and Subscribe! 🧯</h2>
+    <p>Stay in the loop with the latest fire safety tips, hot deals, and company updates from Reliable Fire & Security. No spam—just the good stuff to keep you safe and informed!</p>
+    <p>🔥 Sign up now & stay fire-ready! 🚒✨</p>
+
+    <div class="form-message" id="formMessage"></div>
+
+    <form id="subscribeForm">
+      <label for="email"><span class="required">*</span>Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName">
+
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName">
+
+      <div class="consent">
+        By submitting this form, you are consenting to receive marketing emails from: Reliable Fire & Security. You can revoke your consent to receive emails at any time by using the unsubscribe link found at the bottom of every email.
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">🧯 Safety First – I'm In!</button>
+    </form>
   </div>
 </div>
-<div class="scrim" id="scrim"></div>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <div class="hero-glow"></div>
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-badge reveal"><i class="fas fa-shield-halved"></i> Trusted Fire Protection Partner</div>
-      <h1 class="reveal reveal-delay-1">Industrial &amp;<br><em>Tailor-Made</em><br>Fire Solutions</h1>
-      <p class="sub reveal reveal-delay-2">PT Andrika Mitra Solusi menyediakan sistem proteksi kebakaran yang andal dan terukur — dirancang sesuai standar internasional NFPA, ISO, SNI, FM, dan UL untuk melindungi aset, operasional, dan kehidupan di seluruh Indonesia.</p>
-      <div class="hero-ctas reveal reveal-delay-3">
-        <a class="btn btn-primary" href="#products"><i class="fas fa-fire-extinguisher"></i> Lihat Produk & Layanan</a>
-        <a class="btn btn-outline-white" href="Company%20Profile%20AMS.pdf" download><i class="fas fa-download"></i> Download Company Profile</a>
-      </div>
-      
-    </div>
-  </div>
-  <div class="hero-scroll"><i class="fas fa-chevron-down"></i><span>Scroll</span></div>
-</section>
-<div class="teal-stripe"></div>
-
-<!-- ABOUT -->
-<section class="section" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-img-stack reveal">
-        <div class="about-img-main">
-          <img src="images/produk/ams1.png" alt="AMS Fire Protection Engineers" loading="lazy">
-        </div>
-        <div class="about-commitment-badge">
-          <div class="about-commitment-title"><i class="fas fa-shield-halved"></i> Komitmen Kami</div>
-          <p class="about-commitment-text">Integritas dalam setiap langkah, kompetensi dalam setiap keputusan, dan keberlanjutan dalam setiap solusi.</p>
-        </div>
-      </div>
-      <div class="about-content reveal reveal-delay-2">
-        <div class="eyebrow">Welcome to Our Company</div>
-        <h2>Trusted Fire Protection, <em style="color:var(--teal-darker)">Engineered for Indonesia.</em></h2>
-        <p>PT Andrika Mitra Solusi (AMS) adalah spesialis proteksi kebakaran Indonesia yang berfokus pada fasilitas industri, komersial, dan mission-critical. Kami merancang, menyuplai, menginstalasi, mengkomisioning, dan memelihara sistem proteksi kebakaran yang andal.</p>
-        <p>Sistem kami dirancangan sesuai standar internasional dan disesuaikan dengan profil risiko setiap lokasi. Komitmen kami: integritas dalam setiap penawaran, kompetensi dalam setiap keputusan rancangan, dan keberlanjutan dalam solusi yang kami berikan.</p>
-        <div class="about-tags">
-          <span class="about-tag">NFPA Compliant</span>
-          <span class="about-tag">ISO Standards</span>
-          <span class="about-tag">SNI</span>
-          <span class="about-tag">FM Approved</span>
-          <span class="about-tag">UL Listed</span>
-        </div>
-        <a class="btn btn-primary" href="#contact"><i class="fas fa-headset"></i> Konsultasi Gratis</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VISION MISSION -->
-<section class="section bg-navy" id="vision">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow" style="color:var(--teal)">Visi & Misi</div>
-      <h2 class="section-title" style="color:#fff">Arah & Tujuan <em style="color:var(--teal)">Perusahaan</em></h2>
-      <p class="section-lead" style="color:rgba(255,255,255,.65)">Dipandu oleh nilai Integrity · Competency · Sustainability</p>
-    </div>
-    <div class="vm-grid">
-      <div class="vm-card visi-card reveal">
-        <div class="vm-icon"><i class="fas fa-eye"></i></div>
-        <h3>Visi</h3>
-        <p>Menjadi mitra proteksi kebakaran paling terpercaya di Indonesia, diakui atas keunggulan keselamatan, rancangan, dan inovasi berkelanjutan.</p>
-      </div>
-      <div class="vm-card reveal reveal-delay-2">
-        <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
-        <h3>Misi</h3>
-        <div class="vm-mission-list">
-          <div class="vm-mission-item"><i class="fas fa-check-circle"></i><span>Menyediakan sistem proteksi kebakaran berkualitas tinggi berdasarkan standar internasional.</span></div>
-          <div class="vm-mission-item"><i class="fas fa-check-circle"></i><span>Mengutamakan keselamatan jiwa dan perlindungan aset dalam setiap solusi.</span></div>
-          <div class="vm-mission-item"><i class="fas fa-check-circle"></i><span>Menerapkan teknologi ramah lingkungan dan praktik berkelanjutan.</span></div>
-          <div class="vm-mission-item"><i class="fas fa-check-circle"></i><span>Memberikan layanan profesional dengan integritas dan kompetensi.</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VALUES -->
-<section class="section bg-paper" id="values">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow">Nilai Perusahaan</div>
-      <h2 class="section-title">Fondasi yang Membentuk <em>Kami</em></h2>
-    </div>
-    <div class="values-grid">
-      <div class="value-card reveal">
-        <div class="value-icon"><i class="fas fa-handshake"></i></div>
-        <h3>Integrity</h3>
-        <p>Kami berkomitmen pada kejujuran, transparansi, tanggung jawab, dan praktik bisnis etis dalam setiap proyek — dari penawaran pertama hingga selesainya instalasi.</p>
-      </div>
-      <div class="value-card reveal reveal-delay-2">
-        <div class="value-icon"><i class="fas fa-medal"></i></div>
-        <h3>Competency</h3>
-        <p>Kami menghadirkan keahlian profesional, solusi andal, dan peningkatan berkelanjutan untuk memenuhi kebutuhan klien dengan standar rancangan terbaik.</p>
-      </div>
-      <div class="value-card reveal reveal-delay-3">
-        <div class="value-icon"><i class="fas fa-leaf"></i></div>
-        <h3>Sustainability</h3>
-        <p>Kami mengintegrasikan teknologi ramah lingkungan dan praktik bertanggung jawab dalam setiap solusi — demi People, Planet, dan Profit jangka panjang.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SUSTAINABILITY -->
-<section class="section bg-navy" id="sustainability">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow" style="color:var(--teal)">Sustainability Commitment</div>
-      <h2 class="section-title" style="color:#fff">People · Planet · <em style="color:var(--teal)">Profit</em></h2>
-      <p class="section-lead" style="color:rgba(255,255,255,.65)">Keberlanjutan bukan sekadar kata — ini adalah cara kami beroperasi, berinovasi, dan memberikan nilai.</p>
-    </div>
-    <div class="sust-grid">
-      <div class="sust-card reveal">
-        <div class="sust-num">01</div>
-        <h3>People</h3>
-        <p>Kami mengutamakan keselamatan jiwa, membangun hubungan terpercaya dengan klien dan komunitas, serta mendorong pengembangan karyawan secara berkelanjutan.</p>
-      </div>
-      <div class="sust-card reveal reveal-delay-2">
-        <div class="sust-num">02</div>
-        <h3>Planet</h3>
-        <p>Kami menerapkan teknologi ramah lingkungan, meminimalkan jejak karbon dalam operasional, dan memilih sistem yang bertanggung jawab terhadap lingkungan.</p>
-      </div>
-      <div class="sust-card reveal reveal-delay-3">
-        <div class="sust-num">03</div>
-        <h3>Profit</h3>
-        <p>Kami menghadirkan solusi efisien yang menciptakan nilai jangka panjang dan pertumbuhan berkelanjutan bagi klien, mitra, dan bisnis kami.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTORS -->
-<section class="section" id="sectors">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow">Sektor yang Kami Lindungi</div>
-      <h2 class="section-title">Dari Residensial hingga <em>Industri Berat</em></h2>
-      <p class="section-lead">Kami merancang solusi proteksi kebakaran yang disesuaikan dengan profil risiko unik setiap fasilitas.</p>
-    </div>
-    <div class="sectors-grid reveal">
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-industry"></i></div><div class="sector-name">Manufacturing &amp; Industrial Plants</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-oil-well"></i></div><div class="sector-name">Oil, Gas &amp; Petrochemical</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-server"></i></div><div class="sector-name">Data Centres &amp; Server Rooms</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-warehouse"></i></div><div class="sector-name">Warehousing &amp; Logistics</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-building"></i></div><div class="sector-name">Commercial Buildings &amp; Hospitality</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-hospital"></i></div><div class="sector-name">Healthcare &amp; Critical Facilities</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-home"></i></div><div class="sector-name">Residential &amp; Apartments</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-store"></i></div><div class="sector-name">Retail &amp; Small Business</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-utensils"></i></div><div class="sector-name">Restaurants &amp; Commercial Kitchens</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-graduation-cap"></i></div><div class="sector-name">Educational Institutions &amp; Campuses</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-landmark"></i></div><div class="sector-name">Government &amp; Public Facilities</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-hotel"></i></div><div class="sector-name">Hotels &amp; High-Rise Buildings</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-train"></i></div><div class="sector-name">Transportation Hubs &amp; Infrastructure</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-bolt"></i></div><div class="sector-name">Mining, Energy &amp; Utilities</div></div>
-      <div class="sector-card"><div class="sector-icon"><i class="fas fa-plane"></i></div><div class="sector-name">Airports, Ports &amp; Transit Facilities</div></div>
-    </div>
-    <p style="text-align:center;margin-top:20px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-darker)" class="reveal">SCOPE: RESIDENTIAL · COMMERCIAL · INDUSTRIAL · INFRASTRUCTURE · CRITICAL FACILITIES</p>
-  </div>
-</section>
-
-<!-- CORE PRODUCTS -->
-<section class="section bg-paper" id="products">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow">Core Products & Services</div>
-      <h2 class="section-title">Sistem Proteksi Kebakaran <em>Terintegrasi</em></h2>
-      <p class="section-lead">Kami menghadirkan sistem proteksi kebakaran yang andal dan sesuai standar internasional — dirancang untuk melindungi jiwa, aset, dan masa depan bisnis Anda.</p>
-    </div>
-    <div class="products-grid">
-      <div class="product-card reveal">
-        <div class="product-img" style="position:relative;overflow:hidden;">
-          <!-- SLIDER DETEKSI & ALARM -->
-          <div id="da-slider" style="display:flex;width:100%;height:100%;transition:none;">
-            <img src="images/produk/Deteksi dan Alarm/1.png" alt="Deteksi & Alarm 1" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/2.png" alt="Deteksi & Alarm 2" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/3.png" alt="Deteksi & Alarm 3" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/4.png" alt="Deteksi & Alarm 4" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/5.png" alt="Deteksi & Alarm 5" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/6.png" alt="Deteksi & Alarm 6" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/7.png" alt="Deteksi & Alarm 7" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/8.png" alt="Deteksi & Alarm 8" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/9.png" alt="Deteksi & Alarm 9" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/10.png" alt="Deteksi & Alarm 10" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/11.png" alt="Deteksi & Alarm 11" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/12.png" alt="Deteksi & Alarm 12" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/13.png" alt="Deteksi & Alarm 13" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/14.png" alt="Deteksi & Alarm 14" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/15.png" alt="Deteksi & Alarm 15" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Deteksi dan Alarm/16.png" alt="Deteksi & Alarm 16" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-          </div>
-          <!-- Tombol Panah -->
-          <button onclick="daSlide(-1)" aria-label="Sebelumnya" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(13,35,64,.7);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;" onmouseover="this.style.background='rgba(92,225,230,.85)'" onmouseout="this.style.background='rgba(13,35,64,.7)'">&#8249;</button>
-          <button onclick="daSlide(1)" aria-label="Berikutnya" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(13,35,64,.7);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;" onmouseover="this.style.background='rgba(92,225,230,.85)'" onmouseout="this.style.background='rgba(13,35,64,.7)'">&#8250;</button>
-          <!-- Counter -->
-          <div id="da-counter" style="position:absolute;bottom:8px;right:10px;background:rgba(13,35,64,.65);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px;font-family:var(--font);letter-spacing:.05em;">1 / 16</div>
-        </div>
-        <div class="product-body">
-          <div class="product-num">01 — Deteksi & Alarm</div>
-          <h3>Fire Detection & Alarm Systems</h3>
-          <p>Teknologi deteksi canggih untuk peringatan dini dan respons cepat guna meminimalkan risiko. Mencakup addressable FACP, smoke detector, heat detector, manual call point, dan sirene.</p>
-        </div>
-      </div>
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-img" style="position:relative;overflow:hidden;">
-          <!-- SLIDER FSS -->
-          <div id="fss-slider" style="display:flex;width:100%;height:100%;transition:none;">
-            <img src="images/produk/FSS/1.png" alt="Fire Suppression 1" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/FSS/2.png" alt="Fire Suppression 2" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/FSS/3.png" alt="Fire Suppression 3" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/FSS/4.png" alt="Fire Suppression 4" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-          </div>
-          <!-- Tombol Panah -->
-          <button onclick="fssSlide(-1)" aria-label="Sebelumnya" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(13,35,64,.7);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;" onmouseover="this.style.background='rgba(92,225,230,.85)'" onmouseout="this.style.background='rgba(13,35,64,.7)'">&#8249;</button>
-          <button onclick="fssSlide(1)" aria-label="Berikutnya" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(13,35,64,.7);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;" onmouseover="this.style.background='rgba(92,225,230,.85)'" onmouseout="this.style.background='rgba(13,35,64,.7)'">&#8250;</button>
-          <!-- Counter -->
-          <div id="fss-counter" style="position:absolute;bottom:8px;right:10px;background:rgba(13,35,64,.65);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px;font-family:var(--font);letter-spacing:.05em;">1 / 4</div>
-        </div>
-        <div class="product-body">
-          <div class="product-num">02 — Suppression</div>
-          <h3>Fire Suppression Systems</h3>
-          <p>Sistem suppression otomatis menggunakan teknologi terkini untuk perlindungan maksimal. Tersedia dalam berbagai agen: FM-200, CO₂, clean agent, dan sistem gas inert.</p>
-        </div>
-      </div>
-      <div class="product-card reveal">
-        <div class="product-img" style="position:relative;overflow:hidden;">
-          <!-- SLIDER HYDRANT -->
-          <div id="hyd-slider" style="display:flex;width:100%;height:100%;transition:none;">
-            <img src="images/produk/Hydrant/fire_pump_room.png" alt="NFPA 20 Fire Pump Room" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Hydrant/hydrant_pillar.png" alt="Outdoor Hydrant Pillar" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Hydrant/hydrant_box_indoor.png" alt="Indoor Hydrant Box" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-            <img src="images/produk/Hydrant/siamese_connection.png" alt="Siamese Connection (FDC)" loading="lazy" style="width:100%;height:420px;object-fit:cover;flex-shrink:0;">
-          </div>
-          <!-- Tombol Panah -->
-          <button onclick="hydSlide(-1)" aria-label="Sebelumnya" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(13,35,64,.7);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;" onmouseover="this.style.background='rgba(92,225,230,.85)'" onmouseout="this.style.background='rgba(13,35,64,.7)'">&#8249;</button>
-          <button onclick="hydSlide(1)" aria-label="Berikutnya" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(13,35,64,.7);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;" onmouseover="this.style.background='rgba(92,225,230,.85)'" onmouseout="this.style.background='rgba(13,35,64,.7)'">&#8250;</button>
-          <!-- Counter -->
-          <div id="hyd-counter" style="position:absolute;bottom:8px;right:10px;background:rgba(13,35,64,.65);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px;font-family:var(--font);letter-spacing:.05em;">1 / 4</div>
-        </div>
-        <div class="product-body">
-          <div class="product-num">03 — Hydrant & Pump</div>
-          <h3>Hydrant & Pump Systems</h3>
-          <p>Sistem hidran dan pompa berperforma tinggi untuk distribusi air yang andal dalam kondisi darurat. Desain sesuai standar NFPA 20 dan SNI untuk keandalan operasional penuh.</p>
-        </div>
-      </div>
-      <div class="product-card reveal reveal-delay-2">
-        <div class="product-img" style="position:relative;overflow:hidden;">
-          <!-- SLIDER SPRINKLER -->
-          <div id="spr-slider" style="display:flex;width:100%;height:100%;transition:none;">
-            <img src="images/produk/sprinkler/1.png" alt="Sprinkler System 1" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/2.png" alt="Sprinkler System 2" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/3.png" alt="Sprinkler System 3" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/wet.png" alt="Wet Pipe Sprinkler System — wet pipe sprinkler installation photo" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/dry.png" alt="Dry Pipe Sprinkler System — dry pipe valve assembly with air compressor" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/pre.png" alt="Pre-Action Sprinkler System — pre-action sprinkler system control panel and valve" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/deluge.png" alt="Deluge Sprinkler System — deluge valve and open sprinkler heads industrial site" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/foam.png" alt="Foam-Water Sprinkler System — foam-water proportioner and foam discharge sprinkler" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/mist.png" alt="Water Mist System — high pressure water mist nozzle and pump skid" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/esfr.png" alt="ESFR Sprinkler System — ESFR warehouse ceiling sprinkler installation" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-            <img src="images/produk/sprinkler/residen.png" alt="Residential Sprinkler System — residential concealed sprinkler head in apartment ceiling" loading="lazy" style="width:100%;height:420px;object-fit:cover;object-position:top;flex-shrink:0;">
-          </div>
-          <!-- Tombol Panah -->
-          <button onclick="sprSlide(-1)" aria-label="Sebelumnya" style="position:absolute;left:8px;top:50%;transform:translateY(-50%);background:rgba(13,35,64,.7);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;" onmouseover="this.style.background='rgba(92,225,230,.85)'" onmouseout="this.style.background='rgba(13,35,64,.7)'">&#8249;</button>
-          <button onclick="sprSlide(1)" aria-label="Berikutnya" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);background:rgba(13,35,64,.7);border:none;color:#fff;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:10;transition:background .2s;" onmouseover="this.style.background='rgba(92,225,230,.85)'" onmouseout="this.style.background='rgba(13,35,64,.7)'">&#8250;</button>
-          <!-- Counter -->
-          <div id="spr-counter" style="position:absolute;bottom:8px;right:10px;background:rgba(13,35,64,.65);color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:100px;font-family:var(--font);letter-spacing:.05em;">1 / 11</div>
-        </div>
-        <div class="product-body">
-          <div class="product-num">04 — Sprinkler</div>
-          <h3>Sprinkler Systems</h3>
-          <p>Sistem sprinkler otomatis dirancang untuk pengendalian api yang cepat dan efektif. Tersedia dalam konfigurasi wet pipe, dry pipe, pre-action, dan deluge sesuai kebutuhan.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TAILOR-MADE -->
-<section class="section" id="tailormade">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow">Tailor-Made Solutions</div>
-      <h2 class="section-title">Solusi Khusus <em>Kebutuhan Unik Anda</em></h2>
-      <p class="section-lead">Sistem proteksi kebakaran yang dikustomisasi dan dirancangan dengan presisi untuk memenuhi persyaratan unik setiap fasilitas.</p>
-    </div>
-    <div class="tailor-grid reveal">
-      <div class="tailor-card">
-        <div class="vehicle-slider" id="vehicle-carousel">
-          <div class="khusus-track">
-            <img src="images/produk/vehicle/1.jpg" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/2.webp" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/3.webp" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/4.jpg" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/5.jpg" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/6.jpg" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/th%20(1).webp" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/th%20(2).webp" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/th%20(3).webp" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/th%20(4).webp" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/th%20(5).webp" alt="Vehicle Fire Suppression" loading="lazy">
-            <img src="images/produk/vehicle/th.webp" alt="Vehicle Fire Suppression" loading="lazy">
-          </div>
-          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
-          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
-        </div>
-        <div class="tailor-overlay">
-          <div class="khusus-dots"></div>
-          <h4>Vehicle Fire Suppression</h4>
-          <p>Perlindungan andal untuk kendaraan dan peralatan mobile.</p>
-        </div>
-      </div>
-      <div class="tailor-card">
-        <div class="kitchen-slider" id="kitchen-carousel">
-          <div class="khusus-track">
-            <img src="images/produk/kitchen/1.jpg" alt="Kitchen Protection" loading="lazy">
-            <img src="images/produk/kitchen/2.jpg" alt="Kitchen Protection" loading="lazy">
-            <img src="images/produk/kitchen/3.jpg" alt="Kitchen Protection" loading="lazy">
-            <img src="images/produk/kitchen/4.jpg" alt="Kitchen Protection" loading="lazy">
-          </div>
-          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
-          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
-        </div>
-        <div class="tailor-overlay">
-          <div class="khusus-dots"></div>
-          <h4>Kitchen Protection Systems</h4>
-          <p>Suppression dapur komersial dengan respons cepat dan aman.</p>
-        </div>
-      </div>
-      <div class="tailor-card">
-        <div class="clean-slider" id="clean-carousel">
-          <div class="khusus-track">
-            <img src="images/produk/Clean%20Agent/1.jpg" alt="Server Room Clean Agent" loading="lazy">
-            <img src="images/produk/Clean%20Agent/2.webp" alt="Server Room Clean Agent" loading="lazy">
-            <img src="images/produk/Clean%20Agent/3.webp" alt="Server Room Clean Agent" loading="lazy">
-            <img src="images/produk/Clean%20Agent/4.webp" alt="Server Room Clean Agent" loading="lazy">
-            <img src="images/produk/Clean%20Agent/5.jpg" alt="Server Room Clean Agent" loading="lazy">
-            <img src="images/produk/Clean%20Agent/6.jpg" alt="Server Room Clean Agent" loading="lazy">
-            <img src="images/produk/Clean%20Agent/7.webp" alt="Server Room Clean Agent" loading="lazy">
-            <img src="images/produk/Clean%20Agent/8.webp" alt="Server Room Clean Agent" loading="lazy">
-            <img src="images/produk/Clean%20Agent/9.webp" alt="Server Room Clean Agent" loading="lazy">
-          </div>
-          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
-          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
-        </div>
-        <div class="tailor-overlay">
-          <div class="khusus-dots"></div>
-          <h4>Server Room & Clean Agent</h4>
-          <p>Sistem clean agent untuk melindungi infrastruktur IT kritis.</p>
-        </div>
-      </div>
-      <div class="tailor-card">
-        <div class="mist-slider" id="mist-carousel">
-          <div class="khusus-track">
-            <img src="images/produk/water%20mist/1.jpg" alt="Water Mist Systems" loading="lazy">
-            <img src="images/produk/water%20mist/2.jpg" alt="Water Mist Systems" loading="lazy">
-            <img src="images/produk/water%20mist/3.jpg" alt="Water Mist Systems" loading="lazy">
-            <img src="images/produk/water%20mist/4.jpg" alt="Water Mist Systems" loading="lazy">
-            <img src="images/produk/water%20mist/5.webp" alt="Water Mist Systems" loading="lazy">
-          </div>
-          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
-          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
-        </div>
-        <div class="tailor-overlay">
-          <div class="khusus-dots"></div>
-          <h4>Water Mist Systems</h4>
-          <p>Teknologi kabut air mengurangi panas dan meminimalkan kerusakan.</p>
-        </div>
-      </div>
-      <div class="tailor-card">
-        <div class="foam-slider" id="foam-carousel">
-          <div class="khusus-track">
-            <img src="images/produk/Foam%20System/1.webp" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/2.jpg" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/3.jpg" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/4.jpg" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/5.webp" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/6.jpeg" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/7.webp" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/8.webp" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/9.jpg" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/10.webp" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/12.jpg" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/13.jpg" alt="Foam Systems" loading="lazy">
-            <img src="images/produk/Foam%20System/14.webp" alt="Foam Systems" loading="lazy">
-          </div>
-          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
-          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
-        </div>
-        <div class="tailor-overlay">
-          <div class="khusus-dots"></div>
-          <h4>Foam Systems</h4>
-          <p>Sistem busa performa tinggi untuk bahaya api cairan mudah terbakar.</p>
-        </div>
-      </div>
-      <div class="tailor-card">
-        <div class="heavy-slider" id="heavy-carousel">
-          <div class="khusus-track">
-            <img src="images/produk/Heavy/1.webp" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/2.webp" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/3.jpg" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/4.webp" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/5.jpg" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/6.webp" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/7.jpg" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/8.jpg" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/9.jpg" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/10.jpg" alt="Heavy Equipment Protection" loading="lazy">
-            <img src="images/produk/Heavy/12.webp" alt="Heavy Equipment Protection" loading="lazy">
-          </div>
-          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
-          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
-        </div>
-        <div class="tailor-overlay">
-          <div class="khusus-dots"></div>
-          <h4>Heavy Equipment Protection</h4>
-          <p>Proteksi khusus peralatan berat di lingkungan industri terkeras.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BUSINESS DEVELOPMENT -->
-<section class="section bg-paper" id="process">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow">Business Development Process</div>
-      <h2 class="section-title">Dari Konsultasi hingga <em>Commissioning</em></h2>
-      <p class="section-lead">Solusi kami dirancang berdasarkan standar internasional dengan performa andal, instalasi profesional, dan operasional jangka panjang yang efisien.</p>
-    </div>
-    <div class="process-steps reveal">
-      <div class="process-step">
-        <div class="step-circle"><i class="fas fa-comments"></i></div>
-        <h4>Consultation</h4>
-        <p>Analisis kebutuhan dan profil risiko fasilitas Anda secara menyeluruh.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-circle"><i class="fas fa-drafting-compass"></i></div>
-        <h4>Design</h4>
-        <p>Perancangan sistem proteksi kebakaran sesuai standar dan kondisi lapangan.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-circle"><i class="fas fa-tools"></i></div>
-        <h4>Commissioning</h4>
-        <p>Instalasi dan uji coba sistem memastikan semua berfungsi sempurna.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-circle"><i class="fas fa-wrench"></i></div>
-        <h4>Maintenance</h4>
-        <p>Perawatan rutin berkala memastikan sistem selalu siap beroperasi.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-circle"><i class="fas fa-chalkboard-teacher"></i></div>
-        <h4>Training</h4>
-        <p>Pelatihan tim Anda agar siap menghadapi situasi darurat dengan tepat.</p>
-      </div>
-    </div>
-    <!-- CERTIFICATIONS -->
-    <div class="section-header reveal" style="margin-bottom:28px">
-      <div class="eyebrow">Sertifikasi & Standar</div>
-      <h2 class="section-title" style="font-size:28px">Diakui Secara <em>Internasional</em></h2>
-    </div>
-    <div class="certs-grid reveal">
-      <div class="cert-card">
-        <div class="cert-icon">🔥</div>
-        <h4>NFPA</h4>
-        <p>National Fire Protection Association — standar keselamatan kebakaran kelas dunia.</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon">🌐</div>
-        <h4>ISO</h4>
-        <p>Proses manajemen mutu tersertifikasi untuk perbaikan berkelanjutan.</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon" style="font-size:22px;font-weight:900;">SNI</div>
-        <h4>SNI</h4>
-        <p>Standar Nasional Indonesia untuk regulasi lokal yang wajib dipenuhi.</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon" style="font-size:20px;font-weight:900;color:var(--orange);">FM</div>
-        <h4>FM Approved</h4>
-        <p>Sistem tersetujui FM fokus pada pencegahan kerugian properti dan keandalan.</p>
-      </div>
-      <div class="cert-card">
-        <div class="cert-icon" style="font-size:22px;font-weight:900;color:var(--navy);">UL</div>
-        <h4>UL Listed</h4>
-        <p>Produk terdaftar UL memastikan pengujian keselamatan yang ketat.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GLOBAL PARTNERS -->
-<section class="section" id="partners">
-  <div class="container">
-    <div class="section-header reveal">
-      <div class="eyebrow">Partner Global</div>
-      <h2 class="section-title">Bekerja Sama dengan <em>Brand Terbaik Dunia</em></h2>
-      <p class="section-lead">PT Andrika Mitra Solusi bermitra dengan produsen sistem proteksi kebakaran kelas dunia untuk menghadirkan solusi terbaik bagi klien.</p>
-    </div>
-        <div class="partners-logo-grid reveal">
-      <a class="partner-logo scale-up-extra" href="https://www.akronbrass.com" target="_blank" rel="noopener"><img src="images/logo-partner/Akron.png" alt="Akron" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.amerex-fire.com" target="_blank" rel="noopener"><img src="images/logo-partner/Amerex.png" alt="Amerex" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.ansul.com" target="_blank" rel="noopener"><img src="images/logo-partner/Ansul.webp" alt="Ansul" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.bermad.com" target="_blank" rel="noopener"><img src="images/logo-partner/Bermad.png" alt="Bermad" loading="lazy"></a>
-      <a class="partner-logo scale-up-extra" href="https://www.chemguard.com" target="_blank" rel="noopener"><img src="images/logo-partner/Chemguard.png" alt="Chemguard" loading="lazy"></a>
-      <a class="partner-logo" href="https://chief-technology.com/chief-fire" target="_blank" rel="noopener"><img src="images/logo-partner/Chief%20Fire.png" alt="Chief Fire" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.crowcon.com" target="_blank" rel="noopener"><img src="images/logo-partner/Crowcon.png" alt="Crowcon" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.draeger.com" target="_blank" rel="noopener"><img src="images/logo-partner/Drager.webp" alt="Dräger" loading="lazy"></a>
-      <a class="partner-logo scale-up-extra" href="https://www.elkhartbrass.com" target="_blank" rel="noopener"><img src="images/logo-partner/Elkhart%20Brass.png" alt="Elkhart Brass" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.eversafe.net" target="_blank" rel="noopener"><img src="images/logo-partner/Eversafe.png" alt="Eversafe" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.fike.com" target="_blank" rel="noopener"><img src="images/logo-partner/Fike.png" alt="Fike" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.hdfire.com" target="_blank" rel="noopener"><img src="images/logo-partner/HD%20Fire%20Protect.png" alt="HD Fire Protect" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.honeywell.com" target="_blank" rel="noopener"><img src="images/logo-partner/Honeywell%20Technologies.png" alt="Honeywell Technologies" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.incontrolfire.com" target="_blank" rel="noopener"><img src="images/logo-partner/InControl.jpg" alt="InControl" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.istec.nl" target="_blank" rel="noopener"><img src="images/logo-partner/Istec.png" alt="Istec" loading="lazy"></a>
-      <a class="partner-logo scale-up-extra" href="https://www.johnsoncontrols.com" target="_blank" rel="noopener"><img src="images/logo-partner/Johnson%20Controls%20Tyco.png" alt="Johnson Controls Tyco" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.kennedyvalve.com" target="_blank" rel="noopener"><img src="images/logo-partner/Kennedi%20Valve.webp" alt="Kennedy Valve" loading="lazy"></a>
-      <a class="partner-logo scale-up" href="https://www.kidde.com" target="_blank" rel="noopener"><img src="images/logo-partner/Kidde.webp" alt="Kidde" loading="lazy"></a>
-      <a class="partner-logo scale-up-extra" href="https://www.kolling.com.my" target="_blank" rel="noopener"><img src="images/logo-partner/Kolling.jpeg" alt="Kolling" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.muellercompany.com" target="_blank" rel="noopener"><img src="images/logo-partner/Mueller.png" alt="Mueller" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.protekmanufacturing.com" target="_blank" rel="noopener"><img src="images/logo-partner/Protek.png" alt="Protek" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.reliablefire.com" target="_blank" rel="noopener"><img src="images/logo-partner/Reliable%20Fire%20Equipment.png" alt="Reliable Fire Equipment" loading="lazy"></a>
-      <a class="partner-logo scale-up-extra" href="https://www.rosenbauer.com" target="_blank" rel="noopener"><img src="images/logo-partner/Rosenbauer.png" alt="Rosenbauer" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.siex2001.com" target="_blank" rel="noopener"><img src="images/logo-partner/Siex.png" alt="Siex" loading="lazy"></a>
-      <a class="partner-logo scale-up-extra" href="https://www.skumsprinkler.com" target="_blank" rel="noopener"><img src="images/logo-partner/Skum.png" alt="Skum" loading="lazy"></a>
-      <a class="partner-logo scale-up" href="https://www.perimeter-solutions.com/brands/solberg" target="_blank" rel="noopener"><img src="images/logo-partner/Soldberg.webp" alt="Solberg" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.vikinggroupinc.com" target="_blank" rel="noopener"><img src="images/logo-partner/Viking.png" alt="Viking" loading="lazy"></a>
-      <a class="partner-logo" href="https://www.weflo.com" target="_blank" rel="noopener"><img src="images/logo-partner/Weflo.jpg" alt="Weflo" loading="lazy"></a>
-    </div>
-  </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="section bg-navy" id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="eyebrow" style="color:var(--teal)">Kontak & Lokasi</div>
-        <h2>Siap Melindungi<br>Proyek Anda</h2>
-        <p>Kami siap mendukung kebutuhan proteksi kebakaran dan proyek masa depan Anda. Hubungi kami untuk konsultasi, layanan, atau peluang kemitraan.</p>
-        <div class="contact-items">
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
-            <div class="contact-item-text">
-              <strong>Telepon</strong>
-              <span>+6221-352-97697<br>+6281-2999-97697</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
-            <div class="contact-item-text">
-              <strong>Email</strong>
-              <span>sales@andrikagroup.com</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="contact-item-text">
-              <strong>Alamat</strong>
-              <span>Boulevard Graha Raya Bintaro, Blok JD 15,<br>Venice Arcade, Tangerang Selatan,<br>Indonesia 15324</span>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-item-icon"><i class="fas fa-globe"></i></div>
-            <div class="contact-item-text">
-              <strong>Website</strong>
-              <span><a href="https://www.andrikagroup.com" target="_blank" style="color:var(--teal)">www.andrikagroup.com</a></span>
-            </div>
-          </div>
-        </div>
-        <div class="social-links">
-          <a class="social-link" href="https://wa.me/628129997697" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-          <a class="social-link" href="https://instagram.com/andrikagroup" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a class="social-link" href="https://www.andrikagroup.com" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
-        </div>
-        <div style="margin-top:28px">
-          <a class="btn btn-primary" href="Company%20Profile%20AMS.pdf" download><i class="fas fa-download"></i> Download Company Profile</a>
-        </div>
-      </div>
-      <div class="reveal reveal-delay-2">
-        <div class="contact-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.1879591!2d106.7!3d-6.28!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTYnNDguMCJTIDEwNsKwNDInMDAuMCJF!5e0!3m2!1sid!2sid!4v1234567890" allowfullscreen loading="lazy" title="Lokasi AMS"></iframe>
-        </div>
-        <div style="margin-top:20px;background:rgba(92,225,230,.08);border:1px solid rgba(92,225,230,.2);border-radius:12px;padding:24px">
-          <h4 style="font-family:var(--font);font-weight:800;color:#fff;margin-bottom:8px;font-size:16px">Ready to Protect Your Next Project?</h4>
-          <p style="font-size:14px;color:rgba(255,255,255,.65);margin-bottom:16px">Kirim pesan via WhatsApp untuk respons tercepat dari tim AMS.</p>
-          <a class="btn btn-primary" href="https://wa.me/628129997697?text=Halo%20AMS%2C%20saya%20ingin%20konsultasi%20proteksi%20kebakaran" target="_blank" rel="noopener" style="background:#25D366;border-color:#25D366"><i class="fab fa-whatsapp"></i> Chat di WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-main">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="images/logo-partner/AMS.png" alt="AMS Logo">
-          <p>PT Andrika Mitra Solusi — spesialis proteksi kebakaran industri di Indonesia. Integrity & Competency dalam setiap solusi.</p>
-          <div style="margin-top:16px" class="footer-cert-badges">
-            <span class="cert-badge">NFPA</span>
-            <span class="cert-badge">ISO</span>
-            <span class="cert-badge">SNI</span>
-            <span class="cert-badge">FM</span>
-            <span class="cert-badge">UL</span>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h5>Layanan</h5>
-          <a href="#products">Fire Detection & Alarm</a>
-          <a href="#products">Fire Suppression</a>
-          <a href="#products">Hydrant & Pump</a>
-          <a href="#products">Sprinkler Systems</a>
-          <a href="#tailormade">Tailor-Made Solutions</a>
-        </div>
-        <div class="footer-col">
-          <h5>Perusahaan</h5>
-          <a href="#about">Tentang Kami</a>
-          <a href="#vision">Visi & Misi</a>
-          <a href="#values">Nilai Perusahaan</a>
-          <a href="#sectors">Sektor</a>
-          <a href="#partners">Partner Global</a>
-        </div>
-        <div class="footer-col">
-          <h5>Kontak</h5>
-          <a href="tel:+622135297697">+6221-352-97697</a>
-          <a href="tel:+628129997697">+6281-2999-97697</a>
-          <a href="mailto:sales@andrikagroup.com">sales@andrikagroup.com</a>
-          <a href="https://www.andrikagroup.com" target="_blank">andrikagroup.com</a>
-          <a href="Company%20Profile%20AMS.pdf" download><i class="fas fa-download" style="margin-right:6px"></i>Download Compro</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="footer-bottom">
-      <span>© 2025 PT Andrika Mitra Solusi. All rights reserved.</span>
-      <div class="footer-bottom-links">
-        <span style="color:rgba(255,255,255,.3)">Tangerang Selatan, Indonesia</span>
-        <span style="color:rgba(255,255,255,.3)">Integrity & Competency</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- WHATSAPP FLOATING -->
-<a class="wa-float" href="https://wa.me/628129997697?text=Halo%20AMS%2C%20saya%20ingin%20konsultasi%20proteksi%20kebakaran" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-  <div class="wa-pulse"></div>
-</a>
-
+<!-- SUPABASE JS CLIENT -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-// Slider Deteksi & Alarm
-var daIndex = 0;
-var daTotalSlides = 16;
-function daSlide(dir) {
-  daIndex = (daIndex + dir + daTotalSlides) % daTotalSlides;
-  var slider = document.getElementById('da-slider');
-  slider.style.transition = 'transform .3s ease';
-  slider.style.transform = 'translateX(-' + (daIndex * 100) + '%)';
-  document.getElementById('da-counter').textContent = (daIndex + 1) + ' / ' + daTotalSlides;
-}
-// Slider Fire Suppression Systems
-var fssIndex = 0;
-var fssTotalSlides = 4;
-function fssSlide(dir) {
-  fssIndex = (fssIndex + dir + fssTotalSlides) % fssTotalSlides;
-  var slider = document.getElementById('fss-slider');
-  slider.style.transition = 'transform .3s ease';
-  slider.style.transform = 'translateX(-' + (fssIndex * 100) + '%)';
-  document.getElementById('fss-counter').textContent = (fssIndex + 1) + ' / ' + fssTotalSlides;
-}
-// Slider Hydrant & Pump Systems
-var hydIndex = 0;
-var hydTotalSlides = 4;
-function hydSlide(dir) {
-  hydIndex = (hydIndex + dir + hydTotalSlides) % hydTotalSlides;
-  var slider = document.getElementById('hyd-slider');
-  slider.style.transition = 'transform .3s ease';
-  slider.style.transform = 'translateX(-' + (hydIndex * 100) + '%)';
-  document.getElementById('hyd-counter').textContent = (hydIndex + 1) + ' / ' + hydTotalSlides;
-}
-// Slider Sprinkler Systems
-var sprIndex = 0;
-var sprTotalSlides = 11;
-function sprSlide(dir) {
-  sprIndex = (sprIndex + dir + sprTotalSlides) % sprTotalSlides;
-  var slider = document.getElementById('spr-slider');
-  slider.style.transition = 'transform .3s ease';
-  slider.style.transform = 'translateX(-' + (sprIndex * 100) + '%)';
-  document.getElementById('spr-counter').textContent = (sprIndex + 1) + ' / ' + sprTotalSlides;
-}
-// Carousel Solusi Khusus (vehicle, kitchen, clean, mist, foam, heavy)
-var khususCarousels = ['vehicle', 'kitchen', 'clean', 'mist', 'foam', 'heavy'];
-khususCarousels.forEach(function (name) {
-  var root = document.getElementById(name + '-carousel');
-  if (!root) return;
-  var track = root.querySelector('.khusus-track');
-  var imgs = track.querySelectorAll('img');
-  var total = imgs.length;
-  var dotsWrap = root.parentElement.querySelector('.khusus-dots');
-  var index = 0;
-  var timer = null;
+  // ============================================
+  // GANTI DUA BARIS DI BAWAH INI DENGAN DATA SUPABASE KAMU
+  // ============================================
+  const supabaseUrl = "https://xcmpsmydlgtvegqtokez.supabase.co";
+  const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhjbXBzbXlkbGd0dmVncXRva2V6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE4NTI1NjAsImV4cCI6MjA5NzQyODU2MH0.opac4K11jP9O85PqsZV5BWD08oaaZ2OehQrvp2R_wsY";
+  // ============================================
 
-  function goTo(i) {
-    index = (i + total) % total;
-    track.style.transform = 'translateX(-' + (index * 100) + '%)';
-    if (dotsWrap) {
-      var dots = dotsWrap.querySelectorAll('.khusus-dot');
-      dots.forEach(function (d, di) { d.classList.toggle('active', di === index); });
-    }
+  const supabase = window.supabase.createClient(supabaseUrl, supabaseAnonKey);
+
+  const overlay = document.getElementById("overlay");
+  const closeBtn = document.getElementById("closePopup");
+  const form = document.getElementById("subscribeForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const messageBox = document.getElementById("formMessage");
+
+  // Tampilkan popup saat halaman dibuka
+  window.addEventListener("load", () => {
+    overlay.classList.remove("hidden");
+  });
+
+  // Tutup popup saat tombol X diklik
+  closeBtn.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+  });
+
+  // Tutup popup jika klik area gelap di luar kotak
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) overlay.classList.add("hidden");
+  });
+
+  function showMessage(text, type) {
+    messageBox.textContent = text;
+    messageBox.className = "form-message show " + type;
   }
-  function next() { goTo(index + 1); }
-  function prev() { goTo(index - 1); }
-  function resetAutoplay() { clearInterval(timer); timer = setInterval(next, 3000); }
 
-  if (dotsWrap) {
-    for (var i = 0; i < total; i++) {
-      var dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'khusus-dot' + (i === 0 ? ' active' : '');
-      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
-      (function (idx) {
-        dot.addEventListener('click', function () { goTo(idx); resetAutoplay(); });
-      })(i);
-      dotsWrap.appendChild(dot);
+  // Submit form -> kirim data ke Supabase
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.getElementById("email").value.trim();
+    const firstName = document.getElementById("firstName").value.trim();
+    const lastName = document.getElementById("lastName").value.trim();
+
+    if (!email) {
+      showMessage("Email wajib diisi.", "error");
+      return;
     }
-  }
-  var prevBtn = root.querySelector('.khusus-prev');
-  var nextBtn = root.querySelector('.khusus-next');
-  if (prevBtn) prevBtn.addEventListener('click', function () { prev(); resetAutoplay(); });
-  if (nextBtn) nextBtn.addEventListener('click', function () { next(); resetAutoplay(); });
 
-  resetAutoplay();
-});
-// Header scroll
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 40);
-});
-// Hamburger
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const mobilePanel = document.getElementById('mobilePanel');
-const scrim = document.getElementById('scrim');
-const closeMobile = document.getElementById('closeMobile');
-function openMobile() { mobilePanel.style.display='block'; requestAnimationFrame(() => mobilePanel.classList.add('open')); scrim.classList.add('show'); }
-function closeMobileMenu() { mobilePanel.classList.remove('open'); scrim.classList.remove('show'); setTimeout(() => { mobilePanel.style.display='none'; }, 320); }
-hamburgerBtn.addEventListener('click', openMobile);
-closeMobile.addEventListener('click', closeMobileMenu);
-scrim.addEventListener('click', closeMobileMenu);
-document.querySelectorAll('.mobile-panel a').forEach(a => a.addEventListener('click', closeMobileMenu));
-// Reveal on scroll
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Mengirim...";
+
+    const { error } = await supabase.from("subscribers").insert([
+      {
+        email: email,
+        first_name: firstName,
+        last_name: lastName,
+        is_active: true
+      }
+    ]);
+
+    submitBtn.disabled = false;
+    submitBtn.textContent = "🧯 Safety First – I'm In!";
+
+    if (error) {
+      console.error(error);
+      showMessage("Gagal mendaftar. Coba lagi ya. (" + error.message + ")", "error");
+      return;
+    }
+
+    showMessage("Berhasil! Terima kasih sudah subscribe 🎉", "success");
+    form.reset();
+    setTimeout(() => overlay.classList.add("hidden"), 1500);
+  });
 </script>
+
 </body>
 </html>
