@@ -198,117 +198,19 @@ nav.main-nav a:hover::after { width: 100%; }
 .tailor-card { border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 4/3; cursor: default; }
 .tailor-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
 .tailor-card:hover img { transform: scale(1.08); }
-.tailor-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,35,64,.9) 0%, transparent 55%); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; }
+.tailor-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,35,64,.9) 0%, transparent 55%); display: flex; flex-direction: column; justify-content: flex-end; padding: 20px; pointer-events: none; }
 .tailor-overlay h4 { font-size: 14px; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: .05em; margin-bottom: 4px; }
 .tailor-overlay p { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.5; }
-.vehicle-slider { position: absolute; inset: 0; }
-.vehicle-slider img { position: absolute; inset: 0; opacity: 0; animation: vehicleFade 36s infinite; }
-.vehicle-slider img:nth-child(1) { animation-delay: 0s; }
-.vehicle-slider img:nth-child(2) { animation-delay: 3s; }
-.vehicle-slider img:nth-child(3) { animation-delay: 6s; }
-.vehicle-slider img:nth-child(4) { animation-delay: 9s; }
-.vehicle-slider img:nth-child(5) { animation-delay: 12s; }
-.vehicle-slider img:nth-child(6) { animation-delay: 15s; }
-.vehicle-slider img:nth-child(7) { animation-delay: 18s; }
-.vehicle-slider img:nth-child(8) { animation-delay: 21s; }
-.vehicle-slider img:nth-child(9) { animation-delay: 24s; }
-.vehicle-slider img:nth-child(10) { animation-delay: 27s; }
-.vehicle-slider img:nth-child(11) { animation-delay: 30s; }
-.vehicle-slider img:nth-child(12) { animation-delay: 33s; }
-.kitchen-slider { position: absolute; inset: 0; }
-.kitchen-slider img { position: absolute; inset: 0; opacity: 0; animation: kitchenFade 12s infinite; }
-.kitchen-slider img:nth-child(1) { animation-delay: 0s; }
-.kitchen-slider img:nth-child(2) { animation-delay: 3s; }
-.kitchen-slider img:nth-child(3) { animation-delay: 6s; }
-.kitchen-slider img:nth-child(4) { animation-delay: 9s; }
-.clean-slider { position: absolute; inset: 0; }
-.clean-slider img { position: absolute; inset: 0; opacity: 0; animation: cleanFade 27s infinite; }
-.clean-slider img:nth-child(1) { animation-delay: 0s; }
-.clean-slider img:nth-child(2) { animation-delay: 3s; }
-.clean-slider img:nth-child(3) { animation-delay: 6s; }
-.clean-slider img:nth-child(4) { animation-delay: 9s; }
-.clean-slider img:nth-child(5) { animation-delay: 12s; }
-.clean-slider img:nth-child(6) { animation-delay: 15s; }
-.clean-slider img:nth-child(7) { animation-delay: 18s; }
-.clean-slider img:nth-child(8) { animation-delay: 21s; }
-.clean-slider img:nth-child(9) { animation-delay: 24s; }
-.mist-slider { position: absolute; inset: 0; }
-.mist-slider img { position: absolute; inset: 0; opacity: 0; animation: mistFade 15s infinite; }
-.mist-slider img:nth-child(1) { animation-delay: 0s; }
-.mist-slider img:nth-child(2) { animation-delay: 3s; }
-.mist-slider img:nth-child(3) { animation-delay: 6s; }
-.mist-slider img:nth-child(4) { animation-delay: 9s; }
-.mist-slider img:nth-child(5) { animation-delay: 12s; }
-.foam-slider { position: absolute; inset: 0; }
-.foam-slider img { position: absolute; inset: 0; opacity: 0; animation: foamFade 39s infinite; }
-.foam-slider img:nth-child(1) { animation-delay: 0s; }
-.foam-slider img:nth-child(2) { animation-delay: 3s; }
-.foam-slider img:nth-child(3) { animation-delay: 6s; }
-.foam-slider img:nth-child(4) { animation-delay: 9s; }
-.foam-slider img:nth-child(5) { animation-delay: 12s; }
-.foam-slider img:nth-child(6) { animation-delay: 15s; }
-.foam-slider img:nth-child(7) { animation-delay: 18s; }
-.foam-slider img:nth-child(8) { animation-delay: 21s; }
-.foam-slider img:nth-child(9) { animation-delay: 24s; }
-.foam-slider img:nth-child(10) { animation-delay: 27s; }
-.foam-slider img:nth-child(11) { animation-delay: 30s; }
-.foam-slider img:nth-child(12) { animation-delay: 33s; }
-.foam-slider img:nth-child(13) { animation-delay: 36s; }
-.heavy-slider { position: absolute; inset: 0; }
-.heavy-slider img { position: absolute; inset: 0; opacity: 0; animation: heavyFade 33s infinite; }
-.heavy-slider img:nth-child(1) { animation-delay: 0s; }
-.heavy-slider img:nth-child(2) { animation-delay: 3s; }
-.heavy-slider img:nth-child(3) { animation-delay: 6s; }
-.heavy-slider img:nth-child(4) { animation-delay: 9s; }
-.heavy-slider img:nth-child(5) { animation-delay: 12s; }
-.heavy-slider img:nth-child(6) { animation-delay: 15s; }
-.heavy-slider img:nth-child(7) { animation-delay: 18s; }
-.heavy-slider img:nth-child(8) { animation-delay: 21s; }
-.heavy-slider img:nth-child(9) { animation-delay: 24s; }
-.heavy-slider img:nth-child(10) { animation-delay: 27s; }
-.heavy-slider img:nth-child(11) { animation-delay: 30s; }
-@keyframes heavyFade {
-  0% { opacity: 0; }
-  1.5% { opacity: 1; }
-  7.5% { opacity: 1; }
-  9% { opacity: 0; }
-  100% { opacity: 0; }
-}
-@keyframes foamFade {
-  0% { opacity: 0; }
-  1.3% { opacity: 1; }
-  6.5% { opacity: 1; }
-  7.7% { opacity: 0; }
-  100% { opacity: 0; }
-}
-@keyframes mistFade {
-  0% { opacity: 0; }
-  3.5% { opacity: 1; }
-  17% { opacity: 1; }
-  19.5% { opacity: 0; }
-  100% { opacity: 0; }
-}
-@keyframes cleanFade {
-  0% { opacity: 0; }
-  2% { opacity: 1; }
-  9.5% { opacity: 1; }
-  11% { opacity: 0; }
-  100% { opacity: 0; }
-}
-@keyframes kitchenFade {
-  0% { opacity: 0; }
-  4.5% { opacity: 1; }
-  21% { opacity: 1; }
-  24.5% { opacity: 0; }
-  100% { opacity: 0; }
-}
-@keyframes vehicleFade {
-  0% { opacity: 0; }
-  1.5% { opacity: 1; }
-  7% { opacity: 1; }
-  8.3% { opacity: 0; }
-  100% { opacity: 0; }
-}
+.vehicle-slider, .kitchen-slider, .clean-slider, .mist-slider, .foam-slider, .heavy-slider { position: absolute; inset: 0; overflow: hidden; }
+.vehicle-slider .khusus-track, .kitchen-slider .khusus-track, .clean-slider .khusus-track, .mist-slider .khusus-track, .foam-slider .khusus-track, .heavy-slider .khusus-track { display: flex; width: 100%; height: 100%; transition: transform .5s ease; }
+.vehicle-slider img, .kitchen-slider img, .clean-slider img, .mist-slider img, .foam-slider img, .heavy-slider img { flex: 0 0 100%; width: 100%; height: 100%; object-fit: cover; }
+.khusus-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(13,35,64,.65); border: none; color: #fff; width: 30px; height: 30px; border-radius: 50%; font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 5; transition: background .2s; }
+.khusus-arrow:hover { background: rgba(92,225,230,.85); }
+.khusus-prev { left: 8px; }
+.khusus-next { right: 8px; }
+.khusus-dots { display: flex; gap: 6px; justify-content: center; position: relative; z-index: 5; margin-bottom: 10px; pointer-events: auto; }
+.khusus-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,.45); border: none; padding: 0; cursor: pointer; transition: all .2s; }
+.khusus-dot.active { background: var(--teal); width: 18px; border-radius: 4px; }
 
 /* ── BUSINESS DEVELOPMENT ── */
 .process-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; margin-bottom: 48px; }
@@ -731,103 +633,133 @@ footer { background: #07111f; color: rgba(255,255,255,.6); }
     </div>
     <div class="tailor-grid reveal">
       <div class="tailor-card">
-        <div class="vehicle-slider">
-          <img src="images/produk/vehicle/1.jpg" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/2.webp" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/3.webp" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/4.jpg" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/5.jpg" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/6.jpg" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/th%20(1).webp" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/th%20(2).webp" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/th%20(3).webp" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/th%20(4).webp" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/th%20(5).webp" alt="Vehicle Fire Suppression" loading="lazy">
-          <img src="images/produk/vehicle/th.webp" alt="Vehicle Fire Suppression" loading="lazy">
+        <div class="vehicle-slider" id="vehicle-carousel">
+          <div class="khusus-track">
+            <img src="images/produk/vehicle/1.jpg" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/2.webp" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/3.webp" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/4.jpg" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/5.jpg" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/6.jpg" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/th%20(1).webp" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/th%20(2).webp" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/th%20(3).webp" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/th%20(4).webp" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/th%20(5).webp" alt="Vehicle Fire Suppression" loading="lazy">
+            <img src="images/produk/vehicle/th.webp" alt="Vehicle Fire Suppression" loading="lazy">
+          </div>
+          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
+          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
         </div>
         <div class="tailor-overlay">
+          <div class="khusus-dots"></div>
           <h4>Vehicle Fire Suppression</h4>
           <p>Perlindungan andal untuk kendaraan dan peralatan mobile.</p>
         </div>
       </div>
       <div class="tailor-card">
-        <div class="kitchen-slider">
-          <img src="images/produk/kitchen/1.jpg" alt="Kitchen Protection" loading="lazy">
-          <img src="images/produk/kitchen/2.jpg" alt="Kitchen Protection" loading="lazy">
-          <img src="images/produk/kitchen/3.jpg" alt="Kitchen Protection" loading="lazy">
-          <img src="images/produk/kitchen/4.jpg" alt="Kitchen Protection" loading="lazy">
+        <div class="kitchen-slider" id="kitchen-carousel">
+          <div class="khusus-track">
+            <img src="images/produk/kitchen/1.jpg" alt="Kitchen Protection" loading="lazy">
+            <img src="images/produk/kitchen/2.jpg" alt="Kitchen Protection" loading="lazy">
+            <img src="images/produk/kitchen/3.jpg" alt="Kitchen Protection" loading="lazy">
+            <img src="images/produk/kitchen/4.jpg" alt="Kitchen Protection" loading="lazy">
+          </div>
+          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
+          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
         </div>
         <div class="tailor-overlay">
+          <div class="khusus-dots"></div>
           <h4>Kitchen Protection Systems</h4>
           <p>Suppression dapur komersial dengan respons cepat dan aman.</p>
         </div>
       </div>
       <div class="tailor-card">
-        <div class="clean-slider">
-          <img src="images/produk/Clean%20Agent/1.jpg" alt="Server Room Clean Agent" loading="lazy">
-          <img src="images/produk/Clean%20Agent/2.webp" alt="Server Room Clean Agent" loading="lazy">
-          <img src="images/produk/Clean%20Agent/3.webp" alt="Server Room Clean Agent" loading="lazy">
-          <img src="images/produk/Clean%20Agent/4.webp" alt="Server Room Clean Agent" loading="lazy">
-          <img src="images/produk/Clean%20Agent/5.jpg" alt="Server Room Clean Agent" loading="lazy">
-          <img src="images/produk/Clean%20Agent/6.jpg" alt="Server Room Clean Agent" loading="lazy">
-          <img src="images/produk/Clean%20Agent/7.webp" alt="Server Room Clean Agent" loading="lazy">
-          <img src="images/produk/Clean%20Agent/8.webp" alt="Server Room Clean Agent" loading="lazy">
-          <img src="images/produk/Clean%20Agent/9.webp" alt="Server Room Clean Agent" loading="lazy">
+        <div class="clean-slider" id="clean-carousel">
+          <div class="khusus-track">
+            <img src="images/produk/Clean%20Agent/1.jpg" alt="Server Room Clean Agent" loading="lazy">
+            <img src="images/produk/Clean%20Agent/2.webp" alt="Server Room Clean Agent" loading="lazy">
+            <img src="images/produk/Clean%20Agent/3.webp" alt="Server Room Clean Agent" loading="lazy">
+            <img src="images/produk/Clean%20Agent/4.webp" alt="Server Room Clean Agent" loading="lazy">
+            <img src="images/produk/Clean%20Agent/5.jpg" alt="Server Room Clean Agent" loading="lazy">
+            <img src="images/produk/Clean%20Agent/6.jpg" alt="Server Room Clean Agent" loading="lazy">
+            <img src="images/produk/Clean%20Agent/7.webp" alt="Server Room Clean Agent" loading="lazy">
+            <img src="images/produk/Clean%20Agent/8.webp" alt="Server Room Clean Agent" loading="lazy">
+            <img src="images/produk/Clean%20Agent/9.webp" alt="Server Room Clean Agent" loading="lazy">
+          </div>
+          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
+          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
         </div>
         <div class="tailor-overlay">
+          <div class="khusus-dots"></div>
           <h4>Server Room & Clean Agent</h4>
           <p>Sistem clean agent untuk melindungi infrastruktur IT kritis.</p>
         </div>
       </div>
       <div class="tailor-card">
-        <div class="mist-slider">
-          <img src="images/produk/water%20mist/1.jpg" alt="Water Mist Systems" loading="lazy">
-          <img src="images/produk/water%20mist/2.jpg" alt="Water Mist Systems" loading="lazy">
-          <img src="images/produk/water%20mist/3.jpg" alt="Water Mist Systems" loading="lazy">
-          <img src="images/produk/water%20mist/4.jpg" alt="Water Mist Systems" loading="lazy">
-          <img src="images/produk/water%20mist/5.webp" alt="Water Mist Systems" loading="lazy">
+        <div class="mist-slider" id="mist-carousel">
+          <div class="khusus-track">
+            <img src="images/produk/water%20mist/1.jpg" alt="Water Mist Systems" loading="lazy">
+            <img src="images/produk/water%20mist/2.jpg" alt="Water Mist Systems" loading="lazy">
+            <img src="images/produk/water%20mist/3.jpg" alt="Water Mist Systems" loading="lazy">
+            <img src="images/produk/water%20mist/4.jpg" alt="Water Mist Systems" loading="lazy">
+            <img src="images/produk/water%20mist/5.webp" alt="Water Mist Systems" loading="lazy">
+          </div>
+          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
+          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
         </div>
         <div class="tailor-overlay">
+          <div class="khusus-dots"></div>
           <h4>Water Mist Systems</h4>
           <p>Teknologi kabut air mengurangi panas dan meminimalkan kerusakan.</p>
         </div>
       </div>
       <div class="tailor-card">
-        <div class="foam-slider">
-          <img src="images/produk/Foam%20System/1.webp" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/2.jpg" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/3.jpg" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/4.jpg" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/5.webp" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/6.jpeg" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/7.webp" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/8.webp" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/9.jpg" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/10.webp" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/12.jpg" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/13.jpg" alt="Foam Systems" loading="lazy">
-          <img src="images/produk/Foam%20System/14.webp" alt="Foam Systems" loading="lazy">
+        <div class="foam-slider" id="foam-carousel">
+          <div class="khusus-track">
+            <img src="images/produk/Foam%20System/1.webp" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/2.jpg" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/3.jpg" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/4.jpg" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/5.webp" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/6.jpeg" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/7.webp" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/8.webp" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/9.jpg" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/10.webp" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/12.jpg" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/13.jpg" alt="Foam Systems" loading="lazy">
+            <img src="images/produk/Foam%20System/14.webp" alt="Foam Systems" loading="lazy">
+          </div>
+          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
+          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
         </div>
         <div class="tailor-overlay">
+          <div class="khusus-dots"></div>
           <h4>Foam Systems</h4>
           <p>Sistem busa performa tinggi untuk bahaya api cairan mudah terbakar.</p>
         </div>
       </div>
       <div class="tailor-card">
-        <div class="heavy-slider">
-          <img src="images/produk/Heavy/1.webp" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/2.webp" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/3.jpg" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/4.webp" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/5.jpg" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/6.webp" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/7.jpg" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/8.jpg" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/9.jpg" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/10.jpg" alt="Heavy Equipment Protection" loading="lazy">
-          <img src="images/produk/Heavy/12.webp" alt="Heavy Equipment Protection" loading="lazy">
+        <div class="heavy-slider" id="heavy-carousel">
+          <div class="khusus-track">
+            <img src="images/produk/Heavy/1.webp" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/2.webp" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/3.jpg" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/4.webp" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/5.jpg" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/6.webp" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/7.jpg" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/8.jpg" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/9.jpg" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/10.jpg" alt="Heavy Equipment Protection" loading="lazy">
+            <img src="images/produk/Heavy/12.webp" alt="Heavy Equipment Protection" loading="lazy">
+          </div>
+          <button type="button" class="khusus-arrow khusus-prev" aria-label="Sebelumnya">&#8249;</button>
+          <button type="button" class="khusus-arrow khusus-next" aria-label="Berikutnya">&#8250;</button>
         </div>
         <div class="tailor-overlay">
+          <div class="khusus-dots"></div>
           <h4>Heavy Equipment Protection</h4>
           <p>Proteksi khusus peralatan berat di lingkungan industri terkeras.</p>
         </div>
@@ -1110,6 +1042,49 @@ function sprSlide(dir) {
   slider.style.transform = 'translateX(-' + (sprIndex * 100) + '%)';
   document.getElementById('spr-counter').textContent = (sprIndex + 1) + ' / ' + sprTotalSlides;
 }
+// Carousel Solusi Khusus (vehicle, kitchen, clean, mist, foam, heavy)
+var khususCarousels = ['vehicle', 'kitchen', 'clean', 'mist', 'foam', 'heavy'];
+khususCarousels.forEach(function (name) {
+  var root = document.getElementById(name + '-carousel');
+  if (!root) return;
+  var track = root.querySelector('.khusus-track');
+  var imgs = track.querySelectorAll('img');
+  var total = imgs.length;
+  var dotsWrap = root.parentElement.querySelector('.khusus-dots');
+  var index = 0;
+  var timer = null;
+
+  function goTo(i) {
+    index = (i + total) % total;
+    track.style.transform = 'translateX(-' + (index * 100) + '%)';
+    if (dotsWrap) {
+      var dots = dotsWrap.querySelectorAll('.khusus-dot');
+      dots.forEach(function (d, di) { d.classList.toggle('active', di === index); });
+    }
+  }
+  function next() { goTo(index + 1); }
+  function prev() { goTo(index - 1); }
+  function resetAutoplay() { clearInterval(timer); timer = setInterval(next, 3000); }
+
+  if (dotsWrap) {
+    for (var i = 0; i < total; i++) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'khusus-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Slide ' + (i + 1));
+      (function (idx) {
+        dot.addEventListener('click', function () { goTo(idx); resetAutoplay(); });
+      })(i);
+      dotsWrap.appendChild(dot);
+    }
+  }
+  var prevBtn = root.querySelector('.khusus-prev');
+  var nextBtn = root.querySelector('.khusus-next');
+  if (prevBtn) prevBtn.addEventListener('click', function () { prev(); resetAutoplay(); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { next(); resetAutoplay(); });
+
+  resetAutoplay();
+});
 // Header scroll
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
