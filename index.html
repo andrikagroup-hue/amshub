@@ -155,15 +155,15 @@ nav.main-nav a:hover::before { opacity: 1; }
 .bg-navy { background: var(--teal-darker); color: #fff; }
 .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 @media (max-width: 768px) { .vm-grid { grid-template-columns: 1fr; gap: 28px; } }
-.vm-card { background: var(--navy-soft); border: 1px solid rgba(247,126,45,0.22); box-shadow: 0 8px 32px rgba(0,0,0,0.25); padding: 32px; position: relative; transition: all .25s; }
+.vm-card { background: #f3f4f6; border: 1px solid rgba(247,126,45,0.22); box-shadow: 0 8px 32px rgba(0,0,0,0.18); padding: 32px; position: relative; transition: all .25s; }
 .vm-card:hover { border-color: var(--orange); transform: translateY(-3px); box-shadow: 0 14px 40px rgba(247,126,45,0.18); }
 .vm-card::before { content: ""; position: absolute; top: 0; left: 0; width: 26px; height: 2px; background: var(--orange); }
 .vm-icon { width: 48px; height: 48px; background: rgba(247,126,45,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
 .vm-icon i { font-size: 20px; color: var(--orange); }
-.vm-card h3 { font-family: var(--font); font-size: 19px; font-weight: 700; color: #fff; margin-bottom: 14px; }
-.vm-card p { font-size: 14px; color: rgba(255,255,255,.68); line-height: 1.75; }
+.vm-card h3 { font-family: var(--font); font-size: 19px; font-weight: 700; color: #14213d; margin-bottom: 14px; }
+.vm-card p { font-size: 14px; color: rgba(20,33,61,.72); line-height: 1.75; }
 .vm-mission-list { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
-.vm-mission-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: rgba(255,255,255,.68); }
+.vm-mission-item { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: rgba(20,33,61,.72); }
 .vm-mission-item i { color: var(--orange); font-size: 16px; margin-top: 3px; flex-shrink: 0; }
 /* ── COMMITMENT BADGE ── */
 .about-commitment-badge { position: absolute; bottom: -18px; left: 16px; right: 16px; background: #fff; padding: 12px 16px; box-shadow: 0 8px 32px rgba(15,21,27,0.16); border: 1px solid var(--line); border-left: 3px solid var(--teal); }
