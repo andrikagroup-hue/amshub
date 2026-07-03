@@ -125,9 +125,8 @@ nav.main-nav a:hover::before { opacity: 1; }
 .section { padding: 72px 0; }
 @media (max-width: 768px) { .section { padding: 48px 0; } }
 .section-header { text-align: center; margin-bottom: 44px; }
-.eyebrow { counter-increment: panel; display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 14px; }
-.eyebrow::before { content: "PANEL " counter(panel, decimal-leading-zero); border: 1px solid var(--teal-darker); padding: 3px 8px; }
-.bg-navy .eyebrow::before, .bg-navy .eyebrow { color: var(--teal); border-color: var(--teal); }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 14px; }
+.bg-navy .eyebrow { color: var(--teal); }
 .section-title { font-family: var(--font); font-size: clamp(22px,3vw,36px); font-weight: 700; letter-spacing: -.01em; color: var(--navy); margin-bottom: 12px; }
 .section-title em { font-style: normal; color: var(--teal-darker); }
 .bg-navy .section-title em { color: var(--teal); }
