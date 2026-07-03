@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 :root {
@@ -30,9 +30,9 @@
   --line: #dbe1e4;
   --white: #ffffff;
   --paper: #f5f7f7;
-  --font: 'Space Grotesk', sans-serif;
+  --font: 'Inter', sans-serif;
   --font-b: 'IBM Plex Sans', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-mono: 'Inter', sans-serif;
   --shadow: 0 10px 40px rgba(15,21,27,0.12);
   --shadow-dark: 0 20px 60px rgba(15,21,27,0.35);
   --radius: 3px;
@@ -63,7 +63,6 @@ button { font-family: inherit; cursor: pointer; border: none; }
 
 /* ── HEADER ── */
 #header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 14px 0; transition: all .3s ease; background: var(--white); border-bottom: 1px solid var(--teal-light); }
-#header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 3px; background: repeating-linear-gradient(90deg, var(--teal) 0 10px, transparent 10px 20px); opacity: .7; }
 #header.scrolled { background: var(--white); box-shadow: 0 4px 24px rgba(92,225,230,.25); padding: 9px 0; border-bottom-color: var(--teal); }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 12px; }
@@ -95,7 +94,7 @@ nav.main-nav a:hover::before { opacity: 1; }
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
 .hero-bg img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(15,21,27,.55) 0%, rgba(15,21,27,.15) 42%, transparent 60%); }
-.hero-overlay-box { position: relative; z-index: 2; max-width: 560px; background: rgba(255,255,255,.93); backdrop-filter: blur(6px); border-left: 5px solid var(--teal); padding: 40px 44px; margin-top: 9vh; box-shadow: 0 20px 60px rgba(15,21,27,.25); }
+.hero-overlay-box { position: relative; z-index: 2; max-width: 560px; background: rgba(255,255,255,.58); backdrop-filter: blur(3px); border-left: 5px solid var(--teal); padding: 40px 44px; margin-top: 9vh; box-shadow: 0 20px 60px rgba(15,21,27,.15); }
 @media (max-width: 640px) { .hero-overlay-box { padding: 28px 24px; margin-top: 6vh; max-width: 92%; } }
 .hero-badge { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); border: 1px solid var(--teal); background: var(--white); padding: 7px 14px; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 22px; }
 .hero-badge .dot { width: 7px; height: 7px; background: var(--teal); border-radius: 50%; box-shadow: 0 0 8px var(--teal); animation: dotpulse 2s infinite; }
@@ -118,11 +117,12 @@ nav.main-nav a:hover::before { opacity: 1; }
 .spec-frame .corner.bl { bottom: 0; left: 0; border-bottom: 2px solid var(--teal-darker); border-left: 2px solid var(--teal-darker); }
 .spec-frame .corner.br { bottom: 0; right: 0; border-bottom: 2px solid var(--teal-darker); border-right: 2px solid var(--teal-darker); }
 .spec-tag { position: absolute; left: 30px; bottom: 30px; background: var(--white); color: var(--teal-darker); font-family: var(--font-mono); font-size: 10px; letter-spacing: .07em; text-transform: uppercase; padding: 7px 12px; border: 1px solid var(--teal); }
-.hero-strip { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 100%); padding: 30px 0; }
-.hero-strip-inner { max-width: 1240px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; gap: 60px; }
-.hero-strip-inner h3 { flex-shrink: 0; font-size: 21px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: .03em; }
-.hero-strip-inner p { font-size: 14px; font-weight: 500; color: var(--navy); line-height: 1.6; }
-@media (max-width: 760px) { .hero-strip-inner { flex-direction: column; align-items: flex-start; gap: 10px; padding: 0 20px; } }
+.hero-strip { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; background: linear-gradient(90deg, var(--teal) 0%, var(--teal-light) 100%); padding: 26px 0; }
+.hero-strip-inner { max-width: 1240px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.hero-strip-inner p { max-width: 760px; text-align: left; font-size: 14px; font-weight: 500; color: var(--navy); line-height: 1.6; margin: 0; }
+.hero-strip-badge { flex-shrink: 0; display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); border: 1px solid var(--teal); background: var(--white); padding: 7px 14px; font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--teal-darker); white-space: nowrap; }
+.hero-strip-badge .dot { width: 7px; height: 7px; background: var(--teal); border-radius: 50%; box-shadow: 0 0 8px var(--teal); flex-shrink: 0; }
+@media (max-width: 760px) { .hero-strip-inner { flex-direction: column; align-items: flex-start; gap: 14px; padding: 0 20px; } .hero-strip-inner p { text-align: left; } }
 @keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
 
 /* ── SECTION BASE ── */
@@ -452,7 +452,8 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-ctas">
-        <a class="btn btn-primary btn-sm" href="Company%20Profile%20AMS.pdf" download><i class="fas fa-download"></i> <span>Download Profile</span></a>
+        <a class="btn btn-outline-navy btn-sm" href="Katalog%20AMS.pdf" download><i class="fas fa-download"></i> <span>Catalog</span></a>
+        <a class="btn btn-primary btn-sm" href="Company%20Profile%20AMS.pdf" download><i class="fas fa-download"></i> <span>Company Profile</span></a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
       </div>
     </div>
@@ -470,7 +471,8 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
     <a href="#products">Products & Services</a>
     <a href="#partners">Global Partners</a>
     <a href="#contact">Contact</a>
-    <a href="Company%20Profile%20AMS.pdf" download style="color:var(--teal);margin-top:16px;"><i class="fas fa-download"></i> Download Company Profile</a>
+    <a href="Katalog%20AMS.pdf" download style="color:var(--teal);margin-top:16px;"><i class="fas fa-download"></i> Download Catalog</a>
+    <a href="Company%20Profile%20AMS.pdf" download style="color:var(--teal);"><i class="fas fa-download"></i> Download Company Profile</a>
   </div>
 </div>
 <div class="scrim" id="scrim"></div>
@@ -482,22 +484,12 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
   </div>
   <div class="container">
   <div class="hero-overlay-box reveal">
-    <div class="hero-badge"><span class="dot"></span> Trusted Fire Protection Partner</div>
     <h1 class="reveal reveal-delay-1"><span class="hero-title-box">Industrial &amp; <em>Tailor-Made</em> Fire Solutions</span></h1>
-    <div class="hero-ctas reveal reveal-delay-2">
-      <a class="btn btn-primary" href="#products"><i class="fas fa-fire-extinguisher"></i> View Products & Services</a>
-      <a class="btn btn-outline-navy" href="Company%20Profile%20AMS.pdf" download><i class="fas fa-download"></i> Download Profile</a>
-    </div>
-    <div class="hero-stats reveal reveal-delay-3">
-      <div class="hero-stat"><div class="hero-stat-num">28+</div><div class="hero-stat-label">Global Partners</div></div>
-      <div class="hero-stat"><div class="hero-stat-num">15+</div><div class="hero-stat-label">Industry Sectors</div></div>
-      <div class="hero-stat"><div class="hero-stat-num">5</div><div class="hero-stat-label">International Standards</div></div>
-    </div>
   </div>
   </div>
   <div class="hero-strip">
     <div class="hero-strip-inner">
-      <h3>About AMS</h3>
+      <div class="hero-strip-badge"><span class="dot"></span> Trusted Fire Protection Partner</div>
       <p>PT Andrika Mitra Solusi provides reliable fire protection systems and tailor-made safety solutions to protect lives, assets, and industrial operations across Indonesia, engineered to international standards.</p>
     </div>
   </div>
