@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artikel | PT Andrika Mitra Solusi</title>
+<meta name="description" content="Artikel dan wawasan seputar proteksi kebakaran (fire protection) dari PT Andrika Mitra Solusi (AMS).">
+<link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --teal: #59b1b5; --teal-dark: #3e999d; --teal-darker: #2a7073; --teal-light: #a0d2d4; --teal-pale: #dae6e6;
+  --orange: #f77e2d; --orange-light: #ff9a52; --orange-dark: #d9631a;
+  --navy: #0f151b; --navy-soft: #1a222b; --ink: #10161d; --steel: #48545e; --muted: #74838d; --line: #dbe1e4;
+  --white: #ffffff; --paper: #f5f7f7;
+  --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-b: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-b); color: var(--ink); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3,h4,h5 { font-family: var(--font); margin: 0; line-height: 1.1; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container { padding: 0 18px; } }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; font-family: var(--font-mono); font-weight: 600; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; clip-path: polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px); transition: all .2s ease; white-space: nowrap; cursor: pointer; border: 1px solid transparent; }
+.btn-primary { background: var(--teal); color: var(--navy); }
+.btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
+.btn-outline-navy { background: transparent; border: 1px solid var(--teal-darker); color: var(--navy); }
+.header-ctas .btn-outline-navy { border-color: var(--orange); color: var(--orange-dark); }
+.header-ctas .btn-outline-navy:hover { background: rgba(247,126,45,.08); border-color: var(--orange); color: var(--orange-dark); }
+.btn-sm { padding: 11px 18px; font-size: 11px; }
+
+/* HEADER */
+.top-accent-bar { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); z-index: 1001; }
+#header { position: fixed; top: 3px; left: 0; right: 0; z-index: 1000; padding: 14px 0; transition: all .3s ease; background: var(--white); border-bottom: 1px solid var(--teal-light); }
+#header.scrolled { background: var(--white); box-shadow: 0 4px 24px rgba(92,225,230,.25); padding: 9px 0; border-bottom-color: var(--teal); }
+#header .container { max-width: 1320px; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: nowrap; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img { height: 58px; width: 58px; object-fit: contain; transition: .3s; flex-shrink: 0; }
+#header.scrolled .brand img { height: 46px; width: 46px; }
+.brand-text { font-family: var(--font); color: var(--navy); white-space: nowrap; }
+.brand-text strong { display: block; font-size: 14px; font-weight: 700; letter-spacing: .01em; white-space: nowrap; }
+.brand-text span { display: block; font-family: var(--font-mono); font-size: 9.5px; font-weight: 500; color: var(--teal-darker); letter-spacing: .1em; text-transform: uppercase; margin-top: 2px; white-space: nowrap; }
+.brand-tagline { display: block; font-family: var(--font-mono); font-size: 9px; font-weight: 400; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-top: 1px; white-space: nowrap; }
+nav.main-nav { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+nav.main-nav a { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--steel); position: relative; padding: 4px 0; transition: color .2s; white-space: nowrap; }
+nav.main-nav a.active { color: var(--teal-darker); }
+nav.main-nav a::before { content: "· "; color: var(--teal-darker); opacity: 0; transition: opacity .2s; }
+nav.main-nav a:hover { color: var(--teal-darker); }
+nav.main-nav a:hover::before { opacity: 1; }
+.header-ctas { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.hamburger { display: none; background: none; border: none; font-size: 24px; color: var(--navy); padding: 4px; }
+.mobile-panel { display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 78%; max-width: 300px; background: var(--navy); z-index: 1100; padding: 28px; transform: translateX(110%); transition: transform .3s ease; }
+.mobile-panel.open { transform: translateX(0); display: block; }
+.mobile-panel a { display: block; padding: 14px 0; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid rgba(255,255,255,.1); color: #fff; }
+.mobile-panel a:hover { color: var(--teal); }
+.close-x { float: right; background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; margin-bottom: 20px; }
+.scrim { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 1050; }
+.scrim.show { display: block; }
+@media (max-width: 960px) { nav.main-nav { display: none; } .hamburger { display: inline-block; } }
+
+.section { padding: 72px 0; }
+@media (max-width: 768px) { .section { padding: 48px 0; } }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 14px; }
+.bg-navy .eyebrow { color: var(--teal); }
+.section-title { font-family: var(--font); font-size: clamp(22px,3vw,36px); font-weight: 700; letter-spacing: -.01em; color: var(--navy); margin-bottom: 12px; }
+.section-title em { font-style: normal; color: var(--orange); }
+.bg-navy { background: var(--navy); color: #fff; }
+
+/* ARTICLE HERO */
+.art-hero { background: var(--navy); padding: 150px 0 56px; position: relative; overflow: hidden; }
+.art-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at top right, rgba(89,177,181,.18), transparent 60%); }
+.art-hero .container { position: relative; }
+.art-hero .eyebrow { color: var(--teal); }
+.art-hero h1 { font-size: clamp(26px,3.6vw,42px); font-weight: 700; color: #fff; margin-bottom: 12px; }
+.art-hero h1 em { font-style: normal; color: var(--orange); }
+.art-hero p { font-size: 15px; color: rgba(255,255,255,.65); max-width: 600px; line-height: 1.7; }
+
+/* ARTICLE GRID */
+.art-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 12px; }
+@media (max-width: 860px) { .art-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .art-grid { grid-template-columns: 1fr; } }
+.art-card { background: var(--white); border: 1px solid var(--line); transition: all .2s; display: flex; flex-direction: column; }
+.art-card:hover { border-color: var(--teal); box-shadow: 0 12px 32px rgba(15,21,27,.1); transform: translateY(-4px); }
+.art-thumb { height: 170px; background: linear-gradient(135deg, var(--teal-darker), var(--navy)); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.art-thumb i { font-size: 46px; color: rgba(255,255,255,.35); }
+.art-thumb .art-cat-tag { position: absolute; top: 12px; left: 12px; background: var(--orange); color: #fff; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 10px; }
+.art-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+.art-date { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); margin-bottom: 8px; }
+.art-title { font-size: 16px; font-weight: 700; color: var(--navy); line-height: 1.35; margin-bottom: 10px; }
+.art-excerpt { font-size: 13px; color: var(--steel); line-height: 1.65; margin-bottom: 16px; flex: 1; }
+.art-readmore { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--teal-darker); display: inline-flex; align-items: center; gap: 6px; }
+.art-card:hover .art-readmore { color: var(--orange); }
+
+.art-empty-note { margin-top: 40px; text-align: center; background: var(--paper); border: 1px dashed var(--line); padding: 28px; font-size: 13px; color: var(--muted); }
+
+/* FOOTER */
+footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid rgba(92,225,230,.15); }
+.footer-main { padding: 48px 0 32px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
+@media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
+.footer-brand img { height: 52px; margin-bottom: 16px; }
+.footer-brand p { font-size: 14px; line-height: 1.8; max-width: 260px; }
+.footer-col h5 { font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #fff; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 16px; }
+.footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,.55); padding: 5px 0; transition: color .2s; }
+.footer-col a:hover { color: var(--teal); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer-bottom span { font-family: var(--font-mono); font-size: 12px; }
+
+.wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,.4); transition: transform .2s; }
+.wa-float:hover { transform: scale(1.1); }
+.wa-float i { font-size: 28px; color: #fff; }
+.wa-pulse { position: absolute; top: -4px; right: -4px; width: 15px; height: 15px; background: var(--teal); border-radius: 50%; border: 2px solid #fff; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.25); } }
+</style>
+</head>
+<body>
+
+<div class="top-accent-bar"></div>
+
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-partner/AMS.png" alt="AMS Logo">
+        <div class="brand-text">
+          <strong>ANDRIKA MITRA SOLUSI</strong>
+          <span>Integrity &amp; Competency</span>
+          <span class="brand-tagline">Industrial &amp; Tailor-Made Fire Solutions</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="produk.html">Shop</a>
+        <a href="artikel.html" class="active">Article</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-ctas">
+        <a class="btn btn-outline-navy btn-sm" href="index.html#contact"><i class="fas fa-headset"></i> <span>Consultation</span></a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-panel" id="mobilePanel">
+  <button class="close-x" id="closeMobile"><i class="fas fa-times"></i></button>
+  <div style="clear:both;margin-top:12px;">
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#products">Products</a>
+    <a href="produk.html">AMShop</a>
+    <a href="artikel.html" style="color:var(--teal)">Article</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<section class="art-hero">
+  <div class="container">
+    <div class="eyebrow"><i class="fas fa-newspaper"></i> Artikel</div>
+    <h1>Wawasan <em>Proteksi Kebakaran</em></h1>
+    <p>Kumpulan artikel edukatif seputar sistem proteksi kebakaran, regulasi, dan tips keselamatan dari tim AMS.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="art-grid">
+      <a class="art-card" href="artikel-fire-protection-system.html">
+        <div class="art-thumb"><span class="art-cat-tag">Edukasi</span><i class="fas fa-fire-flame-curved"></i></div>
+        <div class="art-body">
+          <div class="art-date">4 Juli 2026</div>
+          <div class="art-title">Pentingnya Sistem Proteksi Kebakaran untuk Gedung &amp; Industri</div>
+          <div class="art-excerpt">Kenali apa itu fire protection system, komponen utamanya mulai dari deteksi hingga APAR, serta alasan mengapa sistem ini wajib ada di setiap gedung dan fasilitas industri.</div>
+          <span class="art-readmore">Baca Selengkapnya <i class="fas fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+    <div class="art-empty-note"><i class="fas fa-pen-nib" style="margin-right:6px"></i>Artikel baru akan terus ditambahkan di sini secara berkala.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-partner/AMS.png" alt="AMS Logo">
+          <p>PT Andrika Mitra Solusi — industrial fire protection specialists in Indonesia. Integrity &amp; Competency in every solution.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Menu</h5>
+          <a href="index.html#about">About Us</a>
+          <a href="index.html#products">Products</a>
+          <a href="produk.html">AMShop</a>
+          <a href="artikel.html">Article</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="index.html#vision">Vision &amp; Mission</a>
+          <a href="index.html#sectors">Sectors</a>
+          <a href="index.html#partners">Global Partners</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="tel:+622135297697">+6221-352-97697</a>
+          <a href="mailto:sales@andrikagroup.com">sales@andrikagroup.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 PT Andrika Mitra Solusi. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/628129997697?text=Halo%20AMS%2C%20saya%20ingin%20konsultasi%20proteksi%20kebakaran" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <div class="wa-pulse"></div>
+</a>
+
+<script>
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobilePanel = document.getElementById('mobilePanel');
+const scrim = document.getElementById('scrim');
+const closeMobile = document.getElementById('closeMobile');
+function openMobile() { mobilePanel.style.display='block'; requestAnimationFrame(() => mobilePanel.classList.add('open')); scrim.classList.add('show'); }
+function closeMobileMenu() { mobilePanel.classList.remove('open'); scrim.classList.remove('show'); setTimeout(() => { mobilePanel.style.display='none'; }, 320); }
+hamburgerBtn.addEventListener('click', openMobile);
+closeMobile.addEventListener('click', closeMobileMenu);
+scrim.addEventListener('click', closeMobileMenu);
+document.querySelectorAll('.mobile-panel a').forEach(a => a.addEventListener('click', closeMobileMenu));
+</script>
+</body>
+</html>

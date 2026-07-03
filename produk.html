@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMShop | PT Andrika Mitra Solusi</title>
+<meta name="description" content="AMShop — katalog produk proteksi kebakaran PT Andrika Mitra Solusi (AMS). Ajukan permintaan penawaran (quotation) untuk kebutuhan fire protection Anda.">
+<link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --teal: #59b1b5;
+  --teal-dark: #3e999d;
+  --teal-darker: #2a7073;
+  --teal-light: #a0d2d4;
+  --teal-pale: #dae6e6;
+  --orange: #f77e2d;
+  --orange-light: #ff9a52;
+  --orange-dark: #d9631a;
+  --navy: #0f151b;
+  --navy-soft: #1a222b;
+  --graphite: #0f151b;
+  --graphite-2: #1a222b;
+  --ink: #10161d;
+  --steel: #48545e;
+  --muted: #74838d;
+  --line: #dbe1e4;
+  --white: #ffffff;
+  --paper: #f5f7f7;
+  --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-b: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --shadow: 0 10px 40px rgba(15,21,27,0.12);
+  --shadow-dark: 0 20px 60px rgba(15,21,27,0.35);
+  --radius: 3px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-b); color: var(--ink); background: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3,h4,h5 { font-family: var(--font); margin: 0; line-height: 1.1; }
+p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+@media (max-width: 640px) { .container { padding: 0 18px; } }
+
+/* ── BUTTONS ── */
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; font-family: var(--font-mono); font-weight: 600; font-size: 12.5px; letter-spacing: .06em; text-transform: uppercase; clip-path: polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px); transition: all .2s ease; white-space: nowrap; cursor: pointer; border: 1px solid transparent; }
+.btn-primary { background: var(--teal); color: var(--navy); }
+.btn-primary:hover { background: var(--teal-dark); transform: translateY(-2px); }
+.btn-outline-navy { background: transparent; border: 1px solid var(--teal-darker); color: var(--navy); }
+.btn-outline-navy:hover { background: var(--teal-pale); border-color: var(--teal-darker); transform: translateY(-2px); }
+.header-ctas .btn-outline-navy { border-color: var(--orange); color: var(--orange-dark); }
+.header-ctas .btn-outline-navy:hover { background: rgba(247,126,45,.08); border-color: var(--orange); color: var(--orange-dark); }
+.btn-orange { background: var(--orange); color: var(--navy); }
+.btn-orange:hover { background: var(--orange-light); transform: translateY(-2px); }
+.btn-sm { padding: 11px 18px; font-size: 11px; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+
+/* ── HEADER ── */
+.top-accent-bar { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--orange); z-index: 1001; }
+#header { position: fixed; top: 3px; left: 0; right: 0; z-index: 1000; padding: 14px 0; transition: all .3s ease; background: var(--white); border-bottom: 1px solid var(--teal-light); }
+#header.scrolled { background: var(--white); box-shadow: 0 4px 24px rgba(92,225,230,.25); padding: 9px 0; border-bottom-color: var(--teal); }
+#header .container { max-width: 1320px; }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: nowrap; }
+.brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.brand img { height: 58px; width: 58px; object-fit: contain; transition: .3s; flex-shrink: 0; }
+#header.scrolled .brand img { height: 46px; width: 46px; }
+.brand-text { font-family: var(--font); color: var(--navy); white-space: nowrap; }
+.brand-text strong { display: block; font-size: 14px; font-weight: 700; letter-spacing: .01em; white-space: nowrap; }
+.brand-text span { display: block; font-family: var(--font-mono); font-size: 9.5px; font-weight: 500; color: var(--teal-darker); letter-spacing: .1em; text-transform: uppercase; margin-top: 2px; white-space: nowrap; }
+.brand-tagline { display: block; font-family: var(--font-mono); font-size: 9px; font-weight: 400; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; margin-top: 1px; white-space: nowrap; }
+nav.main-nav { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+nav.main-nav a { font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; color: var(--steel); position: relative; padding: 4px 0; transition: color .2s; white-space: nowrap; }
+nav.main-nav a.active { color: var(--teal-darker); }
+nav.main-nav a::before { content: "· "; color: var(--teal-darker); opacity: 0; transition: opacity .2s; }
+nav.main-nav a:hover { color: var(--teal-darker); }
+nav.main-nav a:hover::before { opacity: 1; }
+.header-ctas { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.hamburger { display: none; background: none; border: none; font-size: 24px; color: var(--navy); padding: 4px; }
+.mobile-panel { display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 78%; max-width: 300px; background: var(--navy); z-index: 1100; padding: 28px; transform: translateX(110%); transition: transform .3s ease; }
+.mobile-panel.open { transform: translateX(0); display: block; }
+.mobile-panel a { display: block; padding: 14px 0; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; border-bottom: 1px solid rgba(255,255,255,.1); color: #fff; }
+.mobile-panel a:hover { color: var(--teal); }
+.close-x { float: right; background: none; border: none; color: #fff; font-size: 24px; cursor: pointer; margin-bottom: 20px; }
+.scrim { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 1050; }
+.scrim.show { display: block; }
+@media (max-width: 960px) { nav.main-nav { display: none; } .hamburger { display: inline-block; } }
+@media (max-width: 480px) { .header-ctas .btn-sm span { display: none; } .header-ctas .btn-sm { padding: 10px 14px; } }
+
+/* ── SECTION BASE ── */
+.section { padding: 72px 0; }
+@media (max-width: 768px) { .section { padding: 48px 0; } }
+.section-header { text-align: center; margin-bottom: 44px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 14px; }
+.bg-navy .eyebrow { color: var(--teal); }
+.section-title { font-family: var(--font); font-size: clamp(22px,3vw,36px); font-weight: 700; letter-spacing: -.01em; color: var(--navy); margin-bottom: 12px; }
+.section-title em { font-style: normal; color: var(--teal-darker); }
+.bg-navy .section-title em { color: var(--teal); }
+.section-lead { font-size: 15px; color: var(--steel); max-width: 620px; margin: 0 auto; line-height: 1.7; }
+.bg-navy { background: var(--teal-darker); color: #fff; }
+.bg-paper { background: var(--paper); }
+
+/* ── SHOP HERO ── */
+.shop-hero { background: var(--navy); padding: 150px 0 56px; position: relative; overflow: hidden; }
+.shop-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at top right, rgba(89,177,181,.18), transparent 60%); }
+.shop-hero .container { position: relative; }
+.shop-hero .eyebrow { color: var(--teal); }
+.shop-hero h1 { font-size: clamp(26px,3.6vw,42px); font-weight: 700; color: #fff; margin-bottom: 12px; }
+.shop-hero h1 em { font-style: normal; color: var(--orange); }
+.shop-hero p { font-size: 15px; color: rgba(255,255,255,.65); max-width: 600px; line-height: 1.7; }
+.shop-note { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; font-family: var(--font-mono); font-size: 11.5px; color: var(--teal-light); border: 1px solid rgba(92,225,230,.3); background: rgba(92,225,230,.06); padding: 9px 16px; }
+
+/* ── CATEGORY GRID ── */
+.cat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+@media (max-width: 960px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+.cat-card { background: var(--white); border: 1px solid var(--line); padding: 22px 14px; text-align: center; cursor: pointer; transition: all .2s; }
+.cat-card:hover, .cat-card.active { border-color: var(--orange); box-shadow: 0 8px 24px rgba(247,126,45,.14); transform: translateY(-3px); }
+.cat-icon { width: 46px; height: 46px; margin: 0 auto 12px; background: rgba(247,126,45,.1); display: flex; align-items: center; justify-content: center; }
+.cat-icon i { font-size: 19px; color: var(--orange); }
+.cat-card span { display: block; font-size: 12.5px; font-weight: 600; color: var(--navy); line-height: 1.3; }
+
+/* ── PRODUCT GRID ── */
+.prod-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-top: 40px; }
+@media (max-width: 960px) { .prod-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .prod-grid { grid-template-columns: 1fr 1fr; gap: 12px; } }
+.prod-card { background: var(--white); border: 1px solid var(--line); transition: all .2s; }
+.prod-card:hover { border-color: var(--teal); box-shadow: 0 10px 28px rgba(15,21,27,.08); transform: translateY(-3px); }
+.prod-thumb { height: 140px; background: var(--paper); display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--line); }
+.prod-thumb i { font-size: 40px; color: var(--teal-light); }
+.prod-body { padding: 16px; }
+.prod-cat { font-family: var(--font-mono); font-size: 9.5px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 6px; }
+.prod-name { font-size: 13.5px; font-weight: 700; color: var(--navy); line-height: 1.35; margin-bottom: 4px; min-height: 36px; }
+.prod-code { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); margin-bottom: 12px; }
+.prod-cart-btn { width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; background: var(--teal-pale); color: var(--teal-darker); font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; transition: all .2s; }
+.prod-cart-btn:hover { background: var(--teal); color: #fff; }
+.prod-cart-btn.added { background: var(--orange); color: #fff; }
+.section-more { text-align: center; margin-top: 20px; }
+
+/* ── CART FAB & DRAWER ── */
+.cart-fab { position: fixed; bottom: 28px; right: 96px; z-index: 900; width: 56px; height: 56px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(15,21,27,.35); transition: transform .2s; }
+.cart-fab:hover { transform: scale(1.08); }
+.cart-fab i { font-size: 22px; color: #fff; }
+.cart-badge { position: absolute; top: -4px; right: -4px; min-width: 20px; height: 20px; padding: 0 5px; background: var(--orange); color: #fff; border-radius: 50%; font-family: var(--font-mono); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; }
+.cart-drawer { position: fixed; top: 0; right: 0; bottom: 0; width: 92%; max-width: 380px; background: #fff; z-index: 1200; box-shadow: -10px 0 40px rgba(0,0,0,.25); transform: translateX(110%); transition: transform .3s ease; display: flex; flex-direction: column; }
+.cart-drawer.open { transform: translateX(0); }
+.cart-drawer-head { padding: 20px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: space-between; }
+.cart-drawer-head h3 { font-size: 16px; font-weight: 700; color: var(--navy); }
+.cart-drawer-head button { font-size: 20px; color: var(--muted); }
+.cart-drawer-body { flex: 1; overflow-y: auto; padding: 12px 20px; }
+.cart-empty { text-align: center; color: var(--muted); font-size: 13.5px; padding: 40px 10px; }
+.cart-empty i { font-size: 30px; color: var(--line); margin-bottom: 10px; display: block; }
+.cart-item { display: flex; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.cart-item-icon { width: 40px; height: 40px; background: var(--paper); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.cart-item-icon i { color: var(--teal-darker); font-size: 16px; }
+.cart-item-info { flex: 1; min-width: 0; }
+.cart-item-info strong { display: block; font-size: 12.5px; color: var(--navy); line-height: 1.3; }
+.cart-item-qty { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+.cart-item-qty button { width: 22px; height: 22px; background: var(--paper); border: 1px solid var(--line); font-size: 13px; color: var(--navy); display: flex; align-items: center; justify-content: center; }
+.cart-item-qty span { font-family: var(--font-mono); font-size: 12.5px; min-width: 16px; text-align: center; }
+.cart-item-remove { color: var(--muted); font-size: 14px; padding: 4px; flex-shrink: 0; }
+.cart-item-remove:hover { color: var(--orange); }
+.cart-drawer-foot { padding: 18px 20px; border-top: 1px solid var(--line); }
+.cart-drawer-foot p { font-size: 11.5px; color: var(--muted); margin-bottom: 12px; line-height: 1.6; }
+.cart-drawer-foot .btn { width: 100%; justify-content: center; }
+
+/* ── MODAL ── */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(15,21,27,.7); z-index: 1300; align-items: center; justify-content: center; padding: 20px; }
+.modal-overlay.show { display: flex; }
+.modal-box { background: #fff; max-width: 440px; width: 100%; padding: 32px; max-height: 90vh; overflow-y: auto; }
+.modal-box h3 { font-size: 18px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.modal-box .modal-sub { font-size: 12.5px; color: var(--muted); margin-bottom: 20px; line-height: 1.6; }
+.form-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; color: var(--steel); margin-bottom: 6px; margin-top: 14px; }
+.form-label:first-of-type { margin-top: 0; }
+.form-input { width: 100%; padding: 11px 13px; border: 1px solid var(--line); font-family: var(--font-b); font-size: 13.5px; color: var(--navy); background: var(--paper); }
+.form-input:focus { outline: 2px solid var(--teal); }
+textarea.form-input { resize: vertical; min-height: 70px; }
+.modal-summary { background: var(--paper); border-left: 3px solid var(--teal); padding: 12px 14px; margin-top: 16px; font-size: 12px; color: var(--steel); line-height: 1.7; max-height: 120px; overflow-y: auto; }
+.modal-actions { margin-top: 22px; display: flex; gap: 10px; }
+.modal-actions .btn { flex: 1; justify-content: center; }
+.modal-close-btn { position: absolute; top: 14px; right: 14px; font-size: 20px; color: var(--muted); }
+.modal-box { position: relative; }
+
+/* ── WA FLOAT ── */
+.wa-float { position: fixed; bottom: 28px; right: 28px; z-index: 900; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,.4); transition: transform .2s; }
+.wa-float:hover { transform: scale(1.1); }
+.wa-float i { font-size: 28px; color: #fff; }
+.wa-pulse { position: absolute; top: -4px; right: -4px; width: 15px; height: 15px; background: var(--teal); border-radius: 50%; border: 2px solid #fff; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.25); } }
+
+/* ── FOOTER ── */
+footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid rgba(92,225,230,.15); }
+.footer-main { padding: 48px 0 32px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; }
+@media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+@media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
+.footer-brand img { height: 52px; margin-bottom: 16px; }
+.footer-brand p { font-size: 14px; line-height: 1.8; max-width: 260px; }
+.footer-col h5 { font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #fff; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 16px; }
+.footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,.55); padding: 5px 0; transition: color .2s; }
+.footer-col a:hover { color: var(--teal); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.07); padding: 24px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.footer-bottom span { font-family: var(--font-mono); font-size: 12px; }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,.4); }
+
+/* ── REVEAL ── */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<div class="top-accent-bar"></div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo-partner/AMS.png" alt="AMS Logo">
+        <div class="brand-text">
+          <strong>ANDRIKA MITRA SOLUSI</strong>
+          <span>Integrity &amp; Competency</span>
+          <span class="brand-tagline">Industrial &amp; Tailor-Made Fire Solutions</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html#about">About</a>
+        <a href="index.html#products">Products</a>
+        <a href="produk.html" class="active">Shop</a>
+        <a href="artikel.html">Article</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="header-ctas">
+        <a class="btn btn-outline-navy btn-sm" href="index.html#contact"><i class="fas fa-headset"></i> <span>Consultation</span></a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE PANEL -->
+<div class="mobile-panel" id="mobilePanel">
+  <button class="close-x" id="closeMobile"><i class="fas fa-times"></i></button>
+  <div style="clear:both;margin-top:12px;">
+    <a href="index.html#about">About Us</a>
+    <a href="index.html#products">Products</a>
+    <a href="produk.html" style="color:var(--teal)">AMShop</a>
+    <a href="artikel.html">Article</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<!-- SHOP HERO -->
+<section class="shop-hero">
+  <div class="container">
+    <div class="eyebrow"><i class="fas fa-store"></i> AMShop</div>
+    <h1>Katalog Produk <em>Proteksi Kebakaran</em></h1>
+    <p>Jelajahi lini produk fire protection AMS. Pilih produk yang Anda butuhkan, masukkan ke keranjang, lalu ajukan permintaan penawaran — tim kami akan menghubungi Anda dengan harga dan rekomendasi terbaik.</p>
+    <div class="shop-note"><i class="fas fa-circle-info"></i> Harga disesuaikan dengan spesifikasi &amp; volume proyek — ajukan quotation untuk penawaran resmi.</div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section bg-paper">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">Kategori Produk</div>
+      <h2 class="section-title">Pilih <em>Kategori</em></h2>
+      <p class="section-lead">Klik kategori untuk melihat produk terkait, atau scroll untuk lihat semua.</p>
+    </div>
+    <div class="cat-grid" id="catGrid">
+      <div class="cat-card" data-cat="all"><div class="cat-icon"><i class="fas fa-border-all"></i></div><span>Semua Produk</span></div>
+      <div class="cat-card" data-cat="apar"><div class="cat-icon"><i class="fas fa-fire-extinguisher"></i></div><span>APAR</span></div>
+      <div class="cat-card" data-cat="alarm"><div class="cat-icon"><i class="fas fa-bell"></i></div><span>Fire Detection &amp; Alarm</span></div>
+      <div class="cat-card" data-cat="suppression"><div class="cat-icon"><i class="fas fa-fire"></i></div><span>Fire Suppression</span></div>
+      <div class="cat-card" data-cat="hydrant"><div class="cat-icon"><i class="fas fa-faucet"></i></div><span>Hydrant &amp; Pump</span></div>
+      <div class="cat-card" data-cat="sprinkler"><div class="cat-icon"><i class="fas fa-shower"></i></div><span>Sprinkler System</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section" id="productsSection">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow">AMShop</div>
+      <h2 class="section-title">Daftar <em>Produk</em></h2>
+    </div>
+    <div class="prod-grid" id="prodGrid"></div>
+  </div>
+</section>
+
+<!-- CART FAB -->
+<button class="cart-fab" id="cartFab" aria-label="Buka Keranjang">
+  <i class="fas fa-shopping-cart"></i>
+  <span class="cart-badge" id="cartBadge" style="display:none">0</span>
+</button>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-drawer-head">
+    <h3><i class="fas fa-shopping-cart"></i> Keranjang Anda</h3>
+    <button id="cartCloseBtn"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-drawer-body" id="cartBody">
+    <div class="cart-empty"><i class="fas fa-shopping-cart"></i>Keranjang masih kosong.<br>Pilih produk dari katalog untuk mulai.</div>
+  </div>
+  <div class="cart-drawer-foot">
+    <p><i class="fas fa-circle-info"></i> Belum ada harga di sini — checkout akan mengirimkan daftar produk ini sebagai permintaan penawaran (quotation) ke tim AMS.</p>
+    <button class="btn btn-primary" id="openQuotationBtn"><i class="fas fa-file-invoice"></i> Ajukan Quotation</button>
+  </div>
+</div>
+
+<!-- QUOTATION MODAL -->
+<div class="modal-overlay" id="quotationOverlay">
+  <div class="modal-box">
+    <button class="modal-close-btn" id="quotationCloseBtn"><i class="fas fa-times"></i></button>
+    <h3>Ajukan Permintaan Quotation</h3>
+    <p class="modal-sub">Lengkapi data berikut, daftar produk di keranjang Anda akan otomatis disertakan.</p>
+    <form id="quotationForm">
+      <label class="form-label">Nama Lengkap <span style="color:var(--orange)">*</span></label>
+      <input type="text" class="form-input" id="qName" required>
+      <label class="form-label">Perusahaan / Instansi</label>
+      <input type="text" class="form-input" id="qCompany">
+      <label class="form-label">No. WhatsApp <span style="color:var(--orange)">*</span></label>
+      <input type="tel" class="form-input" id="qPhone" placeholder="08xx xxxx xxxx" required>
+      <label class="form-label">Catatan Tambahan</label>
+      <textarea class="form-input" id="qNote" placeholder="Contoh: lokasi proyek, jumlah lantai, dsb (opsional)"></textarea>
+      <div class="modal-summary" id="modalSummary"></div>
+      <div class="modal-actions">
+        <button type="submit" class="btn btn-primary" style="background:#25D366"><i class="fab fa-whatsapp"></i> Kirim via WhatsApp</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-partner/AMS.png" alt="AMS Logo">
+          <p>PT Andrika Mitra Solusi — industrial fire protection specialists in Indonesia. Integrity &amp; Competency in every solution.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Menu</h5>
+          <a href="index.html#about">About Us</a>
+          <a href="index.html#products">Products</a>
+          <a href="produk.html">AMShop</a>
+          <a href="artikel.html">Article</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="index.html#vision">Vision &amp; Mission</a>
+          <a href="index.html#sectors">Sectors</a>
+          <a href="index.html#partners">Global Partners</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="tel:+622135297697">+6221-352-97697</a>
+          <a href="mailto:sales@andrikagroup.com">sales@andrikagroup.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="footer-bottom">
+      <span>© 2026 PT Andrika Mitra Solusi. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <span style="color:rgba(255,255,255,.3)">Tangerang Selatan, Indonesia</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOATING -->
+<a class="wa-float" href="https://wa.me/628129997697?text=Halo%20AMS%2C%20saya%20ingin%20konsultasi%20proteksi%20kebakaran" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <div class="wa-pulse"></div>
+</a>
+
+<script>
+// ── Header scroll & mobile menu (sama seperti index.html) ──
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobilePanel = document.getElementById('mobilePanel');
+const scrim = document.getElementById('scrim');
+const closeMobile = document.getElementById('closeMobile');
+function openMobile() { mobilePanel.style.display='block'; requestAnimationFrame(() => mobilePanel.classList.add('open')); scrim.classList.add('show'); }
+function closeMobileMenu() { mobilePanel.classList.remove('open'); scrim.classList.remove('show'); setTimeout(() => { mobilePanel.style.display='none'; }, 320); }
+hamburgerBtn.addEventListener('click', openMobile);
+closeMobile.addEventListener('click', closeMobileMenu);
+scrim.addEventListener('click', closeMobileMenu);
+document.querySelectorAll('.mobile-panel a').forEach(a => a.addEventListener('click', closeMobileMenu));
+
+// ── DATA PRODUK ──
+// Catatan buat Omoni: ini masih data contoh. Nanti tinggal edit array ini
+// buat ganti nama produk, kode, kategori, atau nambah produk baru.
+const PRODUCTS = [
+  { id: 'ap1', cat: 'apar', name: 'APAR Dry Chemical Powder', code: 'APAR-DCP', icon: 'fa-fire-extinguisher' },
+  { id: 'ap2', cat: 'apar', name: 'APAR CO2', code: 'APAR-CO2', icon: 'fa-fire-extinguisher' },
+  { id: 'ap3', cat: 'apar', name: 'APAR Foam (AFFF)', code: 'APAR-AFFF', icon: 'fa-fire-extinguisher' },
+  { id: 'al1', cat: 'alarm', name: 'Smoke Detector Photoelectric', code: 'DET-SMK-01', icon: 'fa-bell' },
+  { id: 'al2', cat: 'alarm', name: 'Heat Detector Fixed Temperature', code: 'DET-HT-01', icon: 'fa-bell' },
+  { id: 'al3', cat: 'alarm', name: 'Fire Alarm Control Panel', code: 'FACP-01', icon: 'fa-bell' },
+  { id: 'su1', cat: 'suppression', name: 'Clean Agent Suppression System', code: 'SUP-CA-01', icon: 'fa-fire' },
+  { id: 'su2', cat: 'suppression', name: 'Kitchen Suppression System', code: 'SUP-KIT-01', icon: 'fa-fire' },
+  { id: 'su3', cat: 'suppression', name: 'Foam Suppression System', code: 'SUP-FOAM-01', icon: 'fa-fire' },
+  { id: 'hy1', cat: 'hydrant', name: 'Fire Hydrant Pillar 2 Way', code: 'HYD-PLR-02', icon: 'fa-faucet' },
+  { id: 'hy2', cat: 'hydrant', name: 'Fire Hose Reel', code: 'HYD-HR-01', icon: 'fa-faucet' },
+  { id: 'hy3', cat: 'hydrant', name: 'Fire Pump Electric Driven', code: 'PMP-ELC-01', icon: 'fa-faucet' },
+  { id: 'hy4', cat: 'hydrant', name: 'Fire Pump Diesel Driven', code: 'PMP-DSL-01', icon: 'fa-faucet' },
+  { id: 'sp1', cat: 'sprinkler', name: 'Sprinkler Head Pendant Type', code: 'SPR-PND-01', icon: 'fa-shower' },
+  { id: 'sp2', cat: 'sprinkler', name: 'Sprinkler Head Upright Type', code: 'SPR-UPR-01', icon: 'fa-shower' },
+  { id: 'sp3', cat: 'sprinkler', name: 'Deluge Valve System', code: 'SPR-DLG-01', icon: 'fa-shower' },
+];
+
+const catNames = { apar: 'APAR', alarm: 'Fire Detection & Alarm', suppression: 'Fire Suppression', hydrant: 'Hydrant & Pump', sprinkler: 'Sprinkler System' };
+
+// ── RENDER PRODUK ──
+const prodGrid = document.getElementById('prodGrid');
+function renderProducts(filter) {
+  prodGrid.innerHTML = '';
+  const list = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.cat === filter);
+  list.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'prod-card';
+    card.innerHTML = `
+      <div class="prod-thumb"><i class="fas ${p.icon}"></i></div>
+      <div class="prod-body">
+        <div class="prod-cat">${catNames[p.cat]}</div>
+        <div class="prod-name">${p.name}</div>
+        <div class="prod-code">Kode: ${p.code}</div>
+        <button class="prod-cart-btn" data-id="${p.id}"><i class="fas fa-cart-plus"></i> Tambah</button>
+      </div>`;
+    prodGrid.appendChild(card);
+  });
+  attachCartButtons();
+}
+document.querySelectorAll('.cat-card').forEach(c => {
+  c.addEventListener('click', () => {
+    document.querySelectorAll('.cat-card').forEach(x => x.classList.remove('active'));
+    c.classList.add('active');
+    renderProducts(c.dataset.cat);
+  });
+});
+document.querySelector('.cat-card[data-cat="all"]').classList.add('active');
+renderProducts('all');
+
+// ── CART LOGIC (di memori — reset kalau halaman di-refresh) ──
+let cart = [];
+const cartBadge = document.getElementById('cartBadge');
+const cartBody = document.getElementById('cartBody');
+const cartDrawer = document.getElementById('cartDrawer');
+const cartFab = document.getElementById('cartFab');
+const cartCloseBtn = document.getElementById('cartCloseBtn');
+
+function attachCartButtons() {
+  document.querySelectorAll('.prod-cart-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const p = PRODUCTS.find(x => x.id === btn.dataset.id);
+      addToCart(p);
+      btn.classList.add('added');
+      btn.innerHTML = '<i class="fas fa-check"></i> Ditambahkan';
+      setTimeout(() => { btn.classList.remove('added'); btn.innerHTML = '<i class="fas fa-cart-plus"></i> Tambah'; }, 1200);
+    });
+  });
+}
+function addToCart(p) {
+  const existing = cart.find(i => i.id === p.id);
+  if (existing) { existing.qty += 1; } else { cart.push({ ...p, qty: 1 }); }
+  renderCart();
+}
+function renderCart() {
+  const totalQty = cart.reduce((s, i) => s + i.qty, 0);
+  cartBadge.style.display = totalQty > 0 ? 'flex' : 'none';
+  cartBadge.textContent = totalQty;
+  if (cart.length === 0) {
+    cartBody.innerHTML = '<div class="cart-empty"><i class="fas fa-shopping-cart"></i>Keranjang masih kosong.<br>Pilih produk dari katalog untuk mulai.</div>';
+    return;
+  }
+  cartBody.innerHTML = cart.map(i => `
+    <div class="cart-item">
+      <div class="cart-item-icon"><i class="fas ${i.icon}"></i></div>
+      <div class="cart-item-info">
+        <strong>${i.name}</strong>
+        <div class="cart-item-qty">
+          <button data-id="${i.id}" data-act="dec">−</button>
+          <span>${i.qty}</span>
+          <button data-id="${i.id}" data-act="inc">+</button>
+        </div>
+      </div>
+      <button class="cart-item-remove" data-id="${i.id}" data-act="remove"><i class="fas fa-trash"></i></button>
+    </div>`).join('');
+  cartBody.querySelectorAll('button[data-act]').forEach(b => {
+    b.addEventListener('click', () => {
+      const item = cart.find(x => x.id === b.dataset.id);
+      if (b.dataset.act === 'inc') item.qty += 1;
+      if (b.dataset.act === 'dec') { item.qty -= 1; if (item.qty <= 0) cart = cart.filter(x => x.id !== item.id); }
+      if (b.dataset.act === 'remove') cart = cart.filter(x => x.id !== item.id);
+      renderCart();
+    });
+  });
+}
+cartFab.addEventListener('click', () => cartDrawer.classList.add('open'));
+cartCloseBtn.addEventListener('click', () => cartDrawer.classList.remove('open'));
+
+// ── QUOTATION MODAL ──
+const quotationOverlay = document.getElementById('quotationOverlay');
+const openQuotationBtn = document.getElementById('openQuotationBtn');
+const quotationCloseBtn = document.getElementById('quotationCloseBtn');
+const modalSummary = document.getElementById('modalSummary');
+const quotationForm = document.getElementById('quotationForm');
+
+openQuotationBtn.addEventListener('click', () => {
+  if (cart.length === 0) { alert('Keranjang masih kosong. Silakan pilih produk terlebih dahulu.'); return; }
+  modalSummary.innerHTML = '<strong>Produk di keranjang:</strong><br>' + cart.map(i => `• ${i.name} (${i.qty}x)`).join('<br>');
+  quotationOverlay.classList.add('show');
+  cartDrawer.classList.remove('open');
+});
+quotationCloseBtn.addEventListener('click', () => quotationOverlay.classList.remove('show'));
+
+quotationForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+  const name = document.getElementById('qName').value.trim();
+  const company = document.getElementById('qCompany').value.trim();
+  const phone = document.getElementById('qPhone').value.trim();
+  const note = document.getElementById('qNote').value.trim();
+
+  let msg = `Halo AMS, saya ingin mengajukan permintaan quotation.%0A%0A`;
+  msg += `*Nama:* ${name}%0A`;
+  if (company) msg += `*Perusahaan:* ${company}%0A`;
+  msg += `*No. WhatsApp:* ${phone}%0A%0A`;
+  msg += `*Produk yang diminta:*%0A`;
+  cart.forEach(i => { msg += `- ${i.name} (${i.qty}x)%0A`; });
+  if (note) msg += `%0A*Catatan:* ${note}`;
+
+  window.open(`https://wa.me/628129997697?text=${msg}`, '_blank');
+  quotationOverlay.classList.remove('show');
+});
+</script>
+</body>
+</html>
