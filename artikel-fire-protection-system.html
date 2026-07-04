@@ -83,6 +83,12 @@ nav.main-nav a:hover::before { opacity: 1; }
 @media (max-width: 640px) { .art-body-wrap { padding: 40px 18px 56px; } }
 .art-cover { height: 260px; background: linear-gradient(135deg, var(--teal-darker), var(--navy)); display: flex; align-items: center; justify-content: center; margin-bottom: 40px; }
 .art-cover i { font-size: 64px; color: rgba(255,255,255,.35); }
+.art-cover-link { display: block; position: relative; margin-bottom: 40px; cursor: pointer; }
+.art-cover-link .art-cover-img { margin-bottom: 0; transition: filter .25s ease; }
+.art-cover-link:hover .art-cover-img { filter: brightness(.85); }
+.art-cover-badge { position: absolute; bottom: 14px; right: 14px; background: rgba(15,21,27,.85); backdrop-filter: blur(2px); color: #fff; font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .03em; padding: 8px 14px; display: flex; align-items: center; gap: 8px; opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; }
+.art-cover-link:hover .art-cover-badge { opacity: 1; transform: translateY(0); }
+.art-cover-badge i { color: var(--teal-light); font-size: 13px; }
 .art-content h2 { font-size: 22px; font-weight: 700; color: var(--navy); margin-top: 40px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
 .art-content h2 i { color: var(--orange); font-size: 19px; }
 .art-content p { font-size: 15px; color: var(--steel); line-height: 1.85; margin-bottom: 14px; }
@@ -112,12 +118,12 @@ table.comp-table tr:nth-child(even) td { background: var(--paper); }
 .komponen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0; }
 @media (max-width: 760px) { .komponen-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .komponen-grid { grid-template-columns: 1fr; } }
-.komponen-card { background: var(--paper); border: 1px solid var(--line); padding: 20px 16px; text-align: center; }
-.komponen-icon { width: 44px; height: 44px; margin: 0 auto 12px; background: rgba(89,177,181,.12); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.komponen-card { background: var(--paper); border: 1px solid var(--line); padding: 18px 14px; text-align: center; }
+.komponen-icon { width: 84px; height: 84px; margin: 0 auto 12px; background: rgba(89,177,181,.12); display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 4px; }
 .komponen-icon img { width: 100%; height: 100%; object-fit: cover; }
 .komponen-icon i { font-size: 18px; color: var(--teal-darker); }
-.komponen-card strong { display: block; font-size: 13px; color: var(--navy); margin-bottom: 6px; }
-.komponen-card span { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.komponen-card strong { display: block; font-size: 12px; color: var(--navy); margin-bottom: 5px; }
+.komponen-card span { font-size: 11px; color: var(--muted); line-height: 1.45; }
 
 .art-cta { margin-top: 48px; background: var(--navy); padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 .art-cta h3 { font-size: 17px; color: #fff; font-weight: 700; margin-bottom: 6px; }
@@ -204,7 +210,11 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
 </section>
 
 <div class="art-body-wrap">
-  <img class="art-cover-img" src="images/article/sistem.png" alt="Sistem Proteksi Kebakaran untuk Gedung dan Industri" style="width:100%;height:340px;object-fit:cover;margin-bottom:40px;">
+  <a class="art-cover-link" href="images/article/sistem.png" target="_blank" rel="noopener">
+    <img class="art-cover-img" src="images/article/sistem.png" alt="Sistem Proteksi Kebakaran untuk Gedung dan Industri" style="width:100%;height:340px;object-fit:cover;">
+    <div class="art-cover-badge"><i class="fas fa-expand"></i> Klik untuk lihat gambar penuh</div>
+  </a>
+  <div class="art-cover-hint" style="font-family:var(--font-mono);font-size:11.5px;color:var(--muted);display:flex;align-items:center;gap:7px;margin-bottom:40px;"><i class="fas fa-circle-info" style="color:var(--teal-darker);font-size:12px;"></i> Gambar di atas terpotong agar pas di halaman. Klik untuk melihat versi lengkapnya.</div>
 
   <div class="art-content">
     <h2><i class="fas fa-circle-question"></i> Apa Itu Fire Protection System?</h2>
