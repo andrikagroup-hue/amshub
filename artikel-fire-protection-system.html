@@ -113,7 +113,8 @@ table.comp-table tr:nth-child(even) td { background: var(--paper); }
 @media (max-width: 760px) { .komponen-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 480px) { .komponen-grid { grid-template-columns: 1fr; } }
 .komponen-card { background: var(--paper); border: 1px solid var(--line); padding: 20px 16px; text-align: center; }
-.komponen-icon { width: 44px; height: 44px; margin: 0 auto 12px; background: rgba(89,177,181,.12); display: flex; align-items: center; justify-content: center; }
+.komponen-icon { width: 44px; height: 44px; margin: 0 auto 12px; background: rgba(89,177,181,.12); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.komponen-icon img { width: 100%; height: 100%; object-fit: cover; }
 .komponen-icon i { font-size: 18px; color: var(--teal-darker); }
 .komponen-card strong { display: block; font-size: 13px; color: var(--navy); margin-bottom: 6px; }
 .komponen-card span { font-size: 12px; color: var(--muted); line-height: 1.5; }
@@ -203,7 +204,7 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
 </section>
 
 <div class="art-body-wrap">
-  <div class="art-cover"><i class="fas fa-fire-flame-curved"></i></div>
+  <img class="art-cover-img" src="images/article/sistem.png" alt="Sistem Proteksi Kebakaran untuk Gedung dan Industri" style="width:100%;height:340px;object-fit:cover;margin-bottom:40px;">
 
   <div class="art-content">
     <h2><i class="fas fa-circle-question"></i> Apa Itu Fire Protection System?</h2>
@@ -212,40 +213,40 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
       <li><i class="fas fa-check-circle"></i><span><strong>Mencegah</strong> kebakaran melalui desain bangunan dan material tahan api.</span></li>
       <li><i class="fas fa-check-circle"></i><span><strong>Mendeteksi dini</strong> kebakaran dengan sensor asap, panas, dan api.</span></li>
       <li><i class="fas fa-check-circle"></i><span><strong>Mengendalikan &amp; memadamkan</strong> api menggunakan sprinkler, hidran, dan alat pemadam api ringan (APAR).</span></li>
-      <li><i class="fas fa-check-circle"></i><span><strong>Memfasilitasi evakuasi</strong> dengan alarm kebakaran, pintu darurat, dan sistem komunikasi darurat.</span></li>
+      <li><i class="fas fa-check-circle"></i><span><strong>Memfasilitasi evakuasi</strong> dengan alarm kebakaran, jalur keluar, dan sistem komunikasi darurat.</span></li>
     </ul>
 
     <h2><i class="fas fa-toolbox"></i> Komponen Utama Fire Protection</h2>
     <div class="komponen-grid">
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-satellite-dish"></i></div>
+        <div class="komponen-icon"><img src="images/article/komponen/deteksi.png" alt="Deteksi Kebakaran"></div>
         <strong>Deteksi Kebakaran</strong>
         <span>Smoke detector, heat detector, flame detector.</span>
       </div>
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-shower"></i></div>
+        <div class="komponen-icon"><img src="images/article/komponen/sprinkler.webp" alt="Sistem Sprinkler"></div>
         <strong>Sistem Sprinkler</strong>
         <span>Pemadaman otomatis menggunakan air.</span>
       </div>
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-faucet"></i></div>
+        <div class="komponen-icon"><img src="images/article/komponen/hydrant.webp" alt="Hidran &amp; Selang"></div>
         <strong>Hidran &amp; Selang</strong>
         <span>Sumber air eksternal untuk pemadaman kebakaran.</span>
       </div>
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-fire-extinguisher"></i></div>
+        <div class="komponen-icon"><img src="images/article/komponen/apar.webp" alt="APAR"></div>
         <strong>APAR</strong>
         <span>Alat pemadam api ringan untuk kebakaran skala kecil.</span>
       </div>
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-bell"></i></div>
+        <div class="komponen-icon"><img src="images/article/komponen/panel%20kontrol.webp" alt="Komponen Pendukung"></div>
         <strong>Komponen Pendukung</strong>
         <span>Alarm kebakaran, pintu darurat, pompa &amp; reservoir air, panel kontrol.</span>
       </div>
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-door-closed"></i></div>
+        <div class="komponen-icon"><img src="images/article/komponen/evakuasi.webp" alt="Jalur Evakuasi"></div>
         <strong>Jalur Evakuasi</strong>
-        <span>Pintu darurat, tangga darurat, dan penanda jalur evakuasi.</span>
+        <span>Tangga darurat, rambu penunjuk arah, dan lampu evakuasi menuju titik kumpul aman.</span>
       </div>
     </div>
 

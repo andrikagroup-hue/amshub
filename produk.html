@@ -113,6 +113,23 @@ nav.main-nav a:hover::before { opacity: 1; }
 .shop-hero p { font-size: 15px; color: rgba(255,255,255,.65); max-width: 600px; line-height: 1.7; }
 .shop-note { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; font-family: var(--font-mono); font-size: 11.5px; color: var(--teal-light); border: 1px solid rgba(92,225,230,.3); background: rgba(92,225,230,.06); padding: 9px 16px; }
 
+/* APAR CALCULATOR */
+.calc-wrap { display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: start; margin-top: 12px; }
+@media (max-width: 860px) { .calc-wrap { grid-template-columns: 1fr; } }
+.calc-card { background: var(--paper); border: 1px solid var(--line); padding: 32px; }
+.calc-label { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 10px; }
+.calc-input { width: 100%; padding: 14px 16px; border: 1px solid var(--line); background: var(--white); font-family: var(--font-b); font-size: 22px; font-weight: 700; color: var(--navy); }
+.calc-input:focus { outline: none; border-color: var(--teal); }
+.calc-output { background: var(--teal-pale); color: var(--teal-darker); cursor: default; }
+.calc-footnote { font-size: 12px; color: var(--muted); font-style: italic; margin-top: 14px; }
+.calc-actions { display: flex; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+.calc-info { font-size: 14.5px; color: var(--steel); line-height: 1.85; }
+.calc-info p { margin-bottom: 14px; }
+.calc-info strong { color: var(--navy); }
+.calc-warn { color: var(--orange-dark); font-weight: 700; }
+.calc-info a { color: var(--teal-darker); text-decoration: underline; }
+.calc-info a:hover { color: var(--orange); }
+
 /* ── CATEGORY GRID ── */
 .cat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
 @media (max-width: 960px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -281,6 +298,36 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
       <div class="cat-card" data-cat="suppression"><div class="cat-icon"><i class="fas fa-fire"></i></div><span>Fire Suppression</span></div>
       <div class="cat-card" data-cat="hydrant"><div class="cat-icon"><i class="fas fa-faucet"></i></div><span>Hydrant &amp; Pump</span></div>
       <div class="cat-card" data-cat="sprinkler"><div class="cat-icon"><i class="fas fa-shower"></i></div><span>Sprinkler System</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- APAR CALCULATOR -->
+<section class="section" id="aparCalc">
+  <div class="container">
+    <div class="section-header">
+      <div class="eyebrow"><i class="fas fa-calculator"></i> Kalkulator</div>
+      <h2 class="section-title">Kalkulator <em>Alat Pemadam Api Ringan (APAR)</em></h2>
+      <p class="section-lead">Hitung estimasi jumlah APAR yang dibutuhkan berdasarkan luas area Anda.</p>
+    </div>
+    <div class="calc-wrap">
+      <div class="calc-card">
+        <label class="calc-label" for="calcLuas"><i class="fas fa-ruler-combined"></i> Luas Area (m&sup2;)</label>
+        <input type="number" id="calcLuas" class="calc-input" min="0" placeholder="0">
+        <label class="calc-label" for="calcHasil" style="margin-top:22px"><i class="fas fa-fire-extinguisher"></i> Jumlah APAR yang Dibutuhkan</label>
+        <input type="text" id="calcHasil" class="calc-input calc-output" value="0" readonly>
+        <p class="calc-footnote">*sesuai rekomendasi <em>British Standard 5306</em></p>
+        <div class="calc-actions">
+          <a class="btn btn-outline-navy btn-sm" href="index.html#contact"><i class="fas fa-headset"></i> Hubungi Kami</a>
+          <button type="button" class="btn btn-primary btn-sm" id="calcBuyBtn"><i class="fas fa-cart-shopping"></i> Beli Sekarang</button>
+        </div>
+      </div>
+      <div class="calc-info">
+        <p><span class="calc-warn">Penting:</span> Ini hanya sebuah panduan.</p>
+        <p>Kalkulator APAR ini akan menentukan berapa banyak APAR yang diperlukan di dalam suatu luasan area berdasarkan Peraturan Menteri Tenaga Kerja dan Transmigrasi No. Per. 04/Men/1980 Tentang Syarat-syarat Pemasangan dan Pemeliharaan APAR.</p>
+        <p>Cek keefektifan dan baca peraturan perundangan terkait Norma, Standar, Pedoman, Kriteria (NSPK) K3 terkait bidang Penanggulangan Kebakaran di <a href="https://temank3.kemnaker.go.id/page/perundangan_detail/52/2b6f3f64664cea53d9527b9388c9e67d" target="_blank" rel="noopener"><strong>halaman resmi Kemnaker RI</strong></a>.</p>
+        <p>Perhitungan ini tidak memperhitungkan faktor lain di lapangan yang dapat mempengaruhi tipe dan jumlah APAR yang diperlukan. Mohon lakukan penilaian secara menyeluruh untuk memastikan perlindungan kebakaran yang lebih memadai dan tepat. Paling umumnya di rumah dan perkantoran, perhitungan kami merekomendasikan APAR dengan fire rating 13A, atau umumnya kapasitas 3 Kg, untuk mencakup 200 meter persegi.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -454,6 +501,21 @@ document.querySelectorAll('.cat-card').forEach(c => {
 });
 document.querySelector('.cat-card[data-cat="all"]').classList.add('active');
 renderProducts('all');
+
+// APAR CALCULATOR (rekomendasi: 1 APAR 13A / 3kg per 200 m2, sesuai British Standard 5306)
+const calcLuas = document.getElementById('calcLuas');
+const calcHasil = document.getElementById('calcHasil');
+function updateApaCalc() {
+  const luas = parseFloat(calcLuas.value);
+  if (!luas || luas <= 0) { calcHasil.value = '0'; return; }
+  const jumlah = Math.ceil(luas / 200);
+  calcHasil.value = jumlah;
+}
+calcLuas.addEventListener('input', updateApaCalc);
+document.getElementById('calcBuyBtn').addEventListener('click', () => {
+  document.querySelector('.cat-card[data-cat="apar"]').click();
+  document.getElementById('productsSection').scrollIntoView({ behavior: 'smooth' });
+});
 
 // CART LOGIC (di memori, reset kalau halaman di-refresh)
 let cart = [];
