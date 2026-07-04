@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AMShop | PT Andrika Mitra Solusi</title>
-<meta name="description" content="AMShop — katalog produk proteksi kebakaran PT Andrika Mitra Solusi (AMS). Ajukan permintaan penawaran (quotation) untuk kebutuhan fire protection Anda.">
+<meta name="description" content="AMShop, katalog produk proteksi kebakaran PT Andrika Mitra Solusi (AMS). Ajukan permintaan penawaran (quotation) untuk kebutuhan fire protection Anda.">
 <link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
@@ -261,8 +261,8 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
   <div class="container">
     <div class="eyebrow"><i class="fas fa-store"></i> AMShop</div>
     <h1>Katalog Produk <em>Proteksi Kebakaran</em></h1>
-    <p>Jelajahi lini produk fire protection AMS. Pilih produk yang Anda butuhkan, masukkan ke keranjang, lalu ajukan permintaan penawaran — tim kami akan menghubungi Anda dengan harga dan rekomendasi terbaik.</p>
-    <div class="shop-note"><i class="fas fa-circle-info"></i> Harga disesuaikan dengan spesifikasi &amp; volume proyek — ajukan quotation untuk penawaran resmi.</div>
+    <p>Jelajahi lini produk fire protection AMS. Pilih produk yang Anda butuhkan, masukkan ke keranjang, lalu ajukan permintaan penawaran. Tim kami akan menghubungi Anda dengan harga dan rekomendasi terbaik.</p>
+    <div class="shop-note"><i class="fas fa-circle-info"></i> Harga disesuaikan dengan spesifikasi &amp; volume proyek. Ajukan quotation untuk penawaran resmi.</div>
   </div>
 </section>
 
@@ -312,7 +312,7 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
     <div class="cart-empty"><i class="fas fa-shopping-cart"></i>Keranjang masih kosong.<br>Pilih produk dari katalog untuk mulai.</div>
   </div>
   <div class="cart-drawer-foot">
-    <p><i class="fas fa-circle-info"></i> Belum ada harga di sini — checkout akan mengirimkan daftar produk ini sebagai permintaan penawaran (quotation) ke tim AMS.</p>
+    <p><i class="fas fa-circle-info"></i> Belum ada harga di sini. Checkout akan mengirimkan daftar produk ini sebagai permintaan penawaran (quotation) ke tim AMS.</p>
     <button class="btn btn-primary" id="openQuotationBtn"><i class="fas fa-file-invoice"></i> Ajukan Quotation</button>
   </div>
 </div>
@@ -347,7 +347,7 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="images/logo-partner/AMS.png" alt="AMS Logo">
-          <p>PT Andrika Mitra Solusi — industrial fire protection specialists in Indonesia. Integrity &amp; Competency in every solution.</p>
+          <p>PT Andrika Mitra Solusi, industrial fire protection specialists in Indonesia. Integrity &amp; Competency in every solution.</p>
         </div>
         <div class="footer-col">
           <h5>Menu</h5>
@@ -455,7 +455,7 @@ document.querySelectorAll('.cat-card').forEach(c => {
 document.querySelector('.cat-card[data-cat="all"]').classList.add('active');
 renderProducts('all');
 
-// ── CART LOGIC (di memori — reset kalau halaman di-refresh) ──
+// CART LOGIC (di memori, reset kalau halaman di-refresh)
 let cart = [];
 const cartBadge = document.getElementById('cartBadge');
 const cartBody = document.getElementById('cartBody');

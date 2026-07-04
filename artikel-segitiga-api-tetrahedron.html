@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pentingnya Sistem Proteksi Kebakaran | PT Andrika Mitra Solusi</title>
-<meta name="description" content="Kenali apa itu fire protection system, komponen utamanya, perbedaan active dan passive fire protection, serta alasan mengapa sistem ini penting bagi gedung dan industri.">
+<title>Rahasia Api: Dari Segitiga ke Tetrahedron | PT Andrika Mitra Solusi</title>
+<meta name="description" content="Kenali Fire Triangle dan Fire Tetrahedron, dua konsep dasar ilmu kebakaran yang menjelaskan bagaimana api bisa menyala, terus hidup, dan bagaimana cara memadamkannya.">
 <link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
@@ -75,14 +75,15 @@ nav.main-nav a:hover::before { opacity: 1; }
 .art-breadcrumb a:hover { color: #fff; }
 .art-cat-badge { display: inline-block; background: var(--orange); color: #fff; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 12px; margin-bottom: 16px; }
 .art-hero h1 { font-size: clamp(24px,3.4vw,38px); font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 16px; }
+.art-hero .lead { font-size: 15.5px; color: rgba(255,255,255,.68); line-height: 1.7; margin-bottom: 18px; max-width: 640px; }
 .art-meta { display: flex; gap: 18px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11.5px; color: rgba(255,255,255,.55); }
 .art-meta span { display: inline-flex; align-items: center; gap: 6px; }
 
 /* ARTICLE BODY */
 .art-body-wrap { max-width: 820px; margin: 0 auto; padding: 56px 32px 72px; }
 @media (max-width: 640px) { .art-body-wrap { padding: 40px 18px 56px; } }
-.art-cover { height: 260px; background: linear-gradient(135deg, var(--teal-darker), var(--navy)); display: flex; align-items: center; justify-content: center; margin-bottom: 40px; }
-.art-cover i { font-size: 64px; color: rgba(255,255,255,.35); }
+.art-cover-img { width: 100%; height: 340px; object-fit: cover; margin-bottom: 40px; }
+@media (max-width: 640px) { .art-cover-img { height: 220px; } }
 .art-content h2 { font-size: 22px; font-weight: 700; color: var(--navy); margin-top: 40px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
 .art-content h2 i { color: var(--orange); font-size: 19px; }
 .art-content p { font-size: 15px; color: var(--steel); line-height: 1.85; margin-bottom: 14px; }
@@ -91,16 +92,20 @@ nav.main-nav a:hover::before { opacity: 1; }
 .art-content ul.check-list li i { color: var(--teal-darker); font-size: 15px; margin-top: 3px; flex-shrink: 0; }
 .art-content ul.check-list li strong { color: var(--navy); }
 
-.comp-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 22px 0; }
-@media (max-width: 640px) { .comp-cards { grid-template-columns: 1fr; } }
-.comp-card { background: var(--paper); border-top: 3px solid var(--teal); padding: 20px; }
-.comp-card.passive { border-top-color: var(--orange); }
-.comp-card h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-.comp-card h4 i { color: var(--teal-darker); }
-.comp-card.passive h4 i { color: var(--orange); }
-.comp-card ul { display: flex; flex-direction: column; gap: 8px; }
-.comp-card li { font-size: 13px; color: var(--steel); line-height: 1.6; padding-left: 14px; position: relative; }
-.comp-card li::before { content: "•"; position: absolute; left: 0; color: var(--muted); }
+.komponen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0; }
+@media (max-width: 760px) { .komponen-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .komponen-grid { grid-template-columns: 1fr; } }
+.komponen-card { background: var(--paper); border: 1px solid var(--line); padding: 20px 16px; text-align: center; }
+.komponen-card.highlight { border-color: var(--orange); background: rgba(247,126,45,.05); }
+.komponen-icon { width: 44px; height: 44px; margin: 0 auto 12px; background: rgba(89,177,181,.12); display: flex; align-items: center; justify-content: center; }
+.komponen-card.highlight .komponen-icon { background: rgba(247,126,45,.12); }
+.komponen-icon i { font-size: 18px; color: var(--teal-darker); }
+.komponen-card.highlight .komponen-icon i { color: var(--orange-dark); }
+.komponen-card strong { display: block; font-size: 13px; color: var(--navy); margin-bottom: 6px; }
+.komponen-card span { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+.callout { background: var(--paper); border-left: 3px solid var(--teal); padding: 16px 20px; margin: 22px 0; font-size: 14px; color: var(--steel); line-height: 1.75; }
+.callout strong { color: var(--navy); }
 
 .comp-table-wrap { overflow-x: auto; margin: 22px 0; }
 table.comp-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
@@ -108,15 +113,6 @@ table.comp-table th, table.comp-table td { padding: 12px 14px; text-align: left;
 table.comp-table th { background: var(--navy); color: #fff; font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; font-weight: 600; }
 table.comp-table td { color: var(--steel); line-height: 1.6; }
 table.comp-table tr:nth-child(even) td { background: var(--paper); }
-
-.komponen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0; }
-@media (max-width: 760px) { .komponen-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 480px) { .komponen-grid { grid-template-columns: 1fr; } }
-.komponen-card { background: var(--paper); border: 1px solid var(--line); padding: 20px 16px; text-align: center; }
-.komponen-icon { width: 44px; height: 44px; margin: 0 auto 12px; background: rgba(89,177,181,.12); display: flex; align-items: center; justify-content: center; }
-.komponen-icon i { font-size: 18px; color: var(--teal-darker); }
-.komponen-card strong { display: block; font-size: 13px; color: var(--navy); margin-bottom: 6px; }
-.komponen-card span { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
 .art-cta { margin-top: 48px; background: var(--navy); padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
 .art-cta h3 { font-size: 17px; color: #fff; font-weight: 700; margin-bottom: 6px; }
@@ -191,105 +187,80 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
 
 <section class="art-hero">
   <div class="container">
-    <div class="art-breadcrumb"><a href="artikel.html">Artikel</a> / Pentingnya Fire Protection System</div>
+    <div class="art-breadcrumb"><a href="artikel.html">Artikel</a> / Rahasia Api: Segitiga ke Tetrahedron</div>
     <span class="art-cat-badge">Edukasi</span>
-    <h1>Pentingnya Sistem Proteksi Kebakaran untuk Gedung &amp; Industri</h1>
+    <h1>Rahasia Api yang Jarang Diketahui: Dari Segitiga ke Tetrahedron</h1>
+    <p class="lead">Mengungkap ilmu di balik nyala api, ternyata bukan sekadar soal panas dan oksigen.</p>
     <div class="art-meta">
       <span><i class="far fa-calendar"></i> 4 Juli 2026</span>
-      <span><i class="far fa-clock"></i> 5 menit baca</span>
+      <span><i class="far fa-clock"></i> 4 menit baca</span>
       <span><i class="fas fa-building-shield"></i> PT Andrika Mitra Solusi</span>
     </div>
   </div>
 </section>
 
 <div class="art-body-wrap">
-  <div class="art-cover"><i class="fas fa-fire-flame-curved"></i></div>
+  <img class="art-cover-img" src="images/article/segitiga.png" alt="Ilustrasi Fire Triangle dan Fire Tetrahedron">
 
   <div class="art-content">
-    <h2><i class="fas fa-circle-question"></i> Apa Itu Fire Protection System?</h2>
-    <p>Fire Protection System adalah serangkaian perangkat dan prosedur yang dirancang untuk melindungi manusia, aset, dan bangunan dari risiko kebakaran, mulai dari pencegahan hingga penanganan saat kebakaran benar-benar terjadi.</p>
-    <ul class="check-list">
-      <li><i class="fas fa-check-circle"></i><span><strong>Mencegah</strong> kebakaran melalui desain bangunan dan material tahan api.</span></li>
-      <li><i class="fas fa-check-circle"></i><span><strong>Mendeteksi dini</strong> kebakaran dengan sensor asap, panas, dan api.</span></li>
-      <li><i class="fas fa-check-circle"></i><span><strong>Mengendalikan &amp; memadamkan</strong> api menggunakan sprinkler, hidran, dan alat pemadam api ringan (APAR).</span></li>
-      <li><i class="fas fa-check-circle"></i><span><strong>Memfasilitasi evakuasi</strong> dengan alarm kebakaran, pintu darurat, dan sistem komunikasi darurat.</span></li>
-    </ul>
+    <p>Bayangkan kamu sedang menyalakan lilin di rumah. Lilin itu bisa menyala karena ada tiga hal yang berkumpul bersamaan: sumbu lilin sebagai bahan bakar, oksigen di udara, dan panas dari korek api. Ketiganya bertemu, lalu muncullah api. Inilah yang disebut <strong>Fire Triangle</strong>, segitiga api yang jadi konsep dasar dari semua peristiwa kebakaran.</p>
+    <p>Namun ternyata, api menyimpan satu rahasia lagi yang sering luput dari perhatian orang awam. Para ahli kebakaran menemukan ada satu elemen tambahan yang membuat api bisa terus hidup dan sulit dipadamkan: <strong>reaksi kimia berantai</strong>. Bayangkan api seperti sebuah pesta yang tidak kunjung selesai karena "tamu" terus berdatangan. Inilah konsep <strong>Fire Tetrahedron</strong>, piramida api dengan empat elemen.</p>
 
-    <h2><i class="fas fa-toolbox"></i> Komponen Utama Fire Protection</h2>
+    <h2><i class="fas fa-triangle-exclamation"></i> Segitiga Api: Dasar yang Wajib Dipahami</h2>
+    <p>Tiga elemen ini harus hadir bersamaan agar api bisa menyala. Kalau salah satu hilang, api otomatis padam.</p>
     <div class="komponen-grid">
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-satellite-dish"></i></div>
-        <strong>Deteksi Kebakaran</strong>
-        <span>Smoke detector, heat detector, flame detector.</span>
+        <div class="komponen-icon"><i class="fas fa-temperature-high"></i></div>
+        <strong>Heat (Panas)</strong>
+        <span>Sumber energi penyulut, seperti korek api atau percikan listrik.</span>
       </div>
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-shower"></i></div>
-        <strong>Sistem Sprinkler</strong>
-        <span>Pemadaman otomatis menggunakan air.</span>
+        <div class="komponen-icon"><i class="fas fa-gas-pump"></i></div>
+        <strong>Fuel (Bahan Bakar)</strong>
+        <span>Kayu, bensin, kertas, atau sumbu lilin, apa pun yang bisa terbakar.</span>
       </div>
       <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-faucet"></i></div>
-        <strong>Hidran &amp; Selang</strong>
-        <span>Sumber air eksternal untuk pemadaman kebakaran.</span>
-      </div>
-      <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-fire-extinguisher"></i></div>
-        <strong>APAR</strong>
-        <span>Alat pemadam api ringan untuk kebakaran skala kecil.</span>
-      </div>
-      <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-bell"></i></div>
-        <strong>Komponen Pendukung</strong>
-        <span>Alarm kebakaran, pintu darurat, pompa &amp; reservoir air, panel kontrol.</span>
-      </div>
-      <div class="komponen-card">
-        <div class="komponen-icon"><i class="fas fa-door-closed"></i></div>
-        <strong>Jalur Evakuasi</strong>
-        <span>Pintu darurat, tangga darurat, dan penanda jalur evakuasi.</span>
+        <div class="komponen-icon"><i class="fas fa-wind"></i></div>
+        <strong>Oxygen (O₂)</strong>
+        <span>Udara di sekitar kita yang menopang proses pembakaran.</span>
       </div>
     </div>
+    <div class="callout"><strong>Contoh sederhana:</strong> saat lilin ditutup dengan gelas, oksigen di dalamnya habis, dan api pun mati. Ini membuktikan bahwa menghilangkan satu elemen saja sudah cukup untuk memadamkan api.</div>
 
-    <h2><i class="fas fa-scale-balanced"></i> Active vs Passive Fire Protection</h2>
-    <p>Secara garis besar, sistem proteksi kebakaran dibagi menjadi dua pendekatan yang saling melengkapi:</p>
-    <div class="comp-cards">
-      <div class="comp-card">
-        <h4><i class="fas fa-bolt"></i> Active Fire Protection</h4>
-        <ul>
-          <li>Merespon secara aktif saat kebakaran terdeteksi</li>
-          <li>Contoh: sprinkler, APAR, alarm kebakaran</li>
-          <li>Membutuhkan perawatan &amp; pengujian rutin</li>
-        </ul>
-      </div>
-      <div class="comp-card passive">
-        <h4><i class="fas fa-shield-halved"></i> Passive Fire Protection</h4>
-        <ul>
-          <li>Mencegah penyebaran api dan asap secara pasif</li>
-          <li>Contoh: dinding tahan api, pintu kebakaran, pelapis struktur</li>
-          <li>Lebih tahan lama, berbasis desain bangunan sejak awal</li>
-        </ul>
+    <h2><i class="fas fa-cubes-stacked"></i> Tetrahedron Api: Rahasia di Balik Api yang Tak Kunjung Padam</h2>
+    <p>Selain Heat, Fuel, dan Oxygen, ada satu elemen keempat yang menjelaskan kenapa sebagian kebakaran begitu sulit dipadamkan:</p>
+    <div class="komponen-grid" style="grid-template-columns:1fr;max-width:340px;margin-left:auto;margin-right:auto;">
+      <div class="komponen-card highlight">
+        <div class="komponen-icon"><i class="fas fa-atom"></i></div>
+        <strong>Chemical Chain Reaction</strong>
+        <span>Reaksi kimia berantai yang membuat api terus menyala tanpa henti.</span>
       </div>
     </div>
+    <p>Contohnya, saat bensin terbakar, molekul-molekulnya saling bereaksi dengan sangat cepat sehingga api tidak berhenti dengan sendirinya. Artinya, meskipun panas, bahan bakar, dan oksigen tersedia, kalau reaksi berantai ini berhasil diputus, api tetap bisa padam.</p>
+
+    <h2><i class="fas fa-lightbulb"></i> Kenapa Ini Penting untuk Kita?</h2>
+    <ul class="check-list">
+      <li><i class="fas fa-check-circle"></i><span><strong>Fire Triangle</strong> cocok untuk pemahaman dasar, karena kebakaran sehari-hari umumnya bisa dijelaskan lewat tiga elemen ini.</span></li>
+      <li><i class="fas fa-check-circle"></i><span><strong>Fire Tetrahedron</strong> lebih akurat untuk kebakaran modern, seperti baterai lithium-ion atau kebakaran skala industri.</span></li>
+    </ul>
+    <p>Itulah sebabnya alat pemadam api modern tidak hanya bekerja dengan menutup oksigen atau mendinginkan panas, tapi juga memutus reaksi kimia berantai. Contohnya, APAR jenis <em>dry chemical powder</em> atau <em>foam</em> memang dirancang untuk bekerja pada level ini.</p>
+
     <div class="comp-table-wrap">
       <table class="comp-table">
-        <tr><th>Aspek</th><th>Active Fire Protection</th><th>Passive Fire Protection</th></tr>
-        <tr><td>Cara Kerja</td><td>Merespon aktif saat kebakaran terdeteksi</td><td>Mencegah penyebaran api dan asap</td></tr>
-        <tr><td>Perawatan</td><td>Membutuhkan perawatan rutin</td><td>Lebih tahan lama, berbasis desain bangunan</td></tr>
-        <tr><td>Contoh</td><td>Sprinkler, APAR, alarm, detektor</td><td>Dinding tahan api, pintu kebakaran, pelapis struktur</td></tr>
+        <tr><th>Elemen</th><th>Fire Triangle</th><th>Fire Tetrahedron</th></tr>
+        <tr><td>Heat, Fuel, Oxygen</td><td>✓ Tiga elemen dasar</td><td>✓ Tetap jadi fondasi</td></tr>
+        <tr><td>Chemical Chain Reaction</td><td>Tidak dibahas</td><td>Elemen keempat, kunci kenapa api "tak mau mati"</td></tr>
+        <tr><td>Relevansi</td><td>Kebakaran sederhana sehari-hari</td><td>Kebakaran modern &amp; industri (mis. lithium-ion)</td></tr>
       </table>
     </div>
 
-    <h2><i class="fas fa-earth-asia"></i> Pentingnya Fire Protection</h2>
-    <ul class="check-list">
-      <li><i class="fas fa-check-circle"></i><span><strong>Keselamatan jiwa:</strong> memberikan waktu evakuasi lebih lama.</span></li>
-      <li><i class="fas fa-check-circle"></i><span><strong>Perlindungan aset:</strong> mengurangi kerugian finansial akibat kebakaran.</span></li>
-      <li><i class="fas fa-check-circle"></i><span><strong>Kepatuhan regulasi:</strong> memenuhi standar NFPA, SNI, dan audit keselamatan.</span></li>
-      <li><i class="fas fa-check-circle"></i><span><strong>Keberlanjutan bisnis:</strong> menghindari gangguan operasional dan tuntutan hukum.</span></li>
-    </ul>
+    <h2><i class="fas fa-flag-checkered"></i> Kesimpulan: Api Itu Sederhana, Tapi Tidak Sesederhana yang Kita Kira</h2>
+    <p>Dari segitiga, kita belajar bahwa api butuh tiga elemen untuk menyala. Dari tetrahedron, kita tahu ada "rahasia tambahan" berupa reaksi kimia yang membuatnya terus hidup. Dengan memahami keduanya, kita bisa lebih bijak dalam mencegah dan memadamkan kebakaran, bukan sekadar tahu caranya, tapi juga memahami bagaimana api benar-benar "hidup".</p>
 
     <div class="art-cta">
       <div>
-        <h3>Butuh sistem proteksi kebakaran untuk gedung Anda?</h3>
-        <p>Tim AMS siap membantu konsultasi, desain, hingga instalasi.</p>
+        <h3>Butuh alat pemadam api yang tepat untuk kebutuhan Anda?</h3>
+        <p>Tim AMS siap membantu rekomendasi APAR dan sistem proteksi kebakaran yang sesuai.</p>
       </div>
       <div class="art-cta-actions">
         <a class="btn btn-primary" href="produk.html"><i class="fas fa-store"></i> Lihat AMShop</a>
@@ -339,7 +310,7 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
 
 <a class="wa-float" href="https://wa.me/6281299997697?text=Halo%20AMS%2C%20saya%20ingin%20konsultasi%20proteksi%20kebakaran" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
   <i class="fab fa-whatsapp"></i>
-  <div class="wa-pulse"></div>
+  <span class="wa-pulse"></span>
 </a>
 
 <script>
@@ -347,14 +318,13 @@ const header = document.getElementById('header');
 window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const mobilePanel = document.getElementById('mobilePanel');
-const scrim = document.getElementById('scrim');
 const closeMobile = document.getElementById('closeMobile');
-function openMobile() { mobilePanel.style.display='block'; requestAnimationFrame(() => mobilePanel.classList.add('open')); scrim.classList.add('show'); }
-function closeMobileMenu() { mobilePanel.classList.remove('open'); scrim.classList.remove('show'); setTimeout(() => { mobilePanel.style.display='none'; }, 320); }
+const scrim = document.getElementById('scrim');
+function openMobile() { mobilePanel.classList.add('open'); scrim.classList.add('show'); }
+function closeMobileFn() { mobilePanel.classList.remove('open'); scrim.classList.remove('show'); }
 hamburgerBtn.addEventListener('click', openMobile);
-closeMobile.addEventListener('click', closeMobileMenu);
-scrim.addEventListener('click', closeMobileMenu);
-document.querySelectorAll('.mobile-panel a').forEach(a => a.addEventListener('click', closeMobileMenu));
+closeMobile.addEventListener('click', closeMobileFn);
+scrim.addEventListener('click', closeMobileFn);
 </script>
 </body>
 </html>
