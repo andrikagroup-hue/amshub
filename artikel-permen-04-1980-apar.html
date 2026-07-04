@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Artikel | PT Andrika Mitra Solusi</title>
-<meta name="description" content="Artikel dan wawasan seputar proteksi kebakaran (fire protection) dari PT Andrika Mitra Solusi (AMS).">
+<title>Pentingnya Mematuhi Permen No. 04/MEN/1980 tentang APAR | PT Andrika Mitra Solusi</title>
+<meta name="description" content="Kenali Peraturan Menteri Tenaga Kerja No. 04/MEN/1980 tentang syarat pemasangan dan pemeliharaan Alat Pemadam Api Ringan (APAR), lengkap dengan aturan penempatan, jadwal pemeriksaan, dan sanksi pelanggaran.">
 <link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
 :root {
   --teal: #59b1b5; --teal-dark: #3e999d; --teal-darker: #2a7073; --teal-light: #a0d2d4; --teal-pale: #dae6e6;
   --orange: #f77e2d; --orange-light: #ff9a52; --orange-dark: #d9631a;
-  --navy: #0f151b; --navy-soft: #1a222b; --ink: #10161d; --steel: #48545e; --muted: #74838d; --line: #dbe1e4;
+  --navy: #0f151b; --ink: #10161d; --steel: #48545e; --muted: #74838d; --line: #dbe1e4;
   --white: #ffffff; --paper: #f5f7f7;
   --font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --font-b: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -67,40 +67,56 @@ nav.main-nav a:hover::before { opacity: 1; }
 .scrim.show { display: block; }
 @media (max-width: 960px) { nav.main-nav { display: none; } .hamburger { display: inline-block; } }
 
-.section { padding: 72px 0; }
-@media (max-width: 768px) { .section { padding: 48px 0; } }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 14px; }
-.bg-navy .eyebrow { color: var(--teal); }
-.section-title { font-family: var(--font); font-size: clamp(22px,3vw,36px); font-weight: 700; letter-spacing: -.01em; color: var(--navy); margin-bottom: 12px; }
-.section-title em { font-style: normal; color: var(--orange); }
-.bg-navy { background: var(--navy); color: #fff; }
-
-/* ARTICLE HERO */
-.art-hero { background: var(--navy); padding: 150px 0 56px; position: relative; overflow: hidden; }
+/* ARTICLE HEADER */
+.art-hero { background: var(--navy); padding: 150px 0 48px; position: relative; overflow: hidden; }
 .art-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at top right, rgba(89,177,181,.18), transparent 60%); }
-.art-hero .container { position: relative; }
-.art-hero .eyebrow { color: var(--teal); }
-.art-hero h1 { font-size: clamp(26px,3.6vw,42px); font-weight: 700; color: #fff; margin-bottom: 12px; }
-.art-hero h1 em { font-style: normal; color: var(--orange); }
-.art-hero p { font-size: 15px; color: rgba(255,255,255,.65); max-width: 600px; line-height: 1.7; }
+.art-hero .container { position: relative; max-width: 820px; }
+.art-breadcrumb { font-family: var(--font-mono); font-size: 11px; color: var(--teal-light); margin-bottom: 18px; }
+.art-breadcrumb a:hover { color: #fff; }
+.art-cat-badge { display: inline-block; background: var(--orange); color: #fff; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 5px 12px; margin-bottom: 16px; }
+.art-hero h1 { font-size: clamp(22px,3.2vw,34px); font-weight: 700; color: #fff; line-height: 1.3; margin-bottom: 16px; }
+.art-hero .lead { font-size: 15.5px; color: rgba(255,255,255,.68); line-height: 1.7; margin-bottom: 18px; max-width: 640px; }
+.art-meta { display: flex; gap: 18px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11.5px; color: rgba(255,255,255,.55); }
+.art-meta span { display: inline-flex; align-items: center; gap: 6px; }
 
-/* ARTICLE GRID */
-.art-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 12px; }
-@media (max-width: 860px) { .art-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .art-grid { grid-template-columns: 1fr; } }
-.art-card { background: var(--white); border: 1px solid var(--line); transition: all .2s; display: flex; flex-direction: column; }
-.art-card:hover { border-color: var(--teal); box-shadow: 0 12px 32px rgba(15,21,27,.1); transform: translateY(-4px); }
-.art-thumb { height: 170px; background: linear-gradient(135deg, var(--teal-darker), var(--navy)); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-.art-thumb i { font-size: 46px; color: rgba(255,255,255,.35); }
-.art-thumb .art-cat-tag { position: absolute; top: 12px; left: 12px; background: var(--orange); color: #fff; font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 5px 10px; }
-.art-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-.art-date { font-family: var(--font-mono); font-size: 10.5px; color: var(--muted); margin-bottom: 8px; }
-.art-title { font-size: 16px; font-weight: 700; color: var(--navy); line-height: 1.35; margin-bottom: 10px; }
-.art-excerpt { font-size: 13px; color: var(--steel); line-height: 1.65; margin-bottom: 16px; flex: 1; }
-.art-readmore { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--teal-darker); display: inline-flex; align-items: center; gap: 6px; }
-.art-card:hover .art-readmore { color: var(--orange); }
+/* ARTICLE BODY */
+.art-body-wrap { max-width: 820px; margin: 0 auto; padding: 56px 32px 72px; }
+@media (max-width: 640px) { .art-body-wrap { padding: 40px 18px 56px; } }
 
-.art-empty-note { margin-top: 40px; text-align: center; background: var(--paper); border: 1px dashed var(--line); padding: 28px; font-size: 13px; color: var(--muted); }
+/* CLICKABLE COVER IMAGE + SOFT NOTIF */
+.art-cover-link { display: block; position: relative; margin-bottom: 14px; cursor: pointer; }
+.art-cover-img { width: 100%; height: 340px; object-fit: cover; transition: filter .25s ease; }
+@media (max-width: 640px) { .art-cover-img { height: 220px; } }
+.art-cover-link:hover .art-cover-img { filter: brightness(.85); }
+.art-cover-badge { position: absolute; bottom: 14px; right: 14px; background: rgba(15,21,27,.85); backdrop-filter: blur(2px); color: #fff; font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: .03em; padding: 8px 14px; display: flex; align-items: center; gap: 8px; opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; }
+.art-cover-link:hover .art-cover-badge { opacity: 1; transform: translateY(0); }
+.art-cover-badge i { color: var(--teal-light); font-size: 13px; }
+.art-cover-hint { font-family: var(--font-mono); font-size: 11.5px; color: var(--muted); display: flex; align-items: center; gap: 7px; margin-bottom: 40px; }
+.art-cover-hint i { color: var(--teal-darker); font-size: 12px; }
+
+.art-content h2 { font-size: 22px; font-weight: 700; color: var(--navy); margin-top: 40px; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.art-content h2 i { color: var(--orange); font-size: 19px; }
+.art-content p { font-size: 15px; color: var(--steel); line-height: 1.85; margin-bottom: 14px; }
+.art-content ul.check-list { margin: 18px 0; display: flex; flex-direction: column; gap: 12px; }
+.art-content ul.check-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 14.5px; color: var(--steel); line-height: 1.7; }
+.art-content ul.check-list li i { color: var(--teal-darker); font-size: 15px; margin-top: 3px; flex-shrink: 0; }
+.art-content ul.check-list li strong { color: var(--navy); }
+
+.sub-block { margin: 18px 0; }
+.sub-block h3 { font-size: 14.5px; font-weight: 700; color: var(--teal-darker); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.sub-block h3 i { font-size: 13px; }
+
+.callout { background: var(--paper); border-left: 3px solid var(--teal); padding: 16px 20px; margin: 22px 0; font-size: 14px; color: var(--steel); line-height: 1.75; }
+.callout strong { color: var(--navy); }
+.callout.warn { border-left-color: var(--orange); background: rgba(247,126,45,.05); }
+
+.art-cta { margin-top: 48px; background: var(--navy); padding: 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.art-cta h3 { font-size: 17px; color: #fff; font-weight: 700; margin-bottom: 6px; }
+.art-cta p { font-size: 13px; color: rgba(255,255,255,.6); }
+.art-cta-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--teal-darker); margin-top: 44px; }
+.back-link:hover { color: var(--orange); }
 
 /* FOOTER */
 footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid rgba(92,225,230,.15); }
@@ -167,46 +183,83 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
 
 <section class="art-hero">
   <div class="container">
-    <div class="eyebrow"><i class="fas fa-newspaper"></i> Artikel</div>
-    <h1>Wawasan <em>Proteksi Kebakaran</em></h1>
-    <p>Kumpulan artikel edukatif seputar sistem proteksi kebakaran, regulasi, dan tips keselamatan dari tim AMS.</p>
+    <div class="art-breadcrumb"><a href="artikel.html">Artikel</a> / Permen No. 04/MEN/1980 tentang APAR</div>
+    <span class="art-cat-badge">Regulasi</span>
+    <h1>Pentingnya Mematuhi Permen No. 04/MEN/1980 tentang APAR</h1>
+    <p class="lead">Panduan resmi pemerintah soal pemasangan dan pemeliharaan Alat Pemadam Api Ringan, agar selalu siap digunakan saat keadaan darurat.</p>
+    <div class="art-meta">
+      <span><i class="far fa-calendar"></i> 4 Juli 2026</span>
+      <span><i class="far fa-clock"></i> 4 menit baca</span>
+      <span><i class="fas fa-building-shield"></i> PT Andrika Mitra Solusi</span>
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="art-grid">
-      <a class="art-card" href="artikel-permen-04-1980-apar.html">
-        <div class="art-thumb"><span class="art-cat-tag">Regulasi</span><img src="images/article/Permen.png" alt="Peraturan Menteri Tenaga Kerja No. 04/MEN/1980 tentang APAR" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="art-body">
-          <div class="art-date">4 Juli 2026</div>
-          <div class="art-title">Pentingnya Mematuhi Permen No. 04/MEN/1980 tentang APAR</div>
-          <div class="art-excerpt">Panduan resmi pemerintah soal pemasangan dan pemeliharaan Alat Pemadam Api Ringan, lengkap dengan aturan penempatan, jadwal pemeriksaan, dan sanksi pelanggaran.</div>
-          <span class="art-readmore">Baca Selengkapnya <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
-      <a class="art-card" href="artikel-segitiga-api-tetrahedron.html">
-        <div class="art-thumb"><span class="art-cat-tag">Edukasi</span><img src="images/article/segitiga.png" alt="Ilustrasi Fire Triangle dan Fire Tetrahedron" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="art-body">
-          <div class="art-date">4 Juli 2026</div>
-          <div class="art-title">Rahasia Api yang Jarang Diketahui: Dari Segitiga ke Tetrahedron</div>
-          <div class="art-excerpt">Kenali Fire Triangle dan Fire Tetrahedron, dua konsep dasar ilmu kebakaran yang menjelaskan bagaimana api bisa menyala, terus hidup, dan bagaimana cara memadamkannya.</div>
-          <span class="art-readmore">Baca Selengkapnya <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
-      <a class="art-card" href="artikel-fire-protection-system.html">
-        <div class="art-thumb"><span class="art-cat-tag">Edukasi</span><i class="fas fa-fire-flame-curved"></i></div>
-        <div class="art-body">
-          <div class="art-date">4 Juli 2026</div>
-          <div class="art-title">Pentingnya Sistem Proteksi Kebakaran untuk Gedung &amp; Industri</div>
-          <div class="art-excerpt">Kenali apa itu fire protection system, komponen utamanya mulai dari deteksi hingga APAR, serta alasan mengapa sistem ini wajib ada di setiap gedung dan fasilitas industri.</div>
-          <span class="art-readmore">Baca Selengkapnya <i class="fas fa-arrow-right"></i></span>
-        </div>
-      </a>
+<div class="art-body-wrap">
+
+  <a class="art-cover-link" href="Permen%20No.%2004MEN1980%20tentang%20APAR.pdf" target="_blank" rel="noopener">
+    <img class="art-cover-img" src="images/article/Permen.png" alt="Peraturan Menteri Tenaga Kerja No. 04/MEN/1980 tentang APAR">
+    <div class="art-cover-badge"><i class="fas fa-file-pdf"></i> Klik untuk buka dokumen PDF resmi</div>
+  </a>
+  <div class="art-cover-hint"><i class="fas fa-circle-info"></i> Gambar di atas bisa diklik untuk membuka dokumen Permen No. 04/MEN/1980 dalam format PDF.</div>
+
+  <div class="art-content">
+    <h2><i class="fas fa-magnifying-glass"></i> Latar Belakang</h2>
+    <p>Kebakaran merupakan salah satu ancaman terbesar di tempat kerja maupun fasilitas umum. Untuk mengantisipasi dan menanggulanginya sejak dini, pemerintah menetapkan Peraturan Menteri Tenaga Kerja No. 04/MEN/1980 yang mengatur pemasangan dan pemeliharaan Alat Pemadam Api Ringan (APAR). Aturan ini menjadi pedoman agar setiap APAR selalu siap digunakan saat keadaan darurat.</p>
+
+    <h2><i class="fas fa-location-dot"></i> Pemasangan APAR</h2>
+    <ul class="check-list">
+      <li><i class="fas fa-check-circle"></i><span>APAR harus ditempatkan di lokasi yang mudah terlihat dan dijangkau.</span></li>
+      <li><i class="fas fa-check-circle"></i><span>Jarak antar APAR maksimal 15 meter.</span></li>
+      <li><i class="fas fa-check-circle"></i><span>Warna tabung standar adalah merah dengan tanda pemasangan yang jelas.</span></li>
+      <li><i class="fas fa-check-circle"></i><span>Tidak boleh dipasang di area dengan suhu ekstrem, di atas 49°C atau di bawah -44°C.</span></li>
+      <li><i class="fas fa-check-circle"></i><span>APAR yang dipasang di luar ruangan wajib diberi pelindung.</span></li>
+      <li><i class="fas fa-check-circle"></i><span>Lemari penyimpanan tidak boleh dikunci permanen, agar mudah diakses saat darurat.</span></li>
+    </ul>
+
+    <h2><i class="fas fa-screwdriver-wrench"></i> Pemeliharaan APAR</h2>
+    <div class="sub-block">
+      <h3><i class="fas fa-calendar-check"></i> Pemeriksaan Berkala</h3>
+      <ul class="check-list">
+        <li><i class="fas fa-check-circle"></i><span><strong>Setiap 6 bulan</strong>, cek kondisi tabung, isi, tekanan, dan nozzle.</span></li>
+        <li><i class="fas fa-check-circle"></i><span><strong>Setiap 12 bulan</strong>, pemeriksaan detail sesuai jenis APAR.</span></li>
+      </ul>
     </div>
-    <div class="art-empty-note"><i class="fas fa-pen-nib" style="margin-right:6px"></i>Artikel baru akan terus ditambahkan di sini secara berkala.</div>
+    <div class="sub-block">
+      <h3><i class="fas fa-gauge-high"></i> Uji Tekan &amp; Pengisian Ulang</h3>
+      <ul class="check-list">
+        <li><i class="fas fa-check-circle"></i><span>Uji tekan wajib dilakukan maksimal 5 tahun sekali.</span></li>
+        <li><i class="fas fa-check-circle"></i><span><strong>Soda, busa, atau kimia:</strong> pengisian ulang tiap 1 tahun.</span></li>
+        <li><i class="fas fa-check-circle"></i><span><strong>Busa campuran:</strong> pengisian ulang tiap 2 tahun.</span></li>
+        <li><i class="fas fa-check-circle"></i><span><strong>Halogenated hydrocarbon:</strong> pengisian ulang tiap 3 tahun.</span></li>
+        <li><i class="fas fa-check-circle"></i><span><strong>Jenis lain:</strong> pengisian ulang maksimal 5 tahun.</span></li>
+      </ul>
+    </div>
+    <div class="callout"><strong>Catatan penting:</strong> setiap kali pengisian ulang dilakukan, tanggalnya wajib dicatat langsung di badan tabung.</div>
+
+    <h2><i class="fas fa-scale-balanced"></i> Tanggung Jawab &amp; Sanksi</h2>
+    <p>Pengurus tempat kerja bertanggung jawab penuh atas pemasangan dan pemeliharaan APAR di lingkungannya. Pelanggaran terhadap aturan ini dapat dikenakan hukuman kurungan 3 bulan atau denda Rp100.000, sesuai UU No. 1 Tahun 1970 tentang Keselamatan Kerja.</p>
+
+    <h2><i class="fas fa-hourglass-half"></i> Ketentuan Peralihan</h2>
+    <p>APAR yang sudah terpasang sebelum aturan ini berlaku harus disesuaikan dalam waktu 1 tahun sejak ditetapkan, yaitu sejak 14 April 1980.</p>
+
+    <h2><i class="fas fa-flag-checkered"></i> Kesimpulan</h2>
+    <p>Permen No. 04/MEN/1980 menegaskan bahwa APAR bukan sekadar perlengkapan, melainkan alat vital penyelamat nyawa dan aset. Dengan pemasangan yang tepat dan pemeliharaan rutin, risiko kebakaran dapat ditekan seminimal mungkin.</p>
+
+    <div class="art-cta">
+      <div>
+        <h3>Butuh bantuan pemasangan atau pemeliharaan APAR sesuai standar?</h3>
+        <p>Tim AMS siap membantu memastikan APAR di lokasi Anda sesuai Permen No. 04/MEN/1980.</p>
+      </div>
+      <div class="art-cta-actions">
+        <a class="btn btn-primary" href="produk.html"><i class="fas fa-store"></i> Lihat AMShop</a>
+        <a class="btn btn-primary" style="background:#25D366" href="https://wa.me/6281299997697?text=Halo%20AMS%2C%20saya%20ingin%20konsultasi%20pemasangan%20APAR" target="_blank"><i class="fab fa-whatsapp"></i> Konsultasi</a>
+      </div>
+    </div>
+
+    <a class="back-link" href="artikel.html"><i class="fas fa-arrow-left"></i> Kembali ke Semua Artikel</a>
   </div>
-</section>
+</div>
 
 <footer>
   <div class="footer-main">
@@ -246,7 +299,7 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
 
 <a class="wa-float" href="https://wa.me/6281299997697?text=Halo%20AMS%2C%20saya%20ingin%20konsultasi%20proteksi%20kebakaran" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
   <i class="fab fa-whatsapp"></i>
-  <div class="wa-pulse"></div>
+  <span class="wa-pulse"></span>
 </a>
 
 <script>
@@ -254,14 +307,13 @@ const header = document.getElementById('header');
 window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const mobilePanel = document.getElementById('mobilePanel');
-const scrim = document.getElementById('scrim');
 const closeMobile = document.getElementById('closeMobile');
-function openMobile() { mobilePanel.style.display='block'; requestAnimationFrame(() => mobilePanel.classList.add('open')); scrim.classList.add('show'); }
-function closeMobileMenu() { mobilePanel.classList.remove('open'); scrim.classList.remove('show'); setTimeout(() => { mobilePanel.style.display='none'; }, 320); }
+const scrim = document.getElementById('scrim');
+function openMobile() { mobilePanel.classList.add('open'); scrim.classList.add('show'); }
+function closeMobileFn() { mobilePanel.classList.remove('open'); scrim.classList.remove('show'); }
 hamburgerBtn.addEventListener('click', openMobile);
-closeMobile.addEventListener('click', closeMobileMenu);
-scrim.addEventListener('click', closeMobileMenu);
-document.querySelectorAll('.mobile-panel a').forEach(a => a.addEventListener('click', closeMobileMenu));
+closeMobile.addEventListener('click', closeMobileFn);
+scrim.addEventListener('click', closeMobileFn);
 </script>
 </body>
 </html>
