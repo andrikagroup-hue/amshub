@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PT Andrika Mitra Solusi | Industrial & Tailor-Made Fire Solutions</title>
-<meta name="description" content="PT Andrika Mitra Solusi (AMS), spesialis proteksi kebakaran industri di Indonesia. Desain, supply, instalasi, komisioning, dan maintenance sistem proteksi kebakaran.">
+<meta name="description" content="PT Andrika Mitra Solusi menyediakan solusi proteksi kebakaran, safety equipment, serta industrial and project supply di Indonesia.">
 <link rel="icon" type="image/png" href="images/logo-partner/AMS.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
@@ -210,6 +210,31 @@ nav.main-nav a:hover::before { opacity: 1; }
 .product-num { font-family: var(--font-mono); font-size: 10.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--teal-darker); margin-bottom: 8px; }
 .product-body h3 { font-family: var(--font); font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .product-body p { font-size: 12px; color: var(--steel); line-height: 1.65; }
+
+/* ── INDUSTRIAL & PROJECT SUPPLY ── */
+.business-scope-strip { background: var(--white); border-bottom: 1px solid var(--line); }
+.business-scope-grid { display: grid; grid-template-columns: repeat(3,1fr); }
+.business-scope-item { display: flex; align-items: center; gap: 14px; padding: 22px 24px; color: var(--navy); border-right: 1px solid var(--line); transition: background .2s, color .2s; }
+.business-scope-item:last-child { border-right: 0; }
+.business-scope-item:hover { background: var(--teal-pale); color: var(--teal-darker); }
+.business-scope-item i { width: 36px; height: 36px; display: grid; place-items: center; background: var(--teal-pale); color: var(--teal-darker); border-radius: 50%; flex-shrink: 0; }
+.business-scope-item strong { display: block; font-size: 13px; margin-bottom: 3px; }
+.business-scope-item span { display: block; font-size: 11px; color: var(--muted); line-height: 1.4; }
+.project-supply-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 46px; align-items: center; }
+.project-supply-image { position: relative; min-height: 430px; overflow: hidden; border: 1px solid var(--line); }
+.project-supply-image img { width: 100%; height: 100%; min-height: 430px; object-fit: cover; display: block; }
+.project-supply-content .section-lead { max-width: none; margin-bottom: 24px; }
+.project-capabilities { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin: 22px 0 28px; }
+.project-capability { padding: 13px 14px; border: 1px solid var(--line); background: var(--white); font-size: 12px; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.project-capability i { color: var(--teal-darker); margin-right: 7px; }
+@media (max-width: 760px) {
+  .business-scope-grid { grid-template-columns: 1fr; }
+  .business-scope-item { border-right: 0; border-bottom: 1px solid var(--line); }
+  .business-scope-item:last-child { border-bottom: 0; }
+  .project-supply-grid { grid-template-columns: 1fr; gap: 26px; }
+  .project-supply-image, .project-supply-image img { min-height: 300px; }
+  .project-capabilities { grid-template-columns: 1fr; }
+}
 
 /* ── TAILOR MADE ── */
 .tailor-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -444,6 +469,7 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
         <a href="#about">About</a>
         <a href="#vision">Vision & Mission</a>
         <a href="#sectors">Sectors</a>
+        <a href="industrial-project-supply.html">Industrial Supply</a>
         <a href="#products">Products</a>
         <a href="produk.html">Shop</a>
         <a href="artikel.html">Article</a>
@@ -467,6 +493,7 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
     <a href="#vision">Vision & Mission</a>
     <a href="#values">Core Values</a>
     <a href="#sectors">Sectors</a>
+    <a href="industrial-project-supply.html">Industrial &amp; Project Supply</a>
     <a href="#products">Products & Services</a>
     <a href="produk.html" style="color:var(--teal)">AMShop</a>
     <a href="artikel.html">Article</a>
@@ -495,6 +522,24 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
     </div>
   </div>
 </section>
+
+<!-- BUSINESS SCOPE -->
+<div class="business-scope-strip" aria-label="AMS business solutions">
+  <div class="container business-scope-grid">
+    <a class="business-scope-item" href="#products">
+      <i class="fas fa-fire-extinguisher"></i>
+      <div><strong>Fire Protection Systems</strong><span>Engineered systems, equipment and services</span></div>
+    </a>
+    <a class="business-scope-item" href="produk.html">
+      <i class="fas fa-helmet-safety"></i>
+      <div><strong>Safety Equipment</strong><span>PPE and workplace safety products</span></div>
+    </a>
+    <a class="business-scope-item" href="industrial-project-supply.html">
+      <i class="fas fa-boxes-stacked"></i>
+      <div><strong>Industrial &amp; Project Supply</strong><span>BRC fencing, piping, valves, fittings and project materials</span></div>
+    </a>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section class="section" id="about">
@@ -636,6 +681,29 @@ footer { background: #0a0f14; color: rgba(255,255,255,.6); border-top: 1px solid
       <div class="sector-card"><div class="sector-icon"><i class="fas fa-plane"></i></div><div class="sector-name">Airports, Ports &amp; Transit Facilities</div></div>
     </div>
     <p style="text-align:center;margin-top:20px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-darker)" class="reveal">SCOPE: RESIDENTIAL · COMMERCIAL · INDUSTRIAL · INFRASTRUCTURE · CRITICAL FACILITIES</p>
+  </div>
+</section>
+
+<!-- INDUSTRIAL & PROJECT SUPPLY -->
+<section class="section bg-paper" id="industrial-supply">
+  <div class="container">
+    <div class="project-supply-grid">
+      <div class="project-supply-image reveal">
+        <img src="images/produk/industrial-supply/industrial-quality-check.png" alt="Industrial materials quality checking and project supply preparation" loading="lazy">
+      </div>
+      <div class="project-supply-content reveal reveal-delay-2">
+        <div class="eyebrow">Project-Based Procurement</div>
+        <h2 class="section-title">Industrial &amp; <em>Project Supply</em></h2>
+        <p class="section-lead">AMS supports project procurement through specification review, material sourcing, quantity coordination, quality verification, documentation and delivery planning.</p>
+        <div class="project-capabilities">
+          <div class="project-capability"><i class="fas fa-border-all"></i>BRC Fencing &amp; Perimeter Materials</div>
+          <div class="project-capability"><i class="fas fa-faucet"></i>Piping, Valves &amp; Fittings</div>
+          <div class="project-capability"><i class="fas fa-screwdriver-wrench"></i>Fasteners &amp; Supporting Materials</div>
+          <div class="project-capability"><i class="fas fa-helmet-safety"></i>Safety &amp; Operational Equipment</div>
+        </div>
+        <a class="btn btn-primary" href="industrial-project-supply.html"><i class="fas fa-arrow-right"></i> Explore Project Supply</a>
+      </div>
+    </div>
   </div>
 </section>
 
